@@ -134,6 +134,7 @@ input.btn { border: none; cursor: pointer; }
 	margin:0 0 25px;
 	position:relative;
 	z-index:100;
+	background-size: cover;
 }
 /* header */
 header {
@@ -1781,6 +1782,16 @@ Forms for slider
 }
 
 .footer-freetrial .trial-form { margin: 0; }
+
+/*top notification*/
+.top-notification {
+	background: #21211d;
+	padding: 6px 0;
+	color: #fff;
+	text-align: center;
+	box-shadow: inset 0 -1px 0 1px rgba(255,255,255,.14);
+	border-bottom: 1px solid #21211d;
+}
 
 /* ==========================================================================
 Buttons

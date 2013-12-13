@@ -69,6 +69,12 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 </head>
 
 <body>
+	
+	<?php if ($_SERVER['SCRIPT_NAME'] === "/index.php"): ?>
+	<div class="top-notification hidden">
+		<i class="icon-exclamation-sign"></i> &nbsp;<strong>Important:</strong> You have been redirected to MaxCDN Enterprise, which replaced NetDNA. <a target="_blank" href="http://blog.maxcdn.com/netdna-maxcdn-enterprise/">Read more <i class="icon-arrow-right"></i></a>
+	</div>
+	<?php endif; ?>
 
 	<!-- Orange right slider -->
 	<div class="orange-slider">
@@ -97,7 +103,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			</p>
 		</div>
 		<div class="slider-email hidden">
-			<form id="form-contact-orange-slider" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+			<form id="form-contact-orange-slider-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 				<input name="LeadSource" type="hidden" value="MaxCDN.com">
 				<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Side Bar Form">
 				<input type="hidden" name="lpId" value="-1" />

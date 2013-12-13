@@ -88,7 +88,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<div class="popup" id="popup-contact">
 		<strong class="orange large-heading">Ready for Your Test Drive?</strong>
 		<p>Please fill out the form below and we'll give you a call to set up your free seven day MaxCDN Enterprise trial. Try us out and see how fast we are for yourself.</p><p>Give us a support call at <span class="phone-number">(877) 629-2361</span> &mdash; you'll have access to priority support.<br/>We're sure that our service and performance will exceed your expectations.</p>
-		<form method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -148,7 +148,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<strong class="orange large-heading">Test MaxCDN against your<br/>current solution for free</strong>
 		<p>We will provide you with a third party test ran by Catchpoint; it will measure your current CDN<br/>versus MaxCDN Enterprise from different locations around the world. Once the test is completed, we'll provide a report which shows how they both performed. It can take up to 48</br>hours to send you the report.</p>
 
-		<form method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-speed-report-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -188,7 +188,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<div class="col">
 					<h3>How will this test help you?</h3>
 					<ul class="simple-list">
-						<li><strong>You can save money</strong>! If you're spending $5,000 on CDN now, we'll offer the same performance and reliability for $1,500. (These are example numbers.)</li>
 						<li><strong>You get real data</strong>, from a 3rd party (Catchpoint), to help drive your decisions.</li>
 					</ul>
 				</div>
@@ -201,7 +200,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<strong class="orange large-heading">Contact Us</strong>
 		<p>If you have any technical or pricing questions about MaxCDN Enterprise, we can answer them.<br/>If you leave your details below, we'll contact you back with more information.<br/>Otherwise, you can <a href="#" onclick="return startWidget('chat');">live chat</a> us or call us at <span class="phone-number">(877) 629-2361</span>.</p>
 
-		<form method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-contact-us-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -251,6 +250,24 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/scripts.js"></script>
 
 <script type="text/javascript">
+adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";
+adroll_pix_id = "DGK76G7V2VE7PKFLGTES5N";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+<script type="text/javascript">
 	var seAgent;
 	(function() {
 		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
@@ -289,7 +306,12 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		};
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
 	})();
-	function startWidget(chatType) { return SnapABug.startLink(); }
+	function startWidget(chatType) {
+		try{
+		__adroll.record_user({"adroll_segments": "adrollchat"})    
+		} catch(err) {}
+		return SnapABug.startLink();
+	}
 	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 </script>
 
@@ -300,24 +322,6 @@ var _mfq = _mfq || [];
 	mf.src = "//cdn.mouseflow.com/projects/0871b593-6288-4f18-a9b1-88d1d6802d1e.js";
 	document.getElementsByTagName("head")[0].appendChild(mf);
 })();
-</script>
-
-<script type="text/javascript">
-adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";
-adroll_pix_id = "DGK76G7V2VE7PKFLGTES5N";
-(function () {
-var oldonload = window.onload;
-window.onload = function(){
-   __adroll_loaded=true;
-   var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-   scr.setAttribute('async', 'true');
-   scr.type = "text/javascript";
-   scr.src = host + "/j/roundtrip.js";
-   ((document.getElementsByTagName('head') || [null])[0] ||
-    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-   if(oldonload){oldonload()}};
-}());
 </script>
 
 <script id="_webengage_script_tag" type="text/javascript">

@@ -1,0 +1,113 @@
+/* custom forms styles */
+.customForm-hidden {
+	display: block !important;
+	position: absolute !important;
+	left:-9999px !important;
+}
+/* custom select styles */
+.select-area {
+	background:#f4f4f1;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	height: 30px;
+	color:#323232;
+	font-size:14px;
+	line-height:17px;
+}
+.select-area .select-opener {
+	background: url(../images/ico-01.png) no-repeat;
+	position: absolute;
+	z-index: 3;
+	top:50%;
+	right:9px;
+	margin-top:-3px;
+	width:11px;
+	height:7px;
+}
+.select-area .left {display:none;}
+.select-area .center {
+	white-space: nowrap;
+	position: relative;
+	cursor: default;
+	display: block;
+	padding:6px 9px;
+	z-index: 2;
+}
+.select-area .center img {
+	margin: 5px 5px 0 0;
+	position: relative;
+	float: left;
+}
+.options-overflow div.drop-list {
+	overflow: auto;
+}
+.options-hidden {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+.select-options {
+	z-index: 9000;
+	background:#f4f4f1;
+	position: absolute;
+	font-size:14px;
+	line-height:17px;
+}
+.select-options .drop-holder {height: 1%;}
+.select-options div.drop-list {
+	width: 100%;
+}
+.select-options ul {
+	overflow: hidden;
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.select-options ul li {
+	overflow: hidden;
+	float: left;
+	width: 100%;
+}
+.select-options ul a {
+	text-decoration: none;
+	cursor: default;
+	color: #323232;
+	display: block;
+	overflow: hidden;
+	padding: 5px 9px;
+}
+.select-options ul a span {
+	cursor: default;
+	float: left;
+}
+.select-options .item-selected a {
+	text-decoration: none;
+	background: #666;
+	color: #fff;
+}
+.select-options ul a:hover {
+	text-decoration: none;
+}
+.select-options ul a:focus {
+	outline: none;
+}
+.select-options .optgroup strong{
+	cursor: default;
+	display: block;
+	width: 100%;
+}
+.select-options .optgroup strong em {
+	display: block;
+	padding: 5px;
+	height: 1%;
+}
+.select-options .optgroup ul a {
+	padding-left: 20px;
+}
+.select-options img {
+	margin: 2px 3px 0 0;
+	float: left;
+	border: 0;
+}

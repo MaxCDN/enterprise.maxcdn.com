@@ -1,0 +1,45 @@
+* +html .top-area .block,
+* +html .clients li a,
+* +html .tab-area .logos .tbl {
+	position:relative;
+	display:block;
+}
+* +html .clients li a,
+* +html .tab-area .logos .tbl {float:left;}
+* +html .top-area .block .tbl-cell {
+	position:absolute;
+	top:50%;
+}
+* +html .clients li span,
+* +html .tab-area .logos .tbl-cell {
+	position:relative;
+	float:left;
+	top:50%;
+}
+* +html .top-area .block .tbl-in,
+* +html .clients li img,
+* +html .tab-area .logos img {
+	position:relative;
+	top:-50%;
+}
+* +html .test-form .in,
+* +html .option-list li,
+* +html footer .socials li,
+* +html .tab-area .logos li,
+* +html .clients ul {display:inline;}
+
+.testing-form .group,
+.select-options ul a,
+.select-area .center,
+.price-form .row,
+.data,
+.testing-form,
+.testimonial,
+.carousel {zoom:1;}
+
+.carousel .slide .img img,
+.team-area .holder img {filter: alpha(opacity=0);}
+.carousel .slide-current .img img,
+.team-area .holder img.active {filter: alpha(opacity=100);}
+.carousel .slide .img {background:url(../images/bg-circle.png) no-repeat -183px 0;}
+.carousel .slide-current .img {background:url(../images/bg-circle.png) no-repeat;}

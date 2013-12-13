@@ -281,6 +281,10 @@ $(document).ready(function(){
 	jQuery.fn.exists = function(){
 		return this.length > 0;
 	}
+
+	if (window.location.search.indexOf("ref=netdna") != -1) {
+		$(".top-notification").removeClass("hidden");
+	}
 	
 	if (window.PIE) {
 		$('.ie-fix').each(function() {
@@ -421,7 +425,7 @@ $(document).ready(function(){
 				if (enteredTB >= 3000) {
 					$('div.total .value', priceSection).addClass('strikethrough');
 					$('.price-section .bw-tier-notice.over3pb').fadeIn(1454);
-				} else if (enteredTB >= 1000 && enteredTB < 3000) {
+				} else if (enteredTB >= 1024 && enteredTB < 3000) {
 					$('div.total .value', priceSection).removeClass('strikethrough');
 					$('.price-section .bw-tier-notice.under3pb').fadeIn(1454);
 				} else {

@@ -19,7 +19,7 @@
 	<p>POPs in North America, Europe and Asia. Six hundred peering partners in 90 countries,<br/>including AT&T, Level 3, Time-Warner Cable, Cox, Comcast, Vodaphone and Rogers,<br/>among many others, as well as redundant backbones with GTT and Zayo.<br/>SSD-equipped servers with multiple 10 Gigabit connections.</p>
 
 	<div class="ask-form">
-		<form method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-ask-ameer-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -73,7 +73,7 @@
 				<p class="textcenter no-margin first"><strong>Important!</strong> You qualify for our below 2&cent; list pricing. On average we save our clients over 1/3 off their current CDN bill by using us as a main CDN provider or adding us on a multi-CDN strategy. Try us for 30-days with no commitment.</p>
 				<p class="textcenter no-margin second hidden">
 					<span>Speak with us to get this lower pricing.</span><br/>
-					<a href="#popup-contact" class="btn fancybox">Ask About This Lower Pricing</a>
+					<a href="#popup-specialpricing" class="btn fancybox">Ask About This Lower Pricing</a>
 				</p>
 			</div>
 
@@ -81,7 +81,7 @@
 				<p class="textcenter no-margin first"><strong>Important!</strong> You qualify for our below 2&cent; list pricing and may be as low as 0.8&cent;. On average we save our clients over 1/3 off their current CDN bill by using us as a main CDN provider or adding us on a multi-CDN strategy. Try us for 30-days with no commitment.</p>
 				<p class="textcenter no-margin second hidden">
 					<span>Speak with us to get this lower pricing.</span><br/>
-					<a href="#popup-contact" class="btn fancybox">Ask About This Lower Pricing</a>
+					<a href="#popup-specialpricing" class="btn fancybox">Ask About This Lower Pricing</a>
 				</p>
 			</div>
 
@@ -120,7 +120,7 @@
 				</li>
 			</ul>
 			<div class="feedback-form custom-form">
-				<form method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+				<form id="form-pricing-questions" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 					<input type="hidden" name="lpId" value="-1" />
 					<input type="hidden" name="subId" value="127" />
 					<input type="hidden" name="kw" value="" />
@@ -180,7 +180,7 @@
 	<div class="cols">
 		<div class="col">
 			<div class="trial-form custom-form">
-				<form method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 					<input type="hidden" name="lpId" value="-1" />
 					<input type="hidden" name="subId" value="127" />
 					<input type="hidden" name="kw" value="" />
@@ -259,5 +259,66 @@
 		</div>
 	</div>
 </article><!-- /faq-area -->
+
+<div class="hidden-popup">
+	<div class="popup" id="popup-specialpricing">
+		<strong class="orange large-heading">How Much Can You Save?</strong>
+		<p>Based on your usage, you qualify for MaxCDN Enterprise's lowest prices. Please submit your information below and we'll contact you with more information.</p>
+		<form id="form-popup-lower-pricing-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+			<input type="hidden" name="lpId" value="-1" />
+			<input type="hidden" name="subId" value="127" />
+			<input type="hidden" name="kw" value="" />
+			<input type="hidden" name="cr" value="" />
+			<input type="hidden" name="searchstr" value="" />
+			<input type="hidden" name="_mkt_disp" value="return" />
+			<input type="hidden" name="_mkt_trk" value="" />
+			<input name="content__c" type='text' value="" class="hidden" />
+			<input name="LeadSource" type="hidden" value="MaxCDN.com">
+			<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Lower Pricing Form">
+			<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNLowerPricing_EnterpriseMaxCDN_MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
+			<input type="hidden" name="formid" value="115" />
+			<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
+			<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
+			<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
+
+			<div class="cols">
+				<div class="col">
+					<div class="trial-form custom-form">
+						<label>First Name <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="FirstName" >
+						<label>Last Name <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="LastName" >
+						<label>Email Address <span class="orange-text">*</span></label>
+						<input class="text required" type="email" name="Email" >
+						<label>Phone Number <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="Phone" >
+						<label>URL <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="Website" value="http://" data-value="http://" >
+						<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
+						<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+							<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
+							<option value="Under 5TB">Under 5TB</option>
+							<option value="5TB - 10TB">5TB - 10TB</option>
+							<option value="11 - 100TB">11 - 100TB</option>
+							<option value="101TB - 1,000TB">101TB - 1,000TB</option>
+							<option value="1PB+">1PB+</option>
+						</select>
+					</div>
+				</div>
+				<div class="col">
+					<h3>If we're a fit, you'll enjoy:</h3>
+					<ul class="simple-list">
+						<li>Competitive global rates</li>
+						<li>Fast network, fast provisioning</li>
+						<li>Easy to use, but powerful, control panel and API</li>
+						<li>39ms average response times, according to Cedexis</li>
+						<li>24/7/365 support, even on holidays (yes, even that holiday you're thinking about now)</li>
+					</ul>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-submit">Request Free Trial</button>
+		</form>
+	</div><!-- /popup -->
+</div>
 
 <?php include('../footer.php'); ?>

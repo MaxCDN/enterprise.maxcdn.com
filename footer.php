@@ -158,9 +158,9 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<input type="hidden" name="_mkt_trk" value="" />
 			<input name="content__c" type='text' value="" class="hidden" />
 			<input name="LeadSource" type="hidden" value="MaxCDN.com">
-			<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Free Trial Form">
-			<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNFreeTrial_freetrial.html?cr={creative}&kw={keyword}" />
-			<input type="hidden" name="formid" value="111" />
+			<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Testing Form">
+			<input type="hidden" name="lpurl" value="http://resources.netdna.com/Testing_MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
+			<input type="hidden" name="formid" value="109" />
 			<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
 			<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
 			<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />

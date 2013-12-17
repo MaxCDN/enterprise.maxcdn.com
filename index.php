@@ -276,6 +276,7 @@
 							<option value="101TB - 1,000TB">101TB - 1,000TB</option>
 							<option value="1PB+">1PB+</option>
 						</select>
+						<div class="clearfix"></div>
 					</div>
 					<button id="bootomtrial" type="submit" class="btn btn-submit">Request Free Trial</a>
 				</form>

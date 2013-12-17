@@ -916,7 +916,7 @@ section.info.small  {
 .ask-form .btn-holder {overflow:hidden;}
 .ask-form .btn {
 	float:left;
-	width:236px;
+	width:266px;
 	height:42px;
 	border:0;
 	cursor:pointer;
@@ -1772,6 +1772,17 @@ Forms for slider
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.footer-freetrial .column.last > form input, .footer-freetrial .column.last > form label {
+	clear: none;
+	float: none;
+	height: auto;
+}
+
+
+.footer-freetrial .column.last > form input {
+	padding: 7px;
 }
 
 .footer-freetrial .column.last > form select { width: 370px; }

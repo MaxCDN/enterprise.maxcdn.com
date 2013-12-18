@@ -250,7 +250,7 @@
 			<div class="col">
 				<dl class="faq-list">
 					<dt>I'm not sure if I qualify as an "enterprise" customer. Can I talk to someone about my needs?</dt>
-					<dd>Of course. Contact us at 1-877-629-236, in the US, or +1-323-313-1206 internationally to speak to an account executive. Or email and chat with us through this link (link to contact page). We'll work with you to make sure you get the best price and service for your specific needs.</dd>
+					<dd>Of course. Contact us at 1-877-629-236, in the US, or +1-323-313-1206 internationally to speak to an account executive; you can also <a href="#" onclick="return startWidget('chat');">email and chat with us</a>. We'll work with you to make sure you get the best price and service for your specific needs.</dd>
 					<dt>I push a lot of traffic. Can your CDN still support my needs?</dt>
 					<dd>We overprovision hardware, we use half of our bandwidth capacity and we constantly upgrade our network to ensure we always have more than enough breathing room for unexpected traffic spikes. That's why most of our customers come from the 800 pound gorillas in the industry &mdash; and we're ready for more.</dd>
 				</dl>

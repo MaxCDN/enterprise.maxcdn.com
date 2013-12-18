@@ -47,7 +47,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<li><a id="footercareer" href="http://www.maxcdn.com/company/careers/">Careers</a></li>
 				<li><a id="footerblog" href="http://blog.maxcdn.com/">Blog</a></li>
 				<li><a id="footerteam" href="http://www.maxcdn.com/company/team/">Team</a></li>
-				<li><a id="footerpress" href="http://www.maxcdn.com/press/">Press</a></li>
 				<li><a id="footercontact" href="http://www.maxcdn.com/contact/">Contact</a></li>
 			</ul>
 		</div>

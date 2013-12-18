@@ -66,7 +66,6 @@ if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
 							<li id="menu-item-5417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5417"><a href="http://www.maxcdn.com/company/customers/">Our Customers</a></li>
 							<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://www.maxcdn.com/company/careers/">Careers</a></li>
 							<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://www.maxcdn.com/company/culture/">Culture</a></li>
-							<li id="menu-item-7075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7075"><a href="http://www.maxcdn.com/press/">Press</a></li>
 							<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://www.maxcdn.com/company/open-source/">Open Source</a></li>
 							<li id="menu-item-5366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5366"><a href="http://www.maxcdn.com/company/affiliates/">Become an Affiliate</a></li>
 							<li class="bottom-subnav textcenter">

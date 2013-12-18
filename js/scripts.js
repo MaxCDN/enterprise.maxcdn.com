@@ -285,15 +285,16 @@ $(document).ready(function(){
 	if (window.location.search.indexOf("ref=netdna") != -1) {
 		$(".top-notification").removeClass("hidden");
 	}
+
+	// make sure not clickable subnav works right
+	$("header .top ul li.not-clickable > a").click(function(e) {
+		e.preventDefault();
+	});
 	
 	if (window.PIE) {
 		$('.ie-fix').each(function() {
 			PIE.attach(this);
 		});
-	}
-	
-	if ($('header').exists()) {
-		$('header').sticky({ topSpacing: 0 });
 	}
 	
 	if ($('#sidebar').exists()) {

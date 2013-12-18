@@ -1,8 +1,7 @@
 <?php include('../header.php'); ?>
+<?php include('../nav.php'); ?>
 
 <div class="top-area">
-	<?php include('../nav.php'); ?>
-
 	<div class="price-block">
 		<h1>One World. One Rate.</h1>
 		<p class="no-bottom-space">Just one, no matter where in the world. We charge based on bandwidth.<br/>We don't charge for requests. We also don't charge additional fees for SSL traffic.</p>

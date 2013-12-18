@@ -1,8 +1,7 @@
 <?php include_once('../header.php'); ?>
+<?php include('../nav.php'); ?>
 
 <div class="top-area" style="margin-bottom: 0;">
-	<?php include('../nav.php'); ?>
-	
 	<div class="block">
 		<div class="tbl-cell">
 			<div class="tbl-in">

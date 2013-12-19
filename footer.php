@@ -246,7 +246,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.select.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.fancybox.pack.js"></script>
-<script type="text/javascript" src="<?php echo $filePrepender; ?>js/scripts.js"></script>
+<script type="text/javascript" src="<?php echo $filePrepender; ?>js/scripts.js?q=<?=getMD5Hash('js/scripts.js')?>"></script>
 
 <script type="text/javascript">
 adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";

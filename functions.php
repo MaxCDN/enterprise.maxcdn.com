@@ -16,4 +16,9 @@ function getPageSlug() {
 	$slug = str_replace(array('/','.php'), '', $slug);
 	return $slug."_page";
 }
+
+function getMD5Hash($str) {
+	return md5_file(dirname(__FILE__). DIRECTORY_SEPARATOR . $str);
+}
+
 ?>

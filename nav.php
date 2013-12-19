@@ -49,7 +49,7 @@ if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
 						<a href="/pricing/">Pricing</a>
 						<ul class="sub-menu">
 							<li id="menu-item-7124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7124"><a href="http://www.maxcdn.com/pricing/">Standard Pricing</a></li>
-							<li id="menu-item-7125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7125"><a href="/pricing/">Enterprise Pricing</a></li>
+							<li id="menu-item-7125" class="<?php echo $pricingActive; ?> menu-item menu-item-type-custom menu-item-object-custom menu-item-7125"><a href="/pricing/">Enterprise Pricing</a></li>
 							<li class="bottom-subnav textcenter">
 								<p><span class="phone-number">+1 (877) 629-2361</span></p>
 								<a href="#" onclick="return startWidget('chat');" class="button orange"><i class="icon-comments"></i> CHAT</a>

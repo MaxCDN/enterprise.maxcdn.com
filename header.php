@@ -31,7 +31,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<title><?php echo $title; ?></title>
 	<meta name="description" content="<?php echo $meta_desc; ?>"/>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/styles.css" media="all">
+	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/styles.css?q=<?=getMD5Hash('css/styles.css')?>" media="all">
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/jquery.fancybox.css" media="all">
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/form.css" media="all">
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">

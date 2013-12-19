@@ -5,12 +5,19 @@
 		<div class="block">
 			<div class="tbl-cell">
 				<div class="tbl-in">
-					<h1 style="display: inline;color: rgb(34, 34, 30);font-weight: normal;font: 33px/45px 'OpenSansBold';margin-botton:10px;">High Volume and Performance CDN Without The Cost</h1>
-					<p>Why are more companies switching to us? We offer the same reliability and performance at a third of the price.</p>
-					<a href="#popup-test" class="fancybox btn btn-test">Test our performance</a>
+					<strong class="ttl">High Volume and Performance CDN Without The Cost.</strong>
+					<ul class="simple-list green">
+						<li>SSL options at less than half the price of our closest competitor</li>
+						<li>Simple intuitive control panel &amp; 24/7 support, 365 days a year</li>
+						<li>World-wide ﬂat price — no extra fee for SSL traﬃc</li>
+					</ul>
+					<a id="mainbtntryusfree" href="#" class="btn btn-test">Try Us For Free</a>
+					<p class="belowbtn">or see <a href="/pricing/">enterprise pricing</a></p>
 				</div>
 			</div>
 		</div><!-- /block -->
+	</div><!-- /top-area -->
+	<div class="main main-area" id="reliability">
 		<div class="clients">
 			<span class="str">CURRENT CLIENTS</span>
 			<ul>
@@ -31,8 +38,6 @@
 				</li>
 			</ul>
 		</div><!-- /clients -->
-	</div><!-- /top-area -->
-	<div class="main main-area" id="reliability">
 		<div class="main-holder">
 			<article class="content">
 				<h1 class="heading">The Speed and Features You Need</h1>

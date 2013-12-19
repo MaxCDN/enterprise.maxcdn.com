@@ -10,7 +10,7 @@ if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
 	<div class="top">
 		<div class="container-width aligncenter">
 			<div class="container-padding">
-				<a href="http://maxcdnv4.staging.wpengine.com" class="image maxcdn-colored-logo alignleft"></a>
+				<a href="http://www.maxcdn.com/" class="image maxcdn-colored-logo alignleft"></a>
 				<ul class="alignright nav">
 					<li id="menu-item-7109" class="<?php echo $homeActive; ?> menu-item menu-item-type-custom menu-item-object-custom menu-item-7109"><a href="/">Enterprise</a></li>
 					<li id="menu-item-49" class="not-clickable menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children hasSubnav menu-item-49">

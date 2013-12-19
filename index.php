@@ -5,12 +5,20 @@
 	<div class="block">
 		<div class="tbl-cell">
 			<div class="tbl-in">
-				<strong class="ttl">Enterprise-Level Service &mdash; Without the Cost.</strong>
-				<p>Why are more companies switching to us? We offer the same reliability and performance at a third of the price.</p>
-				<a id="mainbtntestperf" href="#popup-test" class="fancybox btn btn-test">Test our performance</a>
+				<strong class="ttl">Enterprise CDN with Global Flat Rate Pricing.</strong>
+				<ul class="simple-list green">
+					<li>SSL options at less than half the price of our closest competitor</li>
+					<li>Simple intuitive control panel &amp; 24/7 support, 365 days a year</li>
+					<li>World-wide ﬂat price — no extra fee for SSL traﬃc</li>
+				</ul>
+				<a id="mainbtntryusfree" href="#" class="btn btn-test">Try Us For Free</a>
+				<p class="belowbtn">or see <a href="/pricing/">enterprise pricing</a></p>
 			</div>
 		</div>
 	</div><!-- /block -->
+</div><!-- /top-area -->
+<div class="main main-area" id="reliability">
+	<div class="main-holder">
 	<div class="clients">
 		<span class="str">TRUSTED BY</span>
 		<ul>
@@ -31,9 +39,6 @@
 			</li>
 		</ul>
 	</div><!-- /clients -->
-</div><!-- /top-area -->
-<div class="main main-area" id="reliability">
-	<div class="main-holder">
 		<article class="content">
 			<h1 class="heading">The Speed and Features You Need</h1>
 			<p>We are one of the fastest CDNs in the industry, but speed is nothing without control.<br/>We offer on-demand purging (cache invalidation) and provisioning, a fully documented and supported API and a robust suite of security features. We stand behind our CDN with<br/>24/7/365 support while offering competitive bandwidth pricing.</p>
@@ -227,7 +232,7 @@
 
 
 		<!-- Free Trial section -->
-		<div class="free-trial footer-freetrial textleft">
+		<div id="try-us" class="free-trial footer-freetrial textleft">
 			<div class="column fourty first">
 				<p class="orange-text no-bottom-space"><strong>DO YOU USE OVER 25TB PER<br/>MONTH OF BANDWIDTH?</strong></p>
 				<h2 class="no-bottom-space"><strong>GET A 7 DAY FREE TRIAL</strong></h2>

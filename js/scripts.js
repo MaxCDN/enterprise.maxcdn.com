@@ -637,6 +637,24 @@ $(document).ready(function(){
 		$("span.phone-number").text("+1 (323) 313-1206");
 	}
 
+	$("a#mainbtntryusfree").click(function(e) {
+		e.preventDefault();
+		var freetrial = $('.footer-freetrial');
+		$("html, body").animate({ scrollTop: freetrial.offset().top-45 }, {
+			duration: 145,
+			complete: function() {
+				setTimeout(function(){
+					var pos = freetrial.position();
+					freetrial
+						.animate({'left':-14+'px'},54)
+						.animate({'left':+14+'px'},54)
+						.animate({'left':-14+'px'},54)
+						.animate({'left':0+'px'},54);
+				}, 100);
+			}
+		});
+	});
+
 	checkRequiredFields('form');
 	sliderEvents();
 

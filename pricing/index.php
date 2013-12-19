@@ -7,7 +7,6 @@
 		<p class="no-bottom-space">Just one, no matter where in the world. We charge based on bandwidth.<br/>We don't charge for requests. We also don't charge additional fees for SSL traffic.</p>
 		
 		<div class="data">
-			<span class="decor-r ie-fix"></span>
 			<?php include('../snippets/pricing-table.php'); ?>
 		</div><!-- /data -->
 	</div><!-- /price-block -->
@@ -16,9 +15,13 @@
 <article class="info">
 	<h2 class="heading">600 peering partners in 90 countries</h2>
 	<p>POPs in North America, Europe and Asia. Six hundred peering partners in 90 countries,<br/>including AT&T, Level 3, Time-Warner Cable, Cox, Comcast, Vodaphone and Rogers,<br/>among many others, as well as redundant backbones with GTT and Zayo.<br/>SSD-equipped servers with multiple 10 Gigabit connections.</p>
+</article><!-- /info -->
 
-	<div class="ask-form">
-		<form id="form-ask-ameer-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+<article class="have-questions">
+	<h2 class="orange large-heading textcenter">Do You Have Questions?</h2>
+
+	<div class="feedback-form custom-form">
+		<form id="form-pricing-questions" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -28,24 +31,38 @@
 			<input type="hidden" name="_mkt_trk" value="" />
 			<input name="content__c" type='text' value="" class="hidden" />
 			<input name="LeadSource" type="hidden" value="MaxCDN.com">
-			<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Ameer Form">
-			<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDN_MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
-			<input type="hidden" name="formid" value="110" />
+			<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Questions Form">
+			<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNQuestionsForm_EnterpriseMaxCDN_MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
+			<input type="hidden" name="formid" value="116" />
 			<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
 			<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
 			<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
 
-			<h2 class="orange">Meet Ameer</h2>
-			<label>Ameer is a senior account executive at MaxCDN. He'll help you find out if MaxCDN Enterprise is a good fit for your company.</label>
-			<input class="required" type="email" name="Email" placeholder="Your E-mail" />
-			<div class="clearfix"></div>
-			<div class="textarea"><textarea class="required"  name="Contact_Form_Message__c" cols="30" rows="10" style="resize:none;" placeholder="Your Message"></textarea></div>
-			<div class="btn-holder">
-				<button id="askameer" class="btn" type="submit">Ask Ameer your question</button>
+			<div class="container">
+				<div class="column alignleft two">
+					<label>First Name <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="FirstName" >
+					<label>Last Name <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="LastName" >
+					<label>Email Address <span class="orange-text">*</span></label>
+					<input class="text required" type="email" name="Email" >
+					<label>Phone Number <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="Phone" >
+					<label>URL <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="Website" value="http://" data-value="http://" >
+				</div>
+				<div class="column alignright two">
+					<label>Message <span class="orange-text">*</span></label>
+					<textarea class="required" name="Contact_Form_Message__c" cols="30" rows="10" style="resize:none;"></textarea>
+					<a id="calcpricingcontact" href="#" onclick="return startWidget('chat');" class="btn btn-submit alignleft">Chat Now</a>
+					<div class="middle-text alignleft"><strong>or call<br/>+1 (877) 629-2361</strong></div>
+					<button id="calcpricingcontact" class="btn btn-submit alignright" type="submit">Send</button>
+				</div>
 			</div>
 		</form>
 	</div>
-</article><!-- /info -->
+</article>
+
 <a name="calc"></a>
 <article class="price-area">
 	<div class="holder">

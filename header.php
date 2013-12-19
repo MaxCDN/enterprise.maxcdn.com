@@ -71,11 +71,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 <body>
 	
-	<?php if ($_SERVER['SCRIPT_NAME'] === "/index.php"): ?>
+	<!-- netdna merge notification -->
 	<div class="top-notification hidden">
 		<i class="icon-exclamation-sign"></i> &nbsp;<strong>Important:</strong> You have been redirected to MaxCDN Enterprise, which replaced NetDNA. <a target="_blank" href="http://blog.maxcdn.com/netdna-maxcdn-enterprise/">Read more <i class="icon-arrow-right"></i></a>
 	</div>
-	<?php endif; ?>
 
 	<!-- Orange right slider -->
 	<div class="orange-slider">

@@ -7,8 +7,8 @@
 				<div class="tbl-in">
 					<strong class="ttl">High Volume and Performance CDN Without The Cost.</strong>
 					<ul class="simple-list green">
-						<li>SSL options at less than half the price of our closest competitor</li>
-						<li>Simple intuitive control panel &amp; 24/7 support, 365 days a year</li>
+						<li>SSL options at less than half the price of our closest competitor</li><br/>
+						<li>Simple intuitive control panel &amp; 24/7 support, 365 days a year</li><br/>
 						<li>World-wide flat price — no extra fee for SSL traffc</li>
 					</ul>
 					<a id="mainbtntryusfree" href="#" class="btn btn-test">Try Us For Free</a>

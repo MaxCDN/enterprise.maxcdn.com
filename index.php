@@ -9,7 +9,7 @@
 				<ul class="simple-list green">
 					<li>SSL options at less than half the price of our closest competitor</li><br/>
 					<li>Simple intuitive control panel &amp; 24/7 support, 365 days a year</li><br/>
-					<li>World-wide flat price — no extra fee for SSL traffc</li>
+					<li>World-wide flat price — no extra fee for SSL traffic</li>
 				</ul>
 				<a id="mainbtntryusfree" href="#" class="btn btn-test">Try Us For Free</a>
 				<p class="belowbtn">or see <a href="/pricing/">enterprise pricing</a></p>

@@ -1,8 +1,25 @@
 // jQuery cookie plugin
 // https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js
 (function(factory){if(typeof define==="function"&&define.amd)define(["jquery"],factory);else factory(jQuery)})(function($){var pluses=/\+/g;function encode(s){return config.raw?s:encodeURIComponent(s)}function decode(s){return config.raw?s:decodeURIComponent(s)}function stringifyCookieValue(value){return encode(config.json?JSON.stringify(value):String(value))}function parseCookieValue(s){if(s.indexOf('"')===0)s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\");try{s=decodeURIComponent(s.replace(pluses, " "));return config.json?JSON.parse(s):s}catch(e){}}function read(s,converter){var value=config.raw?s:parseCookieValue(s);return $.isFunction(converter)?converter(value):value}var config=$.cookie=function(key,value,options){if(value!==undefined&&!$.isFunction(value)){options=$.extend({},config.defaults,options);if(typeof options.expires==="number"){var days=options.expires,t=options.expires=new Date;t.setDate(t.getDate()+days)}return document.cookie=[encode(key),"=",stringifyCookieValue(value),options.expires? "; expires="+options.expires.toUTCString():"",options.path?"; path="+options.path:"",options.domain?"; domain="+options.domain:"",options.secure?"; secure":""].join("")}var result=key?undefined:{};var cookies=document.cookie?document.cookie.split("; "):[];for(var i=0,l=cookies.length;i<l;i++){var parts=cookies[i].split("=");var name=decode(parts.shift());var cookie=parts.join("=");if(key&&key===name){result=read(cookie,value);break}if(!key&&(cookie=read(cookie))!==undefined)result[name]=cookie}return result}; config.defaults={};$.removeCookie=function(key,options){if($.cookie(key)===undefined)return false;$.cookie(key,"",$.extend({},options,{expires:-1}));return!$.cookie(key)}});
+$.cookie.raw = true;
 
+// browser detection
 (function(a){(jQuery.browser=jQuery.browser||{}).mobile=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))})(navigator.userAgent||navigator.vendor||window.opera);
+
+// query string array
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+(function($) {
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i) {
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace('+', " ").replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
 
 // set up the bandwidth tiers
 // if you want the tier to never end, use NaN
@@ -209,6 +226,20 @@ function checkRequiredFields(form) {
 		} else {
 			//fill out content__c field in form
 			$("input[name='content__c']", $(this)).val('TjMWJFGCrZsrgkTiumWainoraTaYandAd8bapL8Xdks');
+
+			// pass through needed utm details
+			if (typeof $.cookie("custom_utm_source") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("custom_utm_source") + "' />").attr("name", "utm_source__c").appendTo($(this));
+			}
+			if (typeof $.cookie("custom_utm_medium") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("custom_utm_medium") + "' />").attr("name", "utm_medium__c").appendTo($(this));
+			}
+			if (typeof $.cookie("custom_utm_term") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("custom_utm_term") + "' />").attr("name", "utm_term__c").appendTo($(this));
+			}
+			if (typeof $.cookie("custom_utm_campaign") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
+			}
 		}
 	});
 }
@@ -279,6 +310,27 @@ function sliderEvents() {
 	});	
 }
 
+// store utm values in cookies if the exist
+function googleUTMSources() {
+	var utm_source = (typeof $.cookie("utm_source") === 'undefined');
+	var utm_medium = (typeof $.cookie("utm_medium") === 'undefined');
+	var utm_term = (typeof $.cookie("utm_term") === 'undefined');
+	var utm_campaign = (typeof $.cookie("utm_campaign") === 'undefined');
+
+	if (utm_source && typeof $.QueryString["utm_source"] !== 'undefined') {
+			$.cookie("custom_utm_source", $.QueryString["utm_source"], {expires: 1, path: '/'});
+	}
+	if (utm_medium && typeof $.QueryString["utm_medium"] !== 'undefined') {
+			$.cookie("custom_utm_medium", $.QueryString["utm_medium"], {expires: 1, path: '/'});
+	}
+	if (utm_term && typeof $.QueryString["utm_term"] !== 'undefined') {
+			$.cookie("custom_utm_term", $.QueryString["utm_term"], {expires: 1, path: '/'});
+	}
+	if (utm_campaign && typeof $.QueryString["utm_campaign"] !== 'undefined') {
+			$.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 1, path: '/'});
+	}
+}
+
 $(document).ready(function(){
 	jQuery.fn.exists = function(){
 		return this.length > 0;
@@ -302,6 +354,9 @@ $(document).ready(function(){
 	$("header .top ul li.not-clickable > a").click(function(e) {
 		e.preventDefault();
 	});
+
+	// add in utm details
+	googleUTMSources();
 	
 	if (window.PIE) {
 		$('.ie-fix').each(function() {

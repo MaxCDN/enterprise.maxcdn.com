@@ -169,7 +169,7 @@
 	<article class="content">
 		<blockquote class="testimonial-block" id="security">
 			<q>"Security Is Not a Product; It's a Process."</q>
-			<cite><strong>Bruce Schneie</strong> | Cryptographer</cite>
+			<cite><strong>Bruce Schneier</strong> | Cryptographer</cite>
 		</blockquote>
 		<h2 class="orange large-heading">Security</h2>
 		<p>Being able to secure your website is as important as its design and content. Having a fast website doesn't mean you should compromise your security. We make sure that your website is fast, but that it's also secure using industry-leading encryption standards.</p>

@@ -10,6 +10,7 @@ a {
 	color:#ff6f11;
 }
 a:hover {text-decoration:underline;}
+map area { outline: none; }
 img {border:none;}
 form,
 fieldset {
@@ -1470,7 +1471,7 @@ footer .socials .ico-3 {background-position:-100px 0;}
 .chat-now{
     position:fixed;
     bottom:0px;
-    left:0px; 
+    left:5px; 
     display:none;
     width:460px;
     height:323x;

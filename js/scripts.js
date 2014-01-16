@@ -244,17 +244,7 @@ function checkRequiredFields(form) {
 		}
 	});
 }
-//Chat popup
-$(document).ready(function() {
-	if($.cookie('chat_pop')!='hide'){
-    $('.chat-now').delay(30000).fadeIn(400);
-	}
-	$('.chat-now').click(function() {		
-		$('.chat-now').fadeOut(4);
-		return startWidget('chat');
-	});
-});
-	
+
 //for the orange thingy on the right side...
 function sliderEvents() {
 	$(".orange-slider .icons a").click(function() {
@@ -354,6 +344,21 @@ $(document).ready(function(){
 			$("header .top").css("top", "35px");
 			$("aside#sidebar").css("marginTop", "28px");
 		}
+	}
+
+	// automatic chat bubble
+	if(typeof $.cookie("chat_pop") === 'undefined'){
+    	$('.chat-now').hide().delay(30000).fadeIn(600);
+		$('.chat-now').click(function() {		
+			$('.chat-now').hide();
+			$.cookie("chat_pop", true, {expires: 1, path: '/'});
+			return startWidget('chat');
+		});
+		$('#image-maps area').click(function(e) {
+			e.preventDefault();
+			$('.chat-now').hide();
+			$.cookie("chat_pop", true, {expires: 1, path: '/'});
+		});
 	}
 
 	if (jQuery.browser.mobile) {

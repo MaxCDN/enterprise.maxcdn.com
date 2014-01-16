@@ -50,7 +50,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/styles.css?q=<?=getMD5Hash('css/styles.css')?>" media="all">
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/jquery.fancybox.css" media="all">
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/form.css" media="all">
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="prefetch" href="https://enterprise.maxcdn.com/pricing/" />
 	<!--[if lt IE 9]>
 		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -95,9 +95,9 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<!-- Orange right slider -->
 	<div class="orange-slider">
 		<div class="icons">
-			<a id="questionbox-side-chatbutton" href="#chat"><i class="icon-comments"></i></a>
-			<a id="questionbox-side-phonebutton" href="#phone"><i class="icon-phone"></i></a>
-			<a id="questionbox-side-emailbutton" href="#email"><i class="icon-envelope-alt"></i></a>
+			<a id="questionbox-side-chatbutton" href="#chat"><i class="fa fa-comments"></i></a>
+			<a id="questionbox-side-phonebutton" href="#phone"><i class="fa fa-phone"></i></a>
+			<a id="questionbox-side-emailbutton" href="#email"><i class="fa fa-envelope-o"></i></a>
 		</div>
 		<div class="text alignleft">QUESTIONS?</div>
 	</div>

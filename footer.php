@@ -81,8 +81,11 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			</div>
 		</div>
 	</div><!-- /holder -->
+	<a href="#" onclick="return startWidget('chat');" class="chat-now"><img usemap="#image-maps" src="<?php echo $filePrepender; ?>images/chatimage.gif"/></a>
+    <map id="image-maps" name="image-maps">
+<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="JavaScript:  $('.chat-now').fadeOut(400);" />
+</map>
 </footer><!-- /footer -->
-
 <div class="hidden-popup">
 	<div class="popup" id="popup-contact">
 		<strong class="orange large-heading">Ready for Your Test Drive?</strong>

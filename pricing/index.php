@@ -11,7 +11,18 @@
 		</div><!-- /data -->
 	</div><!-- /price-block -->
 </div><!-- /top-area -->				
-<section class="info small"><em>Starting at $800/month. A setup fee may apply.</em></section><br>
+<section class="info small"><em>Starting at $800/month. A setup fee may apply.</em></section><br/>
+<div class="container-padding">
+    <div class="live-chat info">
+        <h2 class="heading">Have questions?</h2>
+        <p>Need to find answers quick? We’re here to help.</p>        
+        <a href="#" class="chbtn">
+            <i class="fa fa-comment"></i>
+            <div onclick="return startWidget('chat');" class="chbtn-chat">Start a Live Chat</div>
+        </a>
+		<p>or call us +1 (877) 629-2361</p>
+    </div>
+</div><br/>
 <article class="info">
 	<h2 class="heading">600 peering partners in 90 countries</h2>
 	<p>POPs in North America, Europe and Asia. Six hundred peering partners in 90 countries,<br/>including AT&T, Level 3, Time-Warner Cable, Cox, Comcast, Vodaphone and Rogers,<br/>among many others, as well as redundant backbones with GTT and Zayo.<br/>SSD-equipped servers with multiple 10 Gigabit connections.</p>
@@ -275,7 +286,17 @@
 		</div>
 	</div>
 </article><!-- /faq-area -->
-
+<div class="container-padding">
+    <div class="live-chat info">
+        <h2 class="heading">Have questions?</h2>
+        <p>Need to find answers quick? We’re here to help.</p>        
+        <a href="#" class="chbtn">
+            <i class="fa fa-comment"></i>
+            <div onclick="return startWidget('chat');" class="chbtn-chat">Start a Live Chat</div>
+        </a>
+		<p>or call us +1 (877) 629-2361</p>
+    </div>
+</div>
 <div class="hidden-popup">
 	<div class="popup" id="popup-specialpricing">
 		<strong class="orange large-heading">How Much Can You Save?</strong>

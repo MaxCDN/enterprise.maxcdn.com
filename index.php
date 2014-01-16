@@ -287,6 +287,17 @@
 			</div>
 			<div class="clearfix"></div>
 		</div>
+		<div class="container-padding">
+    <div class="live-chat info">
+        <h2 class="heading">Have questions?</h2>
+        <p>Need to find answers quick? We’re here to help.</p>        
+        <a href="#" class="chbtn">
+            <i class="fa fa-comment"></i>
+            <div onclick="return startWidget('chat');" class="chbtn-chat">Start a Live Chat</div>
+        </a>
+		<p>or call us +1 (877) 629-2361</p>
+    </div>
+</div><br/>
 	</article>
 	<div class="clearfix"></div>
 </div><!-- /main -->

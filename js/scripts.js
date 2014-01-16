@@ -243,7 +243,10 @@ function checkRequiredFields(form) {
 		}
 	});
 }
-
+//Chat popup
+$(document).ready(function() {
+    $('.chat-now').delay(30000).fadeIn(400);
+});
 //for the orange thingy on the right side...
 function sliderEvents() {
 	$(".orange-slider .icons a").click(function() {

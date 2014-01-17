@@ -144,7 +144,7 @@ function numberWithCommas(x) {
 // nicereply popup after live chat
 function nicereplyPopup(agentName) {
 	if (agentName != null) {
-		var url = 'http://feedback.netdna.com/netdna/' + agentName.replace(' ', '-');
+		var url = 'https://feedback.netdna.com/netdna/' + agentName.replace(' ', '-');
 		$.fancybox(url, {
 			'padding': 0,
 			'margin':10,

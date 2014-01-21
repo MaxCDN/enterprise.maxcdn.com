@@ -1,4 +1,4 @@
 enterprise.maxcdn.com
 =====================
 
-All the code for MaxCDN Enterprise. If you'd like to edit anything, you must branch/fork from master and then submit a pull request. No code shall be directly commited to master. :)
+All code for the MaxCDN Enterprise website at enterprise.maxcdn.com. If there is anything needed to be edit, you must branch/fork from master and then submit a pull request. No code should be directly commited to master, instead, branches will be merged in. :-)

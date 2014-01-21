@@ -55,7 +55,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<h3 class="orange">Telephone</h3>
 			<dl class="dlist">
 				<dt>Toll Free</dt>
-				<dd><span class="str">+1 (877) MAXCDN-1</span><span class="str">+1 (877) 629-2361</span></dd>
+				<dd><span class="str">+1 (877) MAXCDN-1</span><span class="phone-number str">+1 (877) 629-2361</span></dd>
 				<dt>International</dt>
 				<dd>+1 (323) 313-1206</dd>
 				<dt>Fax</dt>
@@ -71,7 +71,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<div class="col col-3">
 			<div class="box">
 				<a href="#" class="btn" onclick="return startWidget('chat');">CHAT NOW</a>
-				<strong class="phone"><span class="replace-number">+1 (877) 629-2361</span></strong>
+				<strong class="phone"><span class="phone-number">+1 (877) 629-2361</span></strong>
 				<span class="str orange">Supercharge your site</span>
 				<ul class="socials">
 					<li><a href="https://twitter.com/maxcdn" target="_blank" class="ico">twitter</a></li>

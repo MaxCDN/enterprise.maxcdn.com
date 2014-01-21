@@ -83,6 +83,8 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="//cdn.optimizely.com/js/140761619.js"></script>
+	<script async src="//13708.tctm.co/t.js"></script>
+	
 </head>
 
 <body>

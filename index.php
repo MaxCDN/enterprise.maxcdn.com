@@ -295,7 +295,7 @@
             <i class="fa fa-comment"></i>
             <div class="chbtn-chat">Start a Live Chat</div>
         </a>
-		<p>or call us +1 (877) 629-2361</p>
+		<p>or call us <span class="phone-number">+1 (877) 629-2361</span></p>
     </div>
 </div><br/>
 	</article>

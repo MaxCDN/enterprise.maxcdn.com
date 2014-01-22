@@ -275,7 +275,6 @@ window.onload = function(){
 		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
 		se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 		var done = false;
-		var chatMsgCounter = 0;
 
 		se.onload = se.onreadystatechange = function() {
 			if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
@@ -292,18 +291,6 @@ window.onload = function(){
 				SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
 					seAgent = agent;
 				});
-
-				SnapABug.setCallback('Close', function (type, status) {
-					if (status === "online" && (type === "chat" || type === "proactive") && chatMsgCounter > 0) {
-						nicereplyPopup(snapengage_get_agent_name());
-						chatMsgCounter = 0;
-					}
-				});
-
-				SnapABug.setCallback('ChatMessageSent', function (msg) {
-					chatMsgCounter++;
-				});
-
 			}
 		};
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);

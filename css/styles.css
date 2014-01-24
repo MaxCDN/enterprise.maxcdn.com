@@ -1468,14 +1468,33 @@ footer .socials .ico-3 {background-position:-100px 0;}
 	aside#sidebar { display: none !important; }
 }
 
-.chat-now{
+.chat-now {
     position:fixed;
     bottom:0px;
     left:5px; 
     display:none;
-    width:460px;
-    height:323x;
+    width:468px;
+    height:331px;
 	z-index: 999;
+	background-image: url('../images/blinker.gif');
+}
+
+.chat-contact-info {
+	position: absolute;
+	bottom: 20px;
+	left: 109px;
+	margin-bottom: 0px;
+	font-family: 'Open Sans';
+	color: white;
+	font-size: 16px;
+}
+
+.fa-mobile {
+	font-size: 32px;
+	position: absolute;
+	left: 85px;
+	color: white;
+	bottom: 14px;
 }
 /* ==========================================================================
 Orange Slider

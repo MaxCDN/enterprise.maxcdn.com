@@ -31,7 +31,7 @@ if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
 						</ul>
 					</li>
 					<li id="menu-item-6260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children hasSubnav menu-item-6260">
-						<a href="http://www.maxcdn.com/solutions/">Features</a>
+						<a href="http://www.maxcdn.com/solutions/">Solutions</a>
 						<ul class="sub-menu">
 							<li id="menu-item-6264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6264"><a href="http://www.maxcdn.com/solutions/">Overview</a></li>
 							<li id="menu-item-6262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6262"><a href="http://www.maxcdn.com/solutions/cms/">CMS</a></li>

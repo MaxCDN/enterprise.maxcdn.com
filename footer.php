@@ -271,8 +271,12 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
 		se.src = 'http://commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 		var done = false;
+<<<<<<< HEAD
 		var chatMsgCounter = 0;
 		
+=======
+
+>>>>>>> 5759caf8929d1b480204b4b281e064bcc3f95625
 		se.onload = se.onreadystatechange = function() {
 			if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 
@@ -288,18 +292,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
 					seAgent = agent;
 				});
-
-				SnapABug.setCallback('Close', function (type, status) {
-					if (status === "online" && (type === "chat" || type === "proactive") && chatMsgCounter > 0) {
-						nicereplyPopup(snapengage_get_agent_name());
-						chatMsgCounter = 0;
-					}
-				});
-
-				SnapABug.setCallback('ChatMessageSent', function (msg) {
-					chatMsgCounter++;
-				});
-
 			}
 		};
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);

@@ -141,21 +141,6 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// nicereply popup after live chat
-function nicereplyPopup(agentName) {
-	if (agentName != null) {
-		var url = 'http://feedback.netdna.com/netdna/' + agentName.replace(' ', '-');
-		$.fancybox(url, {
-			'padding': 0,
-			'margin':10,
-			'width': 554,
-			'height': 680,
-			'type': 'iframe',
-			'wrapCSS': 'fancybox-nicereply'
-		});
-	}
-}
-
 // form validation
 function validateEmail(email) {
 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

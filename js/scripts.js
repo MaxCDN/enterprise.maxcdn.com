@@ -355,7 +355,6 @@ $(document).ready(function(){
 			return startWidget('chat');
 		});
 		$('#image-maps area').click(function(e) {
-			e.preventDefault();
 			$('.chat-now').hide();
 			$.cookie("chat_pop", true, {expires: 1, path: '/'});
 		});

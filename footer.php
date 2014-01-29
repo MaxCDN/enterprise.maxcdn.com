@@ -81,12 +81,14 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			</div>
 		</div>
 	</div><!-- /holder -->
-	<a href="#" class="chat-now chat-window">
+	<a href="#" class="chat-now chat-window" usemap="#image-maps">
 		<i class="fa fa-mobile"></i><p class="chat-contact-info">Feel free to call us: <span class="phone-number">+1 (877) 629-2361</span></p>
 	</a>
+	
 	<map id="image-maps" name="image-maps">
 		<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="#" />
 	</map>
+	
 </footer><!-- /footer -->
 <div class="hidden-popup">
 	<div class="popup" id="popup-contact">
@@ -258,12 +260,27 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	var urlSearch = window.location.search;
 		
 	if (urlSearch.length > 1) {
+	
+		if (urlSearch.match('utm_source=(.*)&utm_medium')) {
+			var utmSource = urlSearch.match('utm_source=(.*)&utm_medium')[1];
+		}
 			
-		var utmSource = urlSearch.match('utm_source=(.*)&utm_medium')[1];
-		var utmMedium = urlSearch.match('utm_medium=(.*)&utm_campaign')[1];
-		var utmCampaign = urlSearch.match('utm_campaign=(.*)&utm_content')[1];
-		var utmContent = urlSearch.match('utm_content=(.*)&utm_term')[1];
-		var utmTerm = urlSearch.match('utm_term=(.*)&')[1];
+		if (urlSearch.match('utm_medium=(.*)&utm_campaign')) {
+			var utmMedium = urlSearch.match('utm_medium=(.*)&utm_campaign')[1];
+		}
+		
+		if (urlSearch.match('utm_campaign=(.*)&utm_content')) {
+			var utmCampaign = urlSearch.match('utm_campaign=(.*)&utm_content')[1];
+		}
+		
+		if (urlSearch.match('utm_content=(.*)&utm_term')) {
+			var utmContent = urlSearch.match('utm_content=(.*)&utm_term')[1];
+		}
+		
+		if (urlSearch.match('utm_term=(.*)&')) {
+			var utmTerm = urlSearch.match('utm_term=(.*)&')[1];
+		}
+				
 	}
 	
 	var seAgent;

@@ -52,6 +52,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/form.css" media="all">
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="prefetch" href="https://enterprise.maxcdn.com/pricing/" />
+
 	<!--[if lt IE 9]>
 		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<script type="text/javascript" src="js/PIE.js"></script>

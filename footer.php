@@ -254,28 +254,34 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/scripts.js?q=<?=getMD5Hash('js/scripts.js')?>"></script>
 
 <script type="text/javascript">
+adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";
+adroll_pix_id = "DGK76G7V2VE7PKFLGTES5N";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
 
-	var urlSearch = window.location.search;
-		
-	if (urlSearch.length > 1) {
-			
-		var utmSource = urlSearch.match('utm_source=(.*)&utm_medium')[1];
-		var utmMedium = urlSearch.match('utm_medium=(.*)&utm_campaign')[1];
-		var utmCampaign = urlSearch.match('utm_campaign=(.*)&utm_content')[1];
-		var utmContent = urlSearch.match('utm_content=(.*)&utm_term')[1];
-		var utmTerm = urlSearch.match('utm_term=(.*)&')[1];
-	}
-	
+<script type="text/javascript">
 	var seAgent;
 	(function() {
 		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
-		se.src = 'http://commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
+		se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 		var done = false;
 		var chatMsgCounter = 0;
-		
+
 		se.onload = se.onreadystatechange = function() {
 			if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
-
+				done = true;
 				SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
 					seAgent = agent;
 					_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
@@ -311,24 +317,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		return SnapABug.startLink();
 	}
 	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
-</script>
-
-<script type="text/javascript">
-adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";
-adroll_pix_id = "DGK76G7V2VE7PKFLGTES5N";
-(function () {
-var oldonload = window.onload;
-window.onload = function(){
-   __adroll_loaded=true;
-   var scr = document.createElement("script");
-   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-   scr.setAttribute('async', 'true');
-   scr.type = "text/javascript";
-   scr.src = host + "/j/roundtrip.js";
-   ((document.getElementsByTagName('head') || [null])[0] ||
-    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-   if(oldonload){oldonload()}};
-}());
 </script>
 
 <script type="text/javascript">

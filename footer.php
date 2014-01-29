@@ -269,7 +269,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	var seAgent;
 	(function() {
 		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
-		se.src = 'http://commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
+		se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 		var done = false;
 		var chatMsgCounter = 0;
 		

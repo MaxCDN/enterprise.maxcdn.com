@@ -1496,6 +1496,17 @@ footer .socials .ico-3 {background-position:-100px 0;}
 	color: white;
 	bottom: 14px;
 }
+
+#image-maps area {
+	display: inherit;
+	position: fixed;
+	z-index: 999;
+	bottom: 290px;
+	height: 20px;
+	width: 20px;
+	left: 425px;
+}
+
 /* ==========================================================================
 Orange Slider
 ========================================================================== */

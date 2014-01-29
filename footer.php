@@ -81,12 +81,14 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			</div>
 		</div>
 	</div><!-- /holder -->
-	<a href="#" class="chat-now chat-window">
+	<a href="#" class="chat-now chat-window" usemap="#image-maps">
 		<i class="fa fa-mobile"></i><p class="chat-contact-info">Feel free to call us: <span class="phone-number">+1 (877) 629-2361</span></p>
 	</a>
+	
 	<map id="image-maps" name="image-maps">
 		<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="#" />
 	</map>
+	
 </footer><!-- /footer -->
 <div class="hidden-popup">
 	<div class="popup" id="popup-contact">

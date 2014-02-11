@@ -190,7 +190,7 @@ function checkRequiredFields(form) {
 		fields.each( function() {
 			//check input, textarea, and select
 			if ($(this).is("input") || $(this).is("textarea")) {
-				if ($(this).val() === "" || $(this).val() == null) {
+				if ($(this).val() === "" || $(this).val() == null || $(this).val() == $(this).prop('defaultValue')) {
 					counter++;
 					$(this).addClass('red-border');
 				}

@@ -104,7 +104,7 @@
 		</div>
 	</div>
 
-	<div class="small-width"><p id="lp-pp-holder"><a href="" id="lp-privacy-policy">Privacy Policy</a><p></div>
+	<div class="small-width"><p id="lp-pp-holder"><a href="http://www.maxcdn.com/legal/privacy/" id="lp-privacy-policy">Privacy Policy</a><p></div>
 
 </div>
 

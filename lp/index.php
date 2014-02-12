@@ -42,24 +42,34 @@
 						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
 						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
 						<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
+
+						<fieldset id="form-part-1">
+							<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input type="text" name="FirstName" value="FIRST NAME" class="required text"></div>
+							<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
+							<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
+							<div class="orange button form-field-button"><a href="#"id="next-form-section">START TRIAL</a></div>
+						</fieldset>
+						<fieldset id="form-part-2">
+							<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
+							<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="url" name="Website" value="WEBSITE" class="required text"></div>
+							<div class="event-form-field select-field">
+								<span class="orange-text float-right">* </span>
+								<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+									<option value="Bandwidth" selected="selected">BANDWIDTH</option>
+									<option value="Under 5TB">Under 5TB</option>
+									<option value="5TB - 10TB">5TB - 10TB</option>
+									<option value="11 - 100TB">11 - 100TB</option>
+									<option value="101TB - 1,000TB">101TB - 1,000TB</option>
+									<option value="1PB+">1PB+</option>
+								</select>
+							</div>
+							<div class="orange button form-field-button"><a href="#"id="previous-form-section">PREVIOUS</a></div>
+							<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
+						</fieldset>
 		
-						<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input type="text" name="FirstName" value="FIRST NAME" class="required text"></div>
-						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
-						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
-						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
-						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="url" name="Website" value="WEBSITE" class="required text"></div>
-						<div class="event-form-field select-field">
-							<span class="orange-text float-right">* </span>
-							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
-								<option value="Bandwidth" selected="selected">BANDWIDTH</option>
-								<option value="Under 5TB">Under 5TB</option>
-								<option value="5TB - 10TB">5TB - 10TB</option>
-								<option value="11 - 100TB">11 - 100TB</option>
-								<option value="101TB - 1,000TB">101TB - 1,000TB</option>
-								<option value="1PB+">1PB+</option>
-							</select>
-						</div>
-						<div class="event-form-submit"><div class="submit-button"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div></div>
+						
+							
+						
 						
 					</form>
 				</aside>

@@ -2365,7 +2365,7 @@ Enterprise LP
 	border: none;
 	padding: 8px 20px;
 	margin-top: 10px;
-	margin-left: 9px;
+	width: 200px;
 }
 
 .enterprise-lp-form .event-form-submit  {
@@ -2491,6 +2491,8 @@ Enterprise LP
 	margin-left: 4px;
 	border: 1px solid #666662;
 	background-color: white;
+	font-size: .8em;
+	color: #666662;
 }
 
 .event-form-field.select-field span.orange-text.float-right {
@@ -2512,4 +2514,28 @@ label.hidden-label {
 
 .data .content.small {
 	font-size: 13px;
+}
+
+#next-form-section, #previous-form-section {
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	color: white;
+	text-decoration: none;
+	width: 160px;
+	text-align: center;
+}
+
+#next-form-section {
+	padding-left: 32px;
+	padding-right: 24px;
+}
+
+#previous-form-section {
+	margin-left: 46px;
+}
+
+.enterprise-lp-form .select-field span.center {
+	padding-left: 14px;
 }

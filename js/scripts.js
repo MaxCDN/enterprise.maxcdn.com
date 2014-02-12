@@ -736,6 +736,74 @@ $(document).ready(function(){
 		});
 	});
 
+	// Two Part Form Script
+
+	var $fs1 = $('fieldset#form-part-1');
+	var $fs2 = $('fieldset#form-part-2');
+	var $prevButt = $('#previous-form-section');
+	var $nextButt = $('#next-form-section');
+	var $formTitle = $('.enterprise-lp-form .lp-section-title');
+	var $formInfo = $('.enterprise-lp-form .trial-information');
+	var trialCounter = 0;
+
+	$fs2.addClass('hide-me');
+
+	$nextButt.click(function(e) {
+		e.preventDefault();
+
+		trialCounter = 0;
+		var fields = $fs1.find('.required');
+
+		fields.each(function() {
+			if ($(this).is("input") || $(this).is("textarea")) {
+				if ($(this).val() === "" || $(this).val() == null || $(this).val() == $(this).prop('defaultValue')) {
+					trialCounter++;
+					$(this).addClass('red-border');
+				}
+
+				if ($(this).data('value') === $(this).val()) {
+					trialCounter++;
+					$(this).addClass('red-border');
+				}
+
+				if ($(this).attr('type') === "email") {
+					if (!validateEmail($(this).val())) {
+						trialCounter++;
+						$(this).addClass('red-border');
+					}
+				} else if ($(this).attr('type') === "url") {
+					if (!validateURL($(this).val())) {
+						trialCounter++;
+						$(this).addClass('red-border');
+					}
+				}
+
+				} else if ($(this).is("select")) {
+					if ($(this)[0].selectedIndex <= 0) {
+						trialCounter++;
+						$(this).addClass('red-border');
+						$(this).prev().addClass('red-border');
+					}
+				}
+			})
+
+		if (trialCounter == 0) {
+			$formTitle.text('Final Step');
+			$nextButt.text('Next');
+			$nextButt.css('padding-left', '63px');
+			$fs2.removeClass('hide-me');
+			$fs1.addClass('hide-me');
+		}
+
+	});
+
+	$prevButt.click(function(e) {
+		e.preventDefault();
+		$formTitle.text('Get a Free Trial');
+		$fs2.addClass('hide-me');
+		$fs1.removeClass('hide-me');
+	});
+
 	checkRequiredFields('form');
 	sliderEvents();
 

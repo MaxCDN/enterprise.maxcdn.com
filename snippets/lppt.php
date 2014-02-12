@@ -32,7 +32,7 @@
 		</tr>
 		<tr>
 			<th>Over 5 PB/Month</th>
-			<td><strong><a href="#popup-generalcontact" class="fancybox small-box">Contact Us</a></td>
+			<td><strong><a href="#popup-lpcontact" class="fancybox small-box">Contact Us</a></td>
 		</tr>
 	</tbody>
 </table>

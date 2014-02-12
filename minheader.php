@@ -87,12 +87,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	
 </head>
 
-<body>
-	
-	<!-- netdna merge notification -->
-	<div class="top-notification hidden">
-   		<i class="icon-exclamation-sign"></i> &nbsp;<strong>Welcome:</strong> Looks unfamiliar? NetDNA is now MaxCDN Enterprise. <a target="_blank" href="http://blog.maxcdn.com/netdna-maxcdn-enterprise/">Read more here <i class="icon-arrow-right"></i></a>
-	</div>
+<body class="grey-background">
 
 	<!-- Orange right slider -->
 	<div class="orange-slider">

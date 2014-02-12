@@ -225,6 +225,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 			<div class="cols">
 				<div class="trial-form generalcontact-form custom-form">
+					<label>First Name <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="FirstName" >
+					<label>Last Name <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="LastName" >
 					<label>Email Address <span class="orange-text">*</span></label>
 					<input class="text required" type="email" name="Email" >
 					<label>Phone Number (optional)</label>
@@ -248,6 +252,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	</div><!-- /popup -->
 </div>
 
+<script type="text/javascript" src="<?php echo $filePrepender; ?>js/lp.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.plugins.min.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.select.js"></script>

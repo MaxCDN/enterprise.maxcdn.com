@@ -26,7 +26,7 @@
 				<aside class="enterprise-lp-form" id="form-sidebar">
 					<h3 class="lp-section-title">Get a Free Trial</h3>
 					<p class="trial-information">If you use over 15TB a month you can get a free trial. Sign up below.</p>
-					<form class="initial-value-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+					<form class="initial-value-form ajax-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
 						<input type="hidden" name="lpId" value="-1" />
@@ -81,7 +81,7 @@
 		<div class="left column">			
 			<div class="data lp-pricing-table">
 				<h3 class="lp-section-title">Simple Flat Rate Pricing</h3>
-				<?php include('../snippets/pricing-table.php'); ?>
+				<?php include('../snippets/lppt.php'); ?>
 				<section class="content small">Starting at $800/month. Setup fees apply.</section>
 			</div>
 					

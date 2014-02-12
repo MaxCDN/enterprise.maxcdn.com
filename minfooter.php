@@ -2,9 +2,9 @@
 $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 ?>
 
-<div class="popup" id="popup-generalcontact">
-		<strong class="orange large-heading">Contact Us</strong>
-		<p>If you have any technical or pricing questions about MaxCDN Enterprise, we can answer them.<br/>If you leave your details below, we'll contact you back with more information.<br/>Otherwise, you can <a href="#" onclick="return startWidget('chat');">live chat</a> us or call us at <span class="phone-number">(877) 629-2361</span>.</p>
+<div class="popup" id="popup-lpcontact">
+		<strong class="orange large-heading">Using Over 5PB a Month?</strong>
+		<p>We'll give you lower pricing. If you leave your details below, we'll contact you back with more information. Otherwise, you can <a href="#" onclick="return startWidget('chat');">live chat</a> us or call us at <span class="phone-number">(877) 629-2361</span>.</p>
 
 		<form id="form-popup-contact-us-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 			<input type="hidden" name="lpId" value="-1" />
@@ -47,7 +47,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-submit">Submit</a>
+			<button type="submit" class="btn btn-submit">Get Lower Pricing</button>
 		</form>
 	</div><!-- /popup -->
 

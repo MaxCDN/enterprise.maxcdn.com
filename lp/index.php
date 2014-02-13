@@ -48,7 +48,7 @@
 						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
 						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
 						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
-						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="url" name="Website" value="WEBSITE" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="website" name="Website" value="WEBSITE" class="required text"></div>
 						<div class="event-form-field select-field">
 							<span class="orange-text float-right">* </span>
 							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">

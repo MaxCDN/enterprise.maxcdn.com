@@ -3,22 +3,22 @@
 
 <div class="enterprise-lp-content">
 	<div class="small-width">
-		<h2 class="enterprise-lp-headline">Why do CDN Companies Charge Different Prices for Different Countries?</h2>
+		<h2 class="enterprise-lp-headline">What do Amazon and Akamai have in common?</h2>
 	</div>
 	
 	<div class="lp-main-row row clearfix">
 		<div class="small-width">
 			<div class="left column">
-				<p class="lp-information">You shouldn't have to! This is why at MaxCDN we offer you one low rate. Just one price for the entire world.</p>
-				<p class="lp-information bottom-paragraph">Why MaxCDN?</p>
+				<p class="lp-information">They charge you different prices for different regions. We don't, we offer you <strong>one flat rate price for the entire world.</p>
+				<p class="lp-information bottom-paragraph">Why are companies making the switch to MaxCDN?</p>
 				<ul id="lp-intro-list">
-					<li>Strong performance due to strategically located data centers and locations that provide 1 hop access to over 90 countries.</li>
-					<li>High reliability due to a 100% SLA and lowest error rates in the industry.</li>
-					<li>Unmatched security such as two-step authentication, IP whitelisting, user management and more.</li>
-					<li>24/7 Support with your dedicated account rep and engineer access.</li>
-					<li>SSL options at less than half the price of our closest competitor.</li>
-					<li>An easy to use control panel that gives you the control to do anything you need to do without requesting support.</li>
-					<li>Simple pricing, one low flat rate and no charges for HTTP/HTTPS requests.</li>
+					<li><strong>High performance</strong> due to strategically located data centers and locations that provide 1 hop access to over 90 countries.</li>
+					<li><strong>Enterprise reliability</strong> due to a 100% SLA and lowest error rates in the industry.</li>
+					<li>Exclusive <strong>security features</strong> such as two-step authentication, IP whitelisting, user management and more.</li>
+					<li><strong>24/7 Support</strong> with your dedicated account rep and engineer access.</li>
+					<li><strong>SSL options</strong> that cost less than half the price of our closest competitor.</li>
+					<li>An <strong>easy to use control panel</strong> that gives you the control to do anything you need to do without requesting support.</li>
+					<li>Simple pricing, <strong>one low flat rate</strong> and no charges for HTTP/HTTPS requests.</li>
 				</ul>
 			</div>
 			
@@ -43,34 +43,24 @@
 						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
 						<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
 
-						<fieldset id="form-part-1">
-							<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input type="text" name="FirstName" value="FIRST NAME" class="required text"></div>
-							<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
-							<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
-							<div class="orange button form-field-button"><a href="#"id="next-form-section">START TRIAL</a></div>
-						</fieldset>
-						<fieldset id="form-part-2">
-							<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
-							<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="url" name="Website" value="WEBSITE" class="required text"></div>
-							<div class="event-form-field select-field">
-								<span class="orange-text float-right">* </span>
-								<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
-									<option value="Bandwidth" selected="selected">BANDWIDTH</option>
-									<option value="Under 5TB">Under 5TB</option>
-									<option value="5TB - 10TB">5TB - 10TB</option>
-									<option value="11 - 100TB">11 - 100TB</option>
-									<option value="101TB - 1,000TB">101TB - 1,000TB</option>
-									<option value="1PB+">1PB+</option>
-								</select>
-							</div>
-							<div class="orange button form-field-button"><a href="#"id="previous-form-section">PREVIOUS</a></div>
-							<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
-						</fieldset>
-		
 						
-							
-						
-						
+						<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input type="text" name="FirstName" value="FIRST NAME" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
+						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="url" name="Website" value="WEBSITE" class="required text"></div>
+						<div class="event-form-field select-field">
+							<span class="orange-text float-right">* </span>
+							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+								<option value="Bandwidth" selected="selected">BANDWIDTH</option>
+								<option value="Under 5TB">Under 5TB</option>
+								<option value="5TB - 10TB">5TB - 10TB</option>
+								<option value="11 - 100TB">11 - 100TB</option>
+								<option value="101TB - 1,000TB">101TB - 1,000TB</option>
+								<option value="1PB+">1PB+</option>
+							</select>
+						</div>
+						<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
 					</form>
 				</aside>
 			</div>
@@ -114,7 +104,7 @@
 		</div>
 	</div>
 
-	<div class="small-width"><p id="lp-pp-holder"><a href="" id="lp-privacy-policy">Privacy Policy</a><p></div>
+	<div class="small-width"><p id="lp-pp-holder"><a href="http://www.maxcdn.com/legal/privacy/" id="lp-privacy-policy">Privacy Policy</a><p></div>
 
 </div>
 

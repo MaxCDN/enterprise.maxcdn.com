@@ -745,6 +745,8 @@ $(document).ready(function(){
 	var $formTitle = $('.enterprise-lp-form .lp-section-title');
 	var $formInfo = $('.enterprise-lp-form .trial-information');
 	var trialCounter = 0;
+	var $formObj = $('.ajax-form');
+	var $formURL = $formObj.attr("action");
 
 	$fs2.addClass('hide-me');
 
@@ -788,11 +790,19 @@ $(document).ready(function(){
 			})
 
 		if (trialCounter == 0) {
-			$formTitle.text('Final Step');
-			$nextButt.text('Next');
-			$nextButt.css('padding-left', '63px');
-			$fs2.removeClass('hide-me');
-			$fs1.addClass('hide-me');
+
+			$.ajax({
+				type: "POST",
+				url: $formURL,
+				data: $formObj.serialize(),
+				success: function() {
+					$formTitle.text('Final Step');
+					$nextButt.text('Next');
+					$nextButt.css('padding-left', '63px');
+					$fs2.removeClass('hide-me');
+					$fs1.addClass('hide-me');
+				}
+			})
 		}
 
 	});

@@ -9,16 +9,16 @@
 	<div class="lp-main-row row clearfix">
 		<div class="small-width">
 			<div class="left column">
-				<p class="lp-information">... They charge you different prices for different regions. We don't, we offer you one flat rate price for the entire world.</p>
+				<p class="lp-information">They charge you different prices for different regions. We don't, we offer you <strong>one flat rate price for the entire world.</p>
 				<p class="lp-information bottom-paragraph">Why are companies making the switch to MaxCDN?</p>
 				<ul id="lp-intro-list">
-					<li>High performance due to strategically located data centers and locations that provide 1 hop access to over 90 countries.</li>
-					<li>Enterprise reliability due to a 100% SLA and lowest error rates in the industry.</li>
-					<li>Exclusive security features such as two-step authentication, IP whitelisting, user management and more.</li>
-					<li>24/7 Support with your dedicated account rep and engineer access.</li>
-					<li>SSL options that cost less than half the price of our closest competitor.</li>
-					<li>An easy to use control panel that gives you the control to do anything you need to do without requesting support.</li>
-					<li>Simple pricing, one low flat rate and no charges for HTTP/HTTPS requests.</li>
+					<li><strong>High performance</strong> due to strategically located data centers and locations that provide 1 hop access to over 90 countries.</li>
+					<li><strong>Enterprise reliability</strong> due to a 100% SLA and lowest error rates in the industry.</li>
+					<li>Exclusive <strong>security features</strong> such as two-step authentication, IP whitelisting, user management and more.</li>
+					<li><strong>24/7 Support</strong> with your dedicated account rep and engineer access.</li>
+					<li><strong>SSL options</strong> that cost less than half the price of our closest competitor.</li>
+					<li>An <strong>easy to use control panel</strong> that gives you the control to do anything you need to do without requesting support.</li>
+					<li>Simple pricing, <strong>one low flat rate</strong> and no charges for HTTP/HTTPS requests.</li>
 				</ul>
 			</div>
 			

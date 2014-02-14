@@ -2538,3 +2538,16 @@ label.hidden-label {
 .enterprise-lp-form .select-field span.center {
 	padding-left: 14px;
 }
+
+.trial-success-container p {
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.trial-success-container .ttl {
+	margin-bottom: 20px;
+}
+
+.trial-success-container .trial-success-disclaimer {
+	font-size: 16px;
+}

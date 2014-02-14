@@ -24,8 +24,8 @@
 			
 			<div class="right column">
 				<aside class="enterprise-lp-form" id="form-sidebar">
-					<h3 class="lp-section-title">Request a Free Trial</h3>
-					<p class="trial-information">If you use over 15TB a month you can get a free trial. Request your free trial below.</p>
+					<h3 class="lp-section-title">Get a Free Trial</h3>
+					<p class="trial-information">You can get an enterprise free trial, simply enter your details below to get started.</p>
 					<form class="initial-value-form ajax-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
@@ -60,7 +60,7 @@
 								<option value="1PB+">1PB+</option>
 							</select>
 						</div>
-						<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">REQUEST TRIAL</button></div>
+						<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
 					</form>
 				</aside>
 			</div>

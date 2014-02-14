@@ -2347,7 +2347,7 @@ Enterprise LP
 .enterprise-lp-form {
 	padding: 20px;
 	background-color: #eee;
-	width: 200px;
+	width: 240px;
 	margin: auto;
 }
 
@@ -2454,7 +2454,7 @@ Enterprise LP
 .enterprise-lp-form.stuck#form-sidebar {
 	position: fixed;
 	top: 100px;
-	margin-left: 30px;
+	margin-left: 10px;
 }
 
 .grey-background {

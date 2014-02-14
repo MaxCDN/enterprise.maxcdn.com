@@ -24,8 +24,8 @@
 			
 			<div class="right column">
 				<aside class="enterprise-lp-form" id="form-sidebar">
-					<h3 class="lp-section-title">Get a Free Trial</h3>
-					<p class="trial-information">If you use over 15TB a month you can get a free trial. Sign up below.</p>
+					<h3 class="lp-section-title">Request a Free Trial</h3>
+					<p class="trial-information">If you use over 15TB a month you can get a free trial. Request your free trial below.</p>
 					<form class="initial-value-form ajax-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
@@ -39,8 +39,8 @@
 						<input type="hidden" name="_mkt_trk" value="" />
 						<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNShortLandingPageFreeTrial_freetrial.html?cr={creative}&kw={keyword}" />
 						<input type="hidden" name="formid" value="119" />
-						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
-						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
+						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/trial-success/" />
+						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/trial-success/" />
 						<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 						
@@ -60,7 +60,7 @@
 								<option value="1PB+">1PB+</option>
 							</select>
 						</div>
-						<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
+						<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">REQUEST TRIAL</button></div>
 					</form>
 				</aside>
 			</div>

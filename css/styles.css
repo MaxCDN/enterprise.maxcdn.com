@@ -2540,7 +2540,7 @@ label.hidden-label {
 }
 
 .trial-success-container p {
-	font-size: 20px;
+	font-size: 19px;
 	line-height: 1.5;
 }
 
@@ -2549,5 +2549,5 @@ label.hidden-label {
 }
 
 .trial-success-container .trial-success-disclaimer {
-	font-size: 16px;
+	font-size: 15px;
 }

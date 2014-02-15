@@ -592,7 +592,7 @@ $(".initial-value-form input[type='phone']").each(function() {
     });
 });
 
-$(".initial-value-form input[type='url']").each(function() {
+$(".initial-value-form input[type='website']").each(function() {
     var default_value = this.value;
   $(this).focus(function(){
      if(this.value == default_value) {this.value = '';}

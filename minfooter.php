@@ -35,15 +35,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					<input class="text " type="text" name="Phone" >
 					<label>Your Website <span class="orange-text">*</span></label>
 					<input class="text required" type="text" name="Website" placeholder="http://your-company.com">
-					<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
-					<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
-						<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
-						<option value="Under 5TB">Under 5TB</option>
-						<option value="5TB - 10TB">5TB - 10TB</option>
-						<option value="11 - 100TB">11 - 100TB</option>
-						<option value="101TB - 1,000TB">101TB - 1,000TB</option>
-						<option value="1PB+">1PB+</option>
-					</select>
 					<div class="clearfix"></div>
 				</div>
 			</div>

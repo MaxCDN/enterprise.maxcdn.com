@@ -25,7 +25,7 @@
 			<div class="right column">
 				<aside class="enterprise-lp-form" id="form-sidebar">
 					<h3 class="lp-section-title">Get a Free Trial</h3>
-					<p class="trial-information">If you use over 15TB a month you can get a free trial. Sign up below.</p>
+					<p class="trial-information">You can get an enterprise free trial, simply enter your details below to get started.</p>
 					<form class="initial-value-form ajax-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
@@ -39,8 +39,8 @@
 						<input type="hidden" name="_mkt_trk" value="" />
 						<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNShortLandingPageFreeTrial_freetrial.html?cr={creative}&kw={keyword}" />
 						<input type="hidden" name="formid" value="119" />
-						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
-						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
+						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/trial-success/" />
+						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/trial-success/" />
 						<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 						
@@ -48,7 +48,7 @@
 						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
 						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
 						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
-						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="url" name="Website" value="WEBSITE" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="website" name="Website" value="WEBSITE" class="required text"></div>
 						<div class="event-form-field select-field">
 							<span class="orange-text float-right">* </span>
 							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">

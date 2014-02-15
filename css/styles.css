@@ -2347,7 +2347,7 @@ Enterprise LP
 .enterprise-lp-form {
 	padding: 20px;
 	background-color: #eee;
-	width: 200px;
+	width: 240px;
 	margin: auto;
 }
 
@@ -2454,7 +2454,7 @@ Enterprise LP
 .enterprise-lp-form.stuck#form-sidebar {
 	position: fixed;
 	top: 100px;
-	margin-left: 30px;
+	margin-left: 10px;
 }
 
 .grey-background {
@@ -2537,4 +2537,17 @@ label.hidden-label {
 
 .enterprise-lp-form .select-field span.center {
 	padding-left: 14px;
+}
+
+.trial-success-container p {
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+.trial-success-container .ttl {
+	margin-bottom: 20px;
+}
+
+.trial-success-container .trial-success-disclaimer {
+	font-size: 16px;
 }

@@ -252,7 +252,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	</div><!-- /popup -->
 </div>
 
-<script type="text/javascript" src="<?php echo $filePrepender; ?>js/lp.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.plugins.min.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.select.js"></script>

@@ -25,7 +25,7 @@
 			<div class="right column">
 				<aside class="enterprise-lp-form" id="form-sidebar">
 					<h3 class="lp-section-title">Get a Free Trial</h3>
-					<p class="trial-information">You can get an enterprise free trial, simply enter your details below to get started.</p>
+					<p class="trial-information">You can get an enterprise free trial, just enter your details to get started.</p>
 					<form class="initial-value-form ajax-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">

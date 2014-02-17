@@ -644,6 +644,90 @@ $('input[name="Website"]').blur(function() {
   $('.wsl').addClass('hide-me');
 });
 
+// Free Trial Form Validation //
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function checkLpTrialForm(form) {
+  //attack to all form submit buttons
+  $(form + ' input, ' + form + ' textarea ,' + form + ' select').click(function(e) {
+    if ($(this).hasClass('red-border')) $(this).removeClass('red-border');
+  }).change( function() {
+    if ($(this).hasClass('red-border')) $(this).removeClass('red-border');
+  });
+
+  $(form).submit(function(e) {
+    //keep track of fails
+    var counter = 0;
+
+    //required fields
+    var fields = $(this).find('.required');
+
+    //remove required border
+    fields.each(function() { $(this).removeClass('red-border'); });
+    $('.select-area',this).removeClass('red-border');
+
+    //check required fields
+    fields.each( function() {
+      //check input, textarea, and select
+      if ($(this).is("input") || $(this).is("textarea")) {
+        if ($(this).val() === "" || $(this).val() == null || $(this).val() == $(this).prop('defaultValue')) {
+          counter++;
+          $(this).addClass('red-border');
+        }
+
+        if ($(this).data('value') === $(this).val()) {
+          counter++;
+          $(this).addClass('red-border');
+        }
+
+        if ($(this).attr('name') === "Email") {
+          if (!validateEmail($(this).val())) {
+            counter++;
+            $(this).addClass('red-border');
+            $('p.email-instructions').removeClass('hide-me');
+          }
+        } 
+
+        } else if ($(this).is("select")) {
+          if ($(this)[0].selectedIndex <= 0) {
+            counter++;
+            $(this).addClass('red-border');
+            $(this).prev().addClass('red-border');
+          }
+        }
+    });
+
+    //don't submit the form :(
+    if (counter > 0) {
+      $('p.form-directions').removeClass('hide-me')
+      return false;
+    } else {
+      //fill out content__c field in form
+      $("input[name='content__c']", $(this)).val('TjMWJFGCrZsrgkTiumWainoraTaYandAd8bapL8Xdks');
+
+      // pass through needed utm details
+      if (typeof $.cookie("custom_utm_source") !== 'undefined') {
+        $("<input type='hidden' value='" + $.cookie("custom_utm_source") + "' />").attr("name", "utm_source__c").appendTo($(this));
+      }
+      if (typeof $.cookie("custom_utm_medium") !== 'undefined') {
+        $("<input type='hidden' value='" + $.cookie("custom_utm_medium") + "' />").attr("name", "utm_medium__c").appendTo($(this));
+      }
+      if (typeof $.cookie("custom_utm_term") !== 'undefined') {
+        $("<input type='hidden' value='" + $.cookie("custom_utm_term") + "' />").attr("name", "utm_term__c").appendTo($(this));
+      }
+      if (typeof $.cookie("custom_utm_campaign") !== 'undefined') {
+        $("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
+      }
+    }
+  });
+}
+
+
+checkLpTrialForm('form.lp-trial-form');
 
 
 

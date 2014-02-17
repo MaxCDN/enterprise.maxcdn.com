@@ -116,7 +116,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			</p>
 		</div>
 		<div class="slider-email hidden">
-			<form id="form-contact-orange-slider-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+			<form id="form-contact-orange-slider-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 				<input name="LeadSource" type="hidden" value="MaxCDN.com">
 				<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Side Bar Form">
 				<input type="hidden" name="lpId" value="-1" />

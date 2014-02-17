@@ -94,7 +94,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<div class="popup" id="popup-contact">
 		<strong class="orange large-heading">Ready for Your Test Drive?</strong>
 		<p>Please fill out the form below and we'll give you a call to set up your free seven day MaxCDN Enterprise trial. Try us out and see how fast we are for yourself.</p><p>Give us a support call at <span class="phone-number">(877) 629-2361</span> &mdash; you'll have access to priority support.<br/>We're sure that our service and performance will exceed your expectations.</p>
-		<form id="form-popup-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -154,7 +154,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<strong class="orange large-heading">Test MaxCDN against your<br/>current solution for free</strong>
 		<p>We will provide you with a third party test ran by Catchpoint; it will measure your current CDN<br/>versus MaxCDN Enterprise from different locations around the world. Once the test is completed, we'll provide a report which shows how they both performed. It can take up to 48</br>hours to send you the report.</p>
 
-		<form id="form-popup-speed-report-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-speed-report-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -206,7 +206,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<strong class="orange large-heading">Contact Us</strong>
 		<p>If you have any technical or pricing questions about MaxCDN Enterprise, we can answer them.<br/>If you leave your details below, we'll contact you back with more information.<br/>Otherwise, you can <a href="#" onclick="return startWidget('chat');">live chat</a> us or call us at <span class="phone-number">(877) 629-2361</span>.</p>
 
-		<form id="form-popup-contact-us-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-contact-us-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />

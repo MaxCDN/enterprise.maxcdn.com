@@ -2384,7 +2384,7 @@ Enterprise LP
 
 .enterprise-lp-form .event-form-field input {
 	padding: 1px;
-	width: 130px;
+	width: 128px;
 	margin-bottom: 5px;
 	color: #666662;
 	height: 30px;
@@ -2418,7 +2418,7 @@ Enterprise LP
 
 .enterprise-lp-form .select-field.event-form-field {
 	height: 34px;
-	width: 160px;
+	width: 161px;
 	overflow: hidden;
 	color: rgb(102, 102, 98);
 	margin: auto;

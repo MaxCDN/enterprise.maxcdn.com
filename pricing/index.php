@@ -32,7 +32,7 @@
 	<h2 class="orange large-heading textcenter">Do You Have Questions?</h2>
 
 	<div class="feedback-form custom-form">
-		<form id="form-pricing-questions" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-pricing-questions" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -147,7 +147,7 @@
 				</li>
 			</ul>
 			<div class="feedback-form custom-form">
-				<form id="form-pricing-questions" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+				<form id="form-pricing-questions" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 					<input type="hidden" name="lpId" value="-1" />
 					<input type="hidden" name="subId" value="127" />
 					<input type="hidden" name="kw" value="" />
@@ -207,7 +207,7 @@
 	<div class="cols">
 		<div class="col">
 			<div class="trial-form custom-form">
-				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 					<input type="hidden" name="lpId" value="-1" />
 					<input type="hidden" name="subId" value="127" />
 					<input type="hidden" name="kw" value="" />
@@ -301,7 +301,7 @@
 	<div class="popup" id="popup-specialpricing">
 		<strong class="orange large-heading">How Much Can You Save?</strong>
 		<p>Based on your usage, you qualify for MaxCDN Enterprise's lowest prices. Please submit your information below and we'll contact you with more information.</p>
-		<form id="form-popup-lower-pricing-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+		<form id="form-popup-lower-pricing-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />

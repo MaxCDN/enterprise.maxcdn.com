@@ -26,7 +26,8 @@
 				<aside class="enterprise-lp-form" id="form-sidebar">
 					<h3 class="lp-section-title">Get a Free Trial</h3>
 					<p class="trial-information">You can get an enterprise free trial, just enter your details to get started.</p>
-					<form class="initial-value-form ajax-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+					<p class="form-directions hide-me">Please fill out all required fields.</p>
+					<form class="initial-value-form ajax-form lp-trial-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
 						<input type="hidden" name="lpId" value="-1" />
@@ -46,7 +47,8 @@
 						
 						<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input type="text" name="FirstName" value="FIRST NAME" class="required text"></div>
 						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
-						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="email" name="Email" value="EMAIL" class="required text"></div>
+						<p class="email-instructions hide-me">Please include a properly formatted email address</p>
+						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="text" name="Email" value="EMAIL" class="required text"></div>
 						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
 						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="website" name="Website" value="WEBSITE" class="required text"></div>
 						<div class="event-form-field select-field">

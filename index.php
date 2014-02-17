@@ -246,7 +246,7 @@
 				</ul>				
 			</div>
 			<div class="column sixty last">
-				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="alignright">
+				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="alignright standard-form">
 					<input type="hidden" name="lpId" value="-1" />
 					<input type="hidden" name="subId" value="127" />
 					<input type="hidden" name="kw" value="" />

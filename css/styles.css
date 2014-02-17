@@ -2551,3 +2551,11 @@ label.hidden-label {
 .trial-success-container .trial-success-disclaimer {
 	font-size: 15px;
 }
+
+.enterprise-lp-form p.form-directions, .enterprise-lp-form p.email-instructions {
+	font-size: 12px;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 3px;
+	color: #ff7012;
+}

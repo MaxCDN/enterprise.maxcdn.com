@@ -372,7 +372,7 @@ var _mfq = _mfq || [];
 	})();
 </script>
 
-<?php if ($_SERVER['SCRIPT_NAME'] === '/success/index.php'): ?>
+<?php if ($_SERVER['SCRIPT_NAME'] === '/success/index.php' || $_SERVER['SCRIPT_NAME'] === '/trial-success/index.php'): ?>
 <!-- Google Code for NetDNA Lead Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */

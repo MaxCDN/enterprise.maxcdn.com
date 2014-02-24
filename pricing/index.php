@@ -134,7 +134,7 @@
 					<span class="value">Included</span>
 				</li>
 				<li>
-					<span class="name">Extended API Secrity</span>
+					<span class="name">Extended API Security</span>
 					<span class="value">Included</span>
 				</li>
 				<li>

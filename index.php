@@ -75,7 +75,7 @@
 		<div class="perfomance-info" id="performance">
 			<h2 class="orange large-heading">Performance</h2>
 			<p>Our servers feature Nginx &mdash; known for its high performance, stability, rich feature set, simple configuration, and low resource consumption &mdash; and 100% SSDs in North America, Europe and Asia, connected to the internet with multiple 10 Gigabit ports.</p>
-			<p>Our redundant upstream providers includes GTT and Zayo; our 600 peering partners cover 90 countries and include AT&amp;T, Level 3, Time-Warner Cable, Cox, Comcast, Vodaphone and Rogers, among many others. Our response time consistently come in at about 39ms according to Cedexis &mdash; but don't take our word for it. Use your own tools to test our speed. We know you'll be pleasantly surprised.</p>
+			<p>Our redundant upstream providers includes GTT and Zayo; our 600 peering partners cover 90 countries and include AT&amp;T, Level 3, Time-Warner Cable, Cox, Comcast, Vodafone and Rogers, among many others. Our response time consistently come in at about 39ms according to Cedexis &mdash; but don't take our word for it. Use your own tools to test our speed. We know you'll be pleasantly surprised.</p>
 		</div><!-- /perfomance-info -->
 		<div class="tab-area" id="tabs-1">
 			<ul class="tabset">

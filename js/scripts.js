@@ -753,7 +753,6 @@ $(document).ready(function(){
 			}
 		});
 	}); 
-	firstVisitCookie();
 	checkRequiredFields('form.standard-form');
 	sliderEvents();
 

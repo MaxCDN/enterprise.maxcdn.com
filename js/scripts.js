@@ -341,8 +341,10 @@ function googleUTMSources() {
 			var first_date =  now.getDate();
 			var first_month = now.getMonth();
 			var first_year = now.getFullYear();
+			var first_hour = now.getHours();
+			var first_minutes = now.getMinutes();
 			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-			var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year;
+			var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year + ' ' + first_hour + ':' + first_minutes;
 
 			$.cookie("first_visit", visit_date, {expires: 100000, path: '/'});
 	}

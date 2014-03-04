@@ -241,8 +241,30 @@ function checkRequiredFields(form) {
 			if (typeof $.cookie("custom_utm_campaign") !== 'undefined') {
 				$("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
 			}
+			if (typeof $.cookie("first_visit") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "PPC_Entrance_Date__c").appendTo($(this));
+			}
 		}
 	});
+}
+
+// Set First Visit Cookie
+
+function firstVisitCookie() {
+
+	var now = new Date();
+	var first_date =  now.getDate();
+	var first_month = now.getMonth();
+	var first_year = now.getFullYear();
+	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year;
+	alert('script working');
+
+	if (typeof $.cookie("first_visit") === 'undefined') {
+		
+		// Set Cookie to Determine First Site Visit
+		$.cookie("first_visit", visit_date, {expires: 100000, path: '/'});
+	}
 }
 
 //for the orange thingy on the right side...
@@ -735,7 +757,7 @@ $(document).ready(function(){
 			}
 		});
 	}); 
-
+	firstVisitCookie();
 	checkRequiredFields('form.standard-form');
 	sliderEvents();
 

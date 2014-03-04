@@ -722,11 +722,14 @@ function checkLpTrialForm(form) {
       if (typeof $.cookie("custom_utm_campaign") !== 'undefined') {
         $("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
       }
+      if (typeof $.cookie("first_visit") !== 'undefined') {
+        $("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "PPC_Entrance_Date__c").appendTo($(this));
+      }
     }
   });
 }
 
-
+firstVisitCookie();
 checkLpTrialForm('form.lp-trial-form');
 
 

@@ -248,24 +248,6 @@ function checkRequiredFields(form) {
 	});
 }
 
-// Set First Visit Cookie
-
-function firstVisitCookie() {
-
-	var now = new Date();
-	var first_date =  now.getDate();
-	var first_month = now.getMonth();
-	var first_year = now.getFullYear();
-	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-	var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year;
-	alert('script working');
-
-	if (typeof $.cookie("first_visit") === 'undefined') {
-		
-		// Set Cookie to Determine First Site Visit
-		$.cookie("first_visit", visit_date, {expires: 100000, path: '/'});
-	}
-}
 
 //for the orange thingy on the right side...
 function sliderEvents() {
@@ -335,10 +317,12 @@ function sliderEvents() {
 
 // store utm values in cookies if the exist
 function googleUTMSources() {
+
 	var utm_source = (typeof $.cookie("utm_source") === 'undefined');
 	var utm_medium = (typeof $.cookie("utm_medium") === 'undefined');
 	var utm_term = (typeof $.cookie("utm_term") === 'undefined');
 	var utm_campaign = (typeof $.cookie("utm_campaign") === 'undefined');
+	var first_visit = (typeof $.cookie("first_visit") === 'undefined');
 
 	if (utm_source && typeof $.QueryString["utm_source"] !== 'undefined') {
 			$.cookie("custom_utm_source", $.QueryString["utm_source"], {expires: 1, path: '/'});
@@ -351,6 +335,16 @@ function googleUTMSources() {
 	}
 	if (utm_campaign && typeof $.QueryString["utm_campaign"] !== 'undefined') {
 			$.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 1, path: '/'});
+	}
+	if (first_visit && typeof $.cookie("custom_utm_source") !== 'undefined') {
+			var now = new Date();
+			var first_date =  now.getDate();
+			var first_month = now.getMonth();
+			var first_year = now.getFullYear();
+			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year;
+
+			$.cookie("first_visit", visit_date, {expires: 100000, path: '/'});
 	}
 }
 

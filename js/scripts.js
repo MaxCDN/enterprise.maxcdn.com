@@ -241,9 +241,16 @@ function checkRequiredFields(form) {
 			if (typeof $.cookie("custom_utm_campaign") !== 'undefined') {
 				$("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
 			}
+			if (typeof $.cookie("custom_utm_content") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("custom_utm_content") + "' />").attr("name", "utm_content__c").appendTo($(this));
+			}
+			if (typeof $.cookie("first_visit") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "PPC_Entrance_Date__c").appendTo($(this));
+			}
 		}
 	});
 }
+
 
 //for the orange thingy on the right side...
 function sliderEvents() {
@@ -313,10 +320,14 @@ function sliderEvents() {
 
 // store utm values in cookies if the exist
 function googleUTMSources() {
+
 	var utm_source = (typeof $.cookie("utm_source") === 'undefined');
 	var utm_medium = (typeof $.cookie("utm_medium") === 'undefined');
 	var utm_term = (typeof $.cookie("utm_term") === 'undefined');
 	var utm_campaign = (typeof $.cookie("utm_campaign") === 'undefined');
+	var utm_content = (typeof $.cookie("utm_content") === 'undefined');
+
+	var first_visit = (typeof $.cookie("first_visit") === 'undefined');
 
 	if (utm_source && typeof $.QueryString["utm_source"] !== 'undefined') {
 			$.cookie("custom_utm_source", $.QueryString["utm_source"], {expires: 1, path: '/'});
@@ -329,6 +340,21 @@ function googleUTMSources() {
 	}
 	if (utm_campaign && typeof $.QueryString["utm_campaign"] !== 'undefined') {
 			$.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 1, path: '/'});
+	}
+	if (utm_content && typeof $.QueryString["utm_content"] !== 'undefined') {
+			$.cookie("custom_utm_content", $.QueryString["utm_content"], {expires: 1, path: '/'});
+	}
+	if (first_visit && typeof $.cookie("custom_utm_source") !== 'undefined') {
+			var now = new Date();
+			var first_date =  now.getDate();
+			var first_month = now.getMonth();
+			var first_year = now.getFullYear();
+			var first_hour = now.getHours();
+			var first_minutes = now.getMinutes();
+			var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year + ' ' + first_hour + ':' + first_minutes;
+
+			$.cookie("first_visit", visit_date, {expires: 100000, path: '/'});
 	}
 }
 
@@ -735,7 +761,6 @@ $(document).ready(function(){
 			}
 		});
 	}); 
-
 	checkRequiredFields('form.standard-form');
 	sliderEvents();
 

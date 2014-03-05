@@ -241,6 +241,9 @@ function checkRequiredFields(form) {
 			if (typeof $.cookie("custom_utm_campaign") !== 'undefined') {
 				$("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
 			}
+			if (typeof $.cookie("custom_utm_content") !== 'undefined') {
+				$("<input type='hidden' value='" + $.cookie("custom_utm_content") + "' />").attr("name", "utm_content__c").appendTo($(this));
+			}
 			if (typeof $.cookie("first_visit") !== 'undefined') {
 				$("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "PPC_Entrance_Date__c").appendTo($(this));
 			}
@@ -322,6 +325,8 @@ function googleUTMSources() {
 	var utm_medium = (typeof $.cookie("utm_medium") === 'undefined');
 	var utm_term = (typeof $.cookie("utm_term") === 'undefined');
 	var utm_campaign = (typeof $.cookie("utm_campaign") === 'undefined');
+	var utm_content = (typeof $.cookie("utm_content") === 'undefined');
+
 	var first_visit = (typeof $.cookie("first_visit") === 'undefined');
 
 	if (utm_source && typeof $.QueryString["utm_source"] !== 'undefined') {
@@ -335,6 +340,9 @@ function googleUTMSources() {
 	}
 	if (utm_campaign && typeof $.QueryString["utm_campaign"] !== 'undefined') {
 			$.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 1, path: '/'});
+	}
+	if (utm_content && typeof $.QueryString["utm_content"] !== 'undefined') {
+			$.cookie("custom_utm_content", $.QueryString["utm_content"], {expires: 1, path: '/'});
 	}
 	if (first_visit && typeof $.cookie("custom_utm_source") !== 'undefined') {
 			var now = new Date();

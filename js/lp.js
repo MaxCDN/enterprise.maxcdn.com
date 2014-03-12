@@ -1,3 +1,61 @@
+// jQuery cookie plugin
+// https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js
+(function(factory){if(typeof define==="function"&&define.amd)define(["jquery"],factory);else factory(jQuery)})(function($){var pluses=/\+/g;function encode(s){return config.raw?s:encodeURIComponent(s)}function decode(s){return config.raw?s:decodeURIComponent(s)}function stringifyCookieValue(value){return encode(config.json?JSON.stringify(value):String(value))}function parseCookieValue(s){if(s.indexOf('"')===0)s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\");try{s=decodeURIComponent(s.replace(pluses, " "));return config.json?JSON.parse(s):s}catch(e){}}function read(s,converter){var value=config.raw?s:parseCookieValue(s);return $.isFunction(converter)?converter(value):value}var config=$.cookie=function(key,value,options){if(value!==undefined&&!$.isFunction(value)){options=$.extend({},config.defaults,options);if(typeof options.expires==="number"){var days=options.expires,t=options.expires=new Date;t.setDate(t.getDate()+days)}return document.cookie=[encode(key),"=",stringifyCookieValue(value),options.expires? "; expires="+options.expires.toUTCString():"",options.path?"; path="+options.path:"",options.domain?"; domain="+options.domain:"",options.secure?"; secure":""].join("")}var result=key?undefined:{};var cookies=document.cookie?document.cookie.split("; "):[];for(var i=0,l=cookies.length;i<l;i++){var parts=cookies[i].split("=");var name=decode(parts.shift());var cookie=parts.join("=");if(key&&key===name){result=read(cookie,value);break}if(!key&&(cookie=read(cookie))!==undefined)result[name]=cookie}return result}; config.defaults={};$.removeCookie=function(key,options){if($.cookie(key)===undefined)return false;$.cookie(key,"",$.extend({},options,{expires:-1}));return!$.cookie(key)}});
+$.cookie.raw = true;
+
+// query string array
+// http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+(function($) {
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i) {
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace('+', " ").replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
+
+function getUTMSources() {
+      var utm_source = (typeof $.cookie("utm_source") === 'undefined');
+      var utm_medium = (typeof $.cookie("utm_medium") === 'undefined');
+      var utm_term = (typeof $.cookie("utm_term") === 'undefined');
+      var utm_campaign = (typeof $.cookie("utm_campaign") === 'undefined');
+      var utm_content = (typeof $.cookie("utm_content") === 'undefined');
+
+      var first_visit = (typeof $.cookie("first_visit") === 'undefined');
+
+      if (utm_source && typeof $.QueryString["utm_source"] !== 'undefined') {
+          $.cookie("custom_utm_source", $.QueryString["utm_source"], {expires: 1, path: '/'});
+      }
+      if (utm_medium && typeof $.QueryString["utm_medium"] !== 'undefined') {
+          $.cookie("custom_utm_medium", $.QueryString["utm_medium"], {expires: 1, path: '/'});
+      }
+      if (utm_term && typeof $.QueryString["utm_term"] !== 'undefined') {
+          $.cookie("custom_utm_term", $.QueryString["utm_term"], {expires: 1, path: '/'});
+      }
+      if (utm_campaign && typeof $.QueryString["utm_campaign"] !== 'undefined') {
+          $.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 1, path: '/'});
+      }
+      if (utm_content && typeof $.QueryString["utm_content"] !== 'undefined') {
+          $.cookie("custom_utm_content", $.QueryString["utm_content"], {expires: 1, path: '/'});
+      }
+      if (first_visit && typeof $.cookie("custom_utm_source") !== 'undefined') {
+          var now = new Date();
+          var first_date =  now.getDate();
+          var first_month = now.getMonth();
+          var first_year = now.getFullYear();
+          var first_hour = now.getHours();
+          var first_minutes = now.getMinutes();
+          var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          var visit_date = first_date + ' ' + months[first_month] + ' ' + first_year + ' ' + first_hour + ':' + first_minutes;
+
+          $.cookie("first_visit", visit_date, {expires: 100000, path: '/'});
+      }
+}
+
 (function() {
   var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __slice = [].slice;
@@ -728,8 +786,7 @@ function checkLpTrialForm(form) {
     }
   });
 }
-
-firstVisitCookie();
+getUTMSources();
 checkLpTrialForm('form.lp-trial-form');
 
 

@@ -29,7 +29,7 @@
 					<p class="form-directions hide-me">Please fill out all required fields.</p>
 					<form class="initial-value-form ajax-form lp-trial-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
-						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
+						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Short LP Trial Form">
 						<input type="hidden" name="lpId" value="-1" />
 						<input type="hidden" name="subId" value="127" />
 						<input type="hidden" name="kw" value="" />

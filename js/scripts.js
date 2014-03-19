@@ -372,12 +372,23 @@ $(document).ready(function(){
 		}
 	}
 
+	// onclick chat cookie set
+
+	$('[onclick="return startWidget(\'chat\');"]').click(function() {
+		$.cookie("livechat_autopopup",true,{expires:1,path:'/'});
+	})
+
 	// automatic chat bubble
 	if(typeof $.cookie("livechat_autopopup")==='undefined' && window.location.href.indexOf("pricing") == -1){
 		var $chatNow=$('.chat-now-popup');
-		$chatNow.hide().delay(30000).fadeIn(600, function() {
-    		_kmq.push(['record', 'Proactive Chat Displayed', {'Version_Number':'01'}]);
-    		});
+		$chatNow.hide().delay(30000).queue(function() {
+    		if(typeof $.cookie("livechat_autopopup")==='undefined') {
+    			$('.chat-now-popup').fadeIn(600, function() {
+    				_kmq.push(['record', 'Proactive Chat Displayed', {'Version_Number':'01'}]);
+    			});
+    		}
+    		$(this).dequeue();
+    		});		
 		$chatNow.click(function(){
 			$chatNow.hide();
 			_kmq.push(['trackClick', '#new-chat-popup', 'Proactive Chat Initiated']);

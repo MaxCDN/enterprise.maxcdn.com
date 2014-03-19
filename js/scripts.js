@@ -375,7 +375,7 @@ $(document).ready(function(){
 	// automatic chat bubble
 	if(typeof $.cookie("livechat_autopopup")==='undefined' && window.location.href.indexOf("pricing") == -1){
 		var $chatNow=$('.chat-now-popup');
-		$chatNow.hide().delay(1000).fadeIn(600, function() {
+		$chatNow.hide().delay(30000).fadeIn(600, function() {
     		_kmq.push(['record', 'Proactive Chat Displayed', {'Version_Number':'01'}]);
     		});
 		$chatNow.click(function(){

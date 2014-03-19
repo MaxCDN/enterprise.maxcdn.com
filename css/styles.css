@@ -1468,7 +1468,7 @@ footer .socials .ico-3 {background-position:-100px 0;}
 	aside#sidebar { display: none !important; }
 }
 
-.chat-now {
+.chat-now-popup {
     position:fixed;
     bottom:0px;
     left:5px; 
@@ -1476,17 +1476,13 @@ footer .socials .ico-3 {background-position:-100px 0;}
     width:468px;
     height:331px;
 	z-index: 999;
-	background-image: url('../images/blinker.gif');
+	color: white;
+	cursor: pointer;
 }
 
-.chat-contact-info {
-	position: absolute;
-	bottom: 20px;
-	left: 109px;
-	margin-bottom: 0px;
-	font-family: 'Open Sans';
-	color: white;
-	font-size: 16px;
+.chat-now-popup:hover {
+	top: inherit;
+	text-decoration: none;
 }
 
 .fa-mobile {
@@ -1497,6 +1493,29 @@ footer .socials .ico-3 {background-position:-100px 0;}
 	bottom: 14px;
 }
 
+#SnapABug_Button {
+	display: none;
+}
+
+.chat-now-popup:active {
+	top: inherit !important;
+}
+
+.chat-popup-icon {
+	position: absolute;
+	bottom: 14px;
+	left: 90px;
+	font-size: 24px;
+}
+
+.chat-popup-text {
+	position: absolute;
+	left: 125px;
+	bottom: 17px;
+	margin-bottom: 0px;
+	font-size: 16px;
+}
+
 #image-maps area {
 	display: inherit;
 	position: fixed;
@@ -1505,7 +1524,38 @@ footer .socials .ico-3 {background-position:-100px 0;}
 	height: 20px;
 	width: 20px;
 	left: 425px;
-	margin-left: 0px;
+}
+
+.chat-now-popup#new-chat-popup {
+	background-image: url('../images/proactive-chat.gif');
+	background-repeat: no-repeat;
+	width: 450px;
+	height: 278px;
+
+}
+
+#image-maps area#new-area {
+	left: 400px;
+	bottom: 244px;
+}
+
+.chat-now-popup#new-chat-popup .chat-popup-text {
+	left: 68px;
+	bottom: 42px;
+	margin-bottom: 0px;
+	font-size: 16px;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: 300;
+}
+
+.chat-now-popup#new-chat-popup .chat-popup-text:before {
+	content: "\f095";
+	font-family: 'FontAwesome';
+	margin-right: 15px;
+	font-size: 24px;
+	line-height: 1;
+	vertical-align: middle;
 }
 
 /* ==========================================================================

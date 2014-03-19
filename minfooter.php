@@ -2,6 +2,14 @@
 $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 ?>
 
+<div href="#" class="chat-now-popup chat-window" id="new-chat-popup">
+		<p class="chat-popup-text">Feel free to call us: <span class="phone-number">+1 (877) 629-2361</span></p>
+	</div>
+	<map id="image-maps" name="image-maps">
+		<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="#" id="new-area"/>
+	</map>
+</div>
+
 <div class="popup" id="popup-lpcontact">
 		<strong class="orange large-heading">Using Over 5PB a Month?</strong>
 		<p>We'll give you lower pricing. If you leave your details below, we'll contact you back with more information. Otherwise, you can <a href="#" onclick="return startWidget('chat');">live chat</a> us or call us at <span class="phone-number">(877) 629-2361</span>.</p>
@@ -52,78 +60,80 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 <script type="text/javascript">
 
-	var urlSearch = window.location.search;
-		
-	if (urlSearch.length > 1) {
-	
-		if (urlSearch.match('utm_source=(.*)&utm_medium')) {
-			var utmSource = urlSearch.match('utm_source=(.*)&utm_medium')[1];
-		}
-			
-		if (urlSearch.match('utm_medium=(.*)&utm_campaign')) {
-			var utmMedium = urlSearch.match('utm_medium=(.*)&utm_campaign')[1];
-		}
-		
-		if (urlSearch.match('utm_campaign=(.*)&utm_content')) {
-			var utmCampaign = urlSearch.match('utm_campaign=(.*)&utm_content')[1];
-		}
-		
-		if (urlSearch.match('utm_content=(.*)&utm_term')) {
-			var utmContent = urlSearch.match('utm_content=(.*)&utm_term')[1];
-		}
-		
-		if (urlSearch.match('utm_term=(.*)&')) {
-			var utmTerm = urlSearch.match('utm_term=(.*)&')[1];
-		}
+			var seAgent;
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
+				var done = false;
+				var chatMsgCounter = 0;
 				
-	}
-	
-	var seAgent;
-	(function() {
-		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
-		se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
-		var done = false;
-		var chatMsgCounter = 0;
+				se.onload = se.onreadystatechange = function() {
+					if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 		
-		se.onload = se.onreadystatechange = function() {
-			if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
-
-				SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
-					seAgent = agent;
-					_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
-				});
-
-				SnapABug.setCallback('StartChat', function(email, msg, type) {
-					_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
-				});
-
-				SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
-					seAgent = agent;
-				});
-
-				SnapABug.setCallback('Close', function (type, status) {
-					if (status === "online" && (type === "chat" || type === "proactive") && chatMsgCounter > 0) {
-						nicereplyPopup(snapengage_get_agent_name());
-						chatMsgCounter = 0;
+						SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
+							seAgent = agent;
+							_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
+						});
+		
+						SnapABug.setCallback('StartChat', function(email, msg, type) {
+							_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
+						});
+		
+						SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
+							seAgent = agent;
+						});
+		
+						SnapABug.setCallback('Close', function (type, status) {
+							if (status === "online" && (type === "chat" || type === "proactive") && chatMsgCounter > 0) {
+								nicereplyPopup(snapengage_get_agent_name());
+								chatMsgCounter = 0;
+							}
+						});
+		
+						SnapABug.setCallback('ChatMessageSent', function (msg) {
+							chatMsgCounter++;
+						});
+		
 					}
-				});
+				};
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
 
-				SnapABug.setCallback('ChatMessageSent', function (msg) {
-					chatMsgCounter++;
-				});
-
+			function startWidget(chatType) {
+				try{
+				__adroll.record_user({"adroll_segments": "adrollchat"})    
+				} catch(err) {}
+				return SnapABug.startLink();
 			}
-		};
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
-	})();
-	function startWidget(chatType) {
-		try{
-		__adroll.record_user({"adroll_segments": "adrollchat"})    
-		} catch(err) {}
-		return SnapABug.startLink();
-	}
-	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
-</script>
+			function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
+
+			googleUTMSources();
+
+			if (typeof $.cookie('custom_utm_source') !== "undefined") {
+				var lc_utm_source = $.cookie('custom_utm_source');
+			}
+
+			if (typeof $.cookie('custom_utm_campaign') !== "undefined") {
+				var lc_utm_campaign = $.cookie('custom_utm_campaign');
+			}
+
+			if (typeof $.cookie('custom_utm_term') !== "undefined") {
+				var lc_utm_term = $.cookie('custom_utm_term');
+			}
+
+			if (typeof $.cookie('custom_utm_content') !== "undefined") {
+				var lc_utm_content = $.cookie('custom_utm_content');
+			}
+
+			if (typeof $.cookie('custom_utm_medium') !== "undefined") {
+				var lc_utm_medium = $.cookie('custom_utm_medium');
+			}
+
+			if (typeof $.cookie('first_visit') !== "undefined") {
+				var lc_first_visit = $.cookie('first_visit');
+			}
+			
+		</script>
 
 <script type="text/javascript">
 adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";

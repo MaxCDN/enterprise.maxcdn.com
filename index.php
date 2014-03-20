@@ -264,6 +264,10 @@
 					<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 					<div class="trial-form custom-form">
+						<label>First Name <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="FirstName" >
+						<label>Last Name <span class="orange-text">*</span></label>
+						<input class="text required" type="textl" name="LastName" >
 						<label>Email Address <span class="orange-text">*</span></label>
 						<input class="text required" type="email" name="Email" >
 						<label>Phone Number (optional)</label>

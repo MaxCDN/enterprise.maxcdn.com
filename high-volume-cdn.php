@@ -633,7 +633,7 @@ window.onload = function(){
 		try{
 		__adroll.record_user({"adroll_segments": "adrollchat"})    
 		} catch(err) {}
-		return SnapABug.startLink();
+		return SnapEngage.openProactiveChat(true,true,'Hi, how can I help you?');
 	}
 	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 </script>

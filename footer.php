@@ -291,17 +291,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 							seAgent = agent;
 						});
 		
-						SnapABug.setCallback('Close', function (type, status) {
-							if (status === "online" && (type === "chat" || type === "proactive") && chatMsgCounter > 0) {
-								nicereplyPopup(snapengage_get_agent_name());
-								chatMsgCounter = 0;
-							}
-						});
-		
-						SnapABug.setCallback('ChatMessageSent', function (msg) {
-							chatMsgCounter++;
-						});
-		
 					}
 				};
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);

@@ -604,6 +604,14 @@ window.onload = function(){
 		se.onload = se.onreadystatechange = function() {
 			if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 				done = true;
+
+				SnapABug.setCallback('ChatMessageSent', function () {
+					if(typeof $.cookie('first_message_sent') === "undefined") {
+						$.cookie('first_message_sent', true, {expires: 1, path: '/'});
+						_kmq.push(['record', 'Initial Chat Message Sent']);
+					}
+				});
+				
 				SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
 					seAgent = agent;
 					_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);

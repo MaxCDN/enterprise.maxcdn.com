@@ -88,18 +88,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		
 						SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
 							seAgent = agent;
-						});
-		
-						SnapABug.setCallback('Close', function (type, status) {
-							if (status === "online" && (type === "chat" || type === "proactive") && chatMsgCounter > 0) {
-								nicereplyPopup(snapengage_get_agent_name());
-								chatMsgCounter = 0;
-							}
-						});
-		
-						SnapABug.setCallback('ChatMessageSent', function (msg) {
-							chatMsgCounter++;
-						});
+						});  
 		
 					}
 				};

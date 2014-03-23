@@ -362,6 +362,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 						<input name="URL_of_Lead_Source__c" type='hidden' value="https://enterprise.maxcdn.com/" />
 
 						<div class="trial-form custom-form">
+							<label>First Name</label>
+							<input class="text required" type="text" name="FirstName" >
+							<label>Last Name</label>
+							<input class="text required" type="text" name="LastName" >
 							<label>Email Address</label>
 							<input class="text required" type="email" name="Email" >
 							<label>Phone Number (optional)</label>
@@ -633,7 +637,6 @@ window.onload = function(){
 		try{
 		__adroll.record_user({"adroll_segments": "adrollchat"})    
 		} catch(err) {}
-		return SnapEngage.openProactiveChat(true,true,'Hi, how can I help you?');
 	}
 	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 </script>

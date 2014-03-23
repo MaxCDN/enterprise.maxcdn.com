@@ -99,7 +99,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				try{
 				__adroll.record_user({"adroll_segments": "adrollchat"})    
 				} catch(err) {}
-				return SnapEngage.openProactiveChat(true,true,'Hi, how can I help you?');
 			}
 			function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 
@@ -149,14 +148,7 @@ window.onload = function(){
 }());
 </script>
 
-<script type="text/javascript">
-var _mfq = _mfq || [];
-(function() {
-	var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
-	mf.src = "//cdn.mouseflow.com/projects/0871b593-6288-4f18-a9b1-88d1d6802d1e.js";
-	document.getElementsByTagName("head")[0].appendChild(mf);
-})();
-</script>
+
 
 <!-- PPC code -->
 <script type="text/javascript">

@@ -27,7 +27,7 @@
 					<h3 class="lp-section-title">Get a Free Trial</h3>
 					<p class="trial-information">You can get an enterprise free trial, just enter your details to get started.</p>
 					<p class="form-directions hide-me">Please fill out all required fields.</p>
-					<form class="initial-value-form ajax-form lp-trial-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+					<form class="initial-value-form ajax-form lp-trial-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" id="lp-trial-form">
 						<input name="LeadSource" type="hidden" value="MaxCDN.com">
 						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Short LP Trial Form">
 						<input type="hidden" name="lpId" value="-1" />

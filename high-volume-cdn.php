@@ -635,8 +635,10 @@ window.onload = function(){
 	})();
 	function startWidget(chatType) {
 		try{
-		__adroll.record_user({"adroll_segments": "adrollchat"})    
-		} catch(err) {}
+  				__adroll.record_user({"adroll_segments": "adrollchat"})    
+  				} catch(err) {}
+ -				return SnapABug.startLink();
+
 	}
 	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 </script>

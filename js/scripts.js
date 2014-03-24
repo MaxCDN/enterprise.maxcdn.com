@@ -330,19 +330,19 @@ function googleUTMSources() {
 	var first_visit = (typeof $.cookie("first_visit") === 'undefined');
 
 	if (utm_source && typeof $.QueryString["utm_source"] !== 'undefined') {
-			$.cookie("custom_utm_source", $.QueryString["utm_source"], {expires: 1, path: '/',  domain: '.maxcdn.com'});
+			$.cookie("custom_utm_source", $.QueryString["utm_source"], {expires: 183, path: '/',  domain: '.maxcdn.com'});
 	}
 	if (utm_medium && typeof $.QueryString["utm_medium"] !== 'undefined') {
-			$.cookie("custom_utm_medium", $.QueryString["utm_medium"], {expires: 1, path: '/',  domain: '.maxcdn.com'});
+			$.cookie("custom_utm_medium", $.QueryString["utm_medium"], {expires: 183, path: '/',  domain: '.maxcdn.com'});
 	}
 	if (utm_term && typeof $.QueryString["utm_term"] !== 'undefined') {
-			$.cookie("custom_utm_term", $.QueryString["utm_term"], {expires: 1, path: '/'});
+			$.cookie("custom_utm_term", $.QueryString["utm_term"], {expires: 183, path: '/', domain: '.maxcdn.com'});
 	}
 	if (utm_campaign && typeof $.QueryString["utm_campaign"] !== 'undefined') {
-			$.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 1, path: '/',  domain: '.maxcdn.com'});
+			$.cookie("custom_utm_campaign", $.QueryString["utm_campaign"], {expires: 183, path: '/',  domain: '.maxcdn.com'});
 	}
 	if (utm_content && typeof $.QueryString["utm_content"] !== 'undefined') {
-			$.cookie("custom_utm_content", $.QueryString["utm_content"], {expires: 1, path: '/',  domain: '.maxcdn.com'});
+			$.cookie("custom_utm_content", $.QueryString["utm_content"], {expires: 183, path: '/',  domain: '.maxcdn.com'});
 	}
 	if (first_visit && typeof $.cookie("custom_utm_source") !== 'undefined') {
 			var now = new Date();

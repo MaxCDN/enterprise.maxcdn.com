@@ -376,7 +376,7 @@ var _mfq = _mfq || [];
 
 	      (function () {
 	      	var kmCookie = $.cookie('km_ai');
-	            var _gaq = _gaq || [];
+	            var _gaq = window._gaq || [];
 
 	            _gaq.push(['_trackEvent', 'Enterprise Success', 'Lead', kmCookie, undefined, true]);
 
@@ -392,7 +392,7 @@ var _mfq = _mfq || [];
 
 	      (function () {
 	      	var kmCookie = $.cookie('km_ai');
-	            var _gaq = _gaq || [];
+	            var _gaq = window._gaq || [];
 
 	            _gaq.push(['_trackEvent', 'Enterprise Trial Success', 'Free Trial Lead', kmCookie, undefined, true]);
 

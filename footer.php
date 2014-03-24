@@ -300,7 +300,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				try{
 				__adroll.record_user({"adroll_segments": "adrollchat"})    
 				} catch(err) {}
-				return SnapEngage.openProactiveChat(true,true,'Hi, how can I help you?');
+				return SnapEngage.startLink();
 			}
 			function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 
@@ -369,6 +369,38 @@ var _mfq = _mfq || [];
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+
+<?php if ($_SERVER['SCRIPT_NAME'] === '/success/index.php' ): ?>
+
+	<script type="text/javascript">
+
+	      (function () {
+	      	var kmCookie = $.cookie('km_ai');
+	            var _gaq = _gaq || [];
+
+	            _gaq.push(['_trackEvent', 'Enterprise Success', 'Lead', kmCookie, undefined, true]);
+
+	      })();
+
+	</script>
+
+<?php endif; ?>
+
+<?php if ($_SERVER['SCRIPT_NAME'] === '/trial-success/index.php' ): ?>
+
+	<script type="text/javascript">
+
+	      (function () {
+	      	var kmCookie = $.cookie('km_ai');
+	            var _gaq = _gaq || [];
+
+	            _gaq.push(['_trackEvent', 'Enterprise Trial Success', 'Free Trial Lead', kmCookie, undefined, true]);
+
+	      })();
+
+	</script>
+
+<?php endif; ?>
 
 <?php if ($_SERVER['SCRIPT_NAME'] === '/success/index.php' || $_SERVER['SCRIPT_NAME'] === '/trial-success/index.php'): ?>
 <!-- Google Code for NetDNA Lead Conversion Page -->

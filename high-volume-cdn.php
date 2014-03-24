@@ -634,11 +634,11 @@ window.onload = function(){
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
 			})();
 
-			function startWidget(chatType) {
+			unction startWidget(chatType) {
 				try{
 				__adroll.record_user({"adroll_segments": "adrollchat"})    
 				} catch(err) {}
-				return SnapEngage.openProactiveChat(true,true,'Hi, how can I help you?');
+				return SnapEngage.startLink();
 			}
 			function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 

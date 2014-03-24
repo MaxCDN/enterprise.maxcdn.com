@@ -598,50 +598,77 @@ window.onload = function(){
 </script>
 
 <script type="text/javascript">
-	var seAgent;
-	(function() {
-		var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
-		se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
-		var done = false;
-		var chatMsgCounter = 0;
 
-		se.onload = se.onreadystatechange = function() {
-			if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
-				done = true;
-
-				SnapABug.setCallback('ChatMessageSent', function () {
-					if(typeof $.cookie('first_message_sent') === "undefined") {
-						$.cookie('first_message_sent', true, {expires: 1, path: '/'});
-						_kmq.push(['record', 'Initial Chat Message Sent']);
-					}
-				});
+			var seAgent;
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
+				var done = false;
+				var chatMsgCounter = 0;
 				
-				SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
-					seAgent = agent;
-					_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
-				});
+				se.onload = se.onreadystatechange = function() {
+					if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 
-				SnapABug.setCallback('StartChat', function(email, msg, type) {
-					_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
-				});
+						SnapABug.setCallback('ChatMessageSent', function () {
+							if(typeof $.cookie('first_message_sent') === "undefined") {
+								$.cookie('first_message_sent', true, {expires: 1, path: '/'});
+								_kmq.push(['record', 'Initial Chat Message Sent']);
+							}
+						});
+		
+						SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
+							seAgent = agent;
+							_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
+						});
+		
+						SnapABug.setCallback('StartChat', function(email, msg, type) {
+							_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
+						});
+		
+						SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
+							seAgent = agent;
+						});
+		
+					}
+				};
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
 
-				SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
-					seAgent = agent;
-				});
-
+			function startWidget(chatType) {
+				try{
+				__adroll.record_user({"adroll_segments": "adrollchat"})    
+				} catch(err) {}
+				return SnapABug.startLink();
 			}
-		};
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
-	})();
-	function startWidget(chatType) {
-		try{
-  				__adroll.record_user({"adroll_segments": "adrollchat"})    
-  				} catch(err) {}
- -				return SnapABug.startLink();
+			function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
 
-	}
-	function snapengage_get_agent_name() { return (typeof seAgent != 'undefined') ? seAgent : null; }
-</script>
+			googleUTMSources();
+
+			if (typeof $.cookie('custom_utm_source') !== "undefined") {
+				var lc_utm_source = $.cookie('custom_utm_source');
+			}
+
+			if (typeof $.cookie('custom_utm_campaign') !== "undefined") {
+				var lc_utm_campaign = $.cookie('custom_utm_campaign');
+			}
+
+			if (typeof $.cookie('custom_utm_term') !== "undefined") {
+				var lc_utm_term = $.cookie('custom_utm_term');
+			}
+
+			if (typeof $.cookie('custom_utm_content') !== "undefined") {
+				var lc_utm_content = $.cookie('custom_utm_content');
+			}
+
+			if (typeof $.cookie('custom_utm_medium') !== "undefined") {
+				var lc_utm_medium = $.cookie('custom_utm_medium');
+			}
+
+			if (typeof $.cookie('first_visit') !== "undefined") {
+				var lc_first_visit = $.cookie('first_visit');
+			}
+			
+		</script>
 
 <script type="text/javascript">
 var _mfq = _mfq || [];

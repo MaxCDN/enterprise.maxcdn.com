@@ -186,7 +186,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 						<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
 						<script type="text/javascript" src="https://cdn-assets.netdna.com/maps/google-maps-marker.js"></script>
 						<script type="text/javascript" src="https://cdn-assets.netdna.com/maps/maps.js"></script>
-						<div id="map_canvas" style="width: 100%; height: 242px;"></div> 
+						<div id="map_canvas" style="width: 100%; height: 242px;"></div>
 						<div class="image datacenter-partners"></div>
 						<script type="text/javascript">
 						var map = new NetDNA_Map({
@@ -341,7 +341,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 						<li>Easiest to use control panel</li>
 						<li>24/7 superior support</li>
 						<li>High performance</li>
-					</ul>				
+					</ul>
 				</div>
 				<div class="column sixty last">
 					<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="alignright standard-form">
@@ -391,7 +391,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					<div class="container-padding">
     <div class="live-chat info">
         <h2 class="heading">Have questions?</h2>
-        <p>Need to find answers quick? We’re here to help.</p>        
+        <p>Need to find answers quick? We’re here to help.</p>
         <a href="#" onclick="return startWidget('chat');" class="chbtn">
             <i class="fa fa-comment"></i>
             <div class="chbtn-chat">Start a Live Chat</div>
@@ -401,7 +401,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 </div><br/>
 		</article>
 		<div class="clearfix"></div>
-		
+
 	</div><!-- /main -->
 
 <?php
@@ -498,6 +498,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<div class="cols">
 				<div class="col">
 					<div class="trial-form custom-form">
+						<label>First Name <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="FirstName" >
+						<label>Last Name <span class="orange-text">*</span></label>
+						<input class="text required" type="text" name="LastName" >
 						<label>Email Address <span class="orange-text">*</span></label>
 						<input class="text required" type="email" name="Email" >
 						<label>Phone Number (optional)</label>
@@ -549,6 +553,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 			<div class="cols">
 				<div class="trial-form generalcontact-form custom-form">
+					<label>First Name <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="FirstName" >
+					<label>Last Name <span class="orange-text">*</span></label>
+					<input class="text required" type="text" name="LastName" >
 					<label>Email Address <span class="orange-text">*</span></label>
 					<input class="text required" type="email" name="Email" >
 					<label>Phone Number (optional)</label>
@@ -605,7 +613,7 @@ window.onload = function(){
 				se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 				var done = false;
 				var chatMsgCounter = 0;
-				
+
 				se.onload = se.onreadystatechange = function() {
 					if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 
@@ -615,20 +623,20 @@ window.onload = function(){
 								_kmq.push(['record', 'Initial Chat Message Sent']);
 							}
 						});
-		
+
 						SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
 							seAgent = agent;
 							_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
 						});
-		
+
 						SnapABug.setCallback('StartChat', function(email, msg, type) {
 							_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
 						});
-		
+
 						SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
 							seAgent = agent;
 						});
-		
+
 					}
 				};
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
@@ -636,7 +644,7 @@ window.onload = function(){
 
 			unction startWidget(chatType) {
 				try{
-				__adroll.record_user({"adroll_segments": "adrollchat"})    
+				__adroll.record_user({"adroll_segments": "adrollchat"})
 				} catch(err) {}
 				return SnapEngage.startLink();
 			}
@@ -667,7 +675,7 @@ window.onload = function(){
 			if (typeof $.cookie('first_visit') !== "undefined") {
 				var lc_first_visit = $.cookie('first_visit');
 			}
-			
+
 		</script>
 
 <script type="text/javascript">

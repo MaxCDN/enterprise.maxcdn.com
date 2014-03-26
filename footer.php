@@ -88,7 +88,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="#" id="new-area"/>
 	</map>
 </div>
-	
+
 </footer><!-- /footer -->
 <div class="hidden-popup">
 	<div class="popup" id="popup-contact">
@@ -267,7 +267,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 				var done = false;
 				var chatMsgCounter = 0;
-				
+
 				se.onload = se.onreadystatechange = function() {
 					if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 
@@ -277,20 +277,20 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 								_kmq.push(['record', 'Initial Chat Message Sent']);
 							}
 						});
-		
+
 						SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
 							seAgent = agent;
 							_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
 						});
-		
+
 						SnapABug.setCallback('StartChat', function(email, msg, type) {
 							_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
 						});
-		
+
 						SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
 							seAgent = agent;
 						});
-		
+
 					}
 				};
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
@@ -298,7 +298,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 			function startWidget(chatType) {
 				try{
-				__adroll.record_user({"adroll_segments": "adrollchat"})    
+				__adroll.record_user({"adroll_segments": "adrollchat"})
 				} catch(err) {}
 				return SnapEngage.startLink();
 			}
@@ -329,7 +329,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			if (typeof $.cookie('first_visit') !== "undefined") {
 				var lc_first_visit = $.cookie('first_visit');
 			}
-			
+
 		</script>
 
 <script type="text/javascript">
@@ -394,7 +394,7 @@ var _mfq = _mfq || [];
 	      	var kmCookie = $.cookie('km_ai');
 	            var _gaq = window._gaq || [];
 
-	            _gaq.push(['_trackEvent', 'Enterprise Trial Success', 'Free Trial Lead', kmCookie, undefined, true]);
+	            _gaq.push(['_trackEvent', 'Enterprise Trial Success', 'Lead', kmCookie, undefined, true]);
 
 	      })();
 

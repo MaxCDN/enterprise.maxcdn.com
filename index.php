@@ -58,7 +58,7 @@
 				<li><a id="scrollerpricing" href="#pricing">PRICING<span class="ico ico-6">&nbsp;</span></a></li>
 			</ul>
 			<a id="scrollerchatonline" href="#" class="btn-chat" onclick="return startWidget('chat');">chat online</a>
-			<p class="sidebar-phone textcenter"><strong>or give us a call at:<br/></strong><span class="phone-number">+1 (877) 629-2361</span>
+			<p class="sidebar-phone textcenter"><strong>Call Now:<br/></strong><span class="phone-number">+1 (877) 629-2361</span><br /><strong>Email:<br /></strong>enterprise@maxcdn.com</p>
 		</aside>
 	</div><!-- /main-holder -->
 </div><!-- /main -->
@@ -87,7 +87,7 @@
 					<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
 					<script type="text/javascript" src="https://cdn-assets.netdna.com/maps/google-maps-marker.js"></script>
 					<script type="text/javascript" src="https://cdn-assets.netdna.com/maps/maps.js"></script>
-					<div id="map_canvas" style="width: 100%; height: 242px;"></div> 
+					<div id="map_canvas" style="width: 100%; height: 242px;"></div>
 					<div class="image datacenter-partners"></div>
 					<script type="text/javascript">
 					var map = new NetDNA_Map({
@@ -243,7 +243,7 @@
 					<li>Easiest to use control panel</li>
 					<li>24/7 superior support</li>
 					<li>High performance</li>
-				</ul>				
+				</ul>
 			</div>
 			<div class="column sixty last">
 				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="alignright standard-form">
@@ -294,7 +294,7 @@
 		<div class="container-padding">
      <div class="live-chat info">
         <h2 class="heading">Have questions?</h2>
-        <p>Need to find answers quick? We’re here to help.</p>        
+        <p>Need to find answers quick? We’re here to help.</p>
         <a href="#" onclick="return startWidget('chat');" class="chbtn">
             <i class="fa fa-comment"></i>
             <div class="chbtn-chat">Start a Live Chat</div>

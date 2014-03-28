@@ -66,7 +66,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/5c293324-896b-4816-ad45-6fd7f39fa366.js';
 				var done = false;
 				var chatMsgCounter = 0;
-				
+
 				se.onload = se.onreadystatechange = function() {
 					if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete')) {
 
@@ -74,22 +74,24 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 							if(typeof $.cookie('first_message_sent') === "undefined") {
 								$.cookie('first_message_sent', true, {expires: 1, path: '/'});
 								_kmq.push(['record', 'Initial Chat Message Sent']);
+								var kmCookie = $.cookie('km_ai');
+			            				_gaq.push(['_trackEvent', 'LiveChat', 'Message Sent', kmCookie, undefined, true]);
 							}
 						});
-		
+
 						SnapABug.setCallback('OpenProactive', function(agent, msg, type) {
 							seAgent = agent;
 							_gaq.push(['_trackEvent', 'SnapEngage', 'proactivePrompt', agent]);
 						});
-		
+
 						SnapABug.setCallback('StartChat', function(email, msg, type) {
 							_gaq.push(['_trackEvent', 'SnapEngage', type + "Engaged", seAgent]);
 						});
-		
+
 						SnapABug.setCallback('ChatMessageReceived', function (agent, msg) {
 							seAgent = agent;
 						});
-		
+
 					}
 				};
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
@@ -97,7 +99,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 			function startWidget(chatType) {
 				try{
-				__adroll.record_user({"adroll_segments": "adrollchat"})    
+				__adroll.record_user({"adroll_segments": "adrollchat"})
 				} catch(err) {}
 				return SnapEngage.startLink();
 			}
@@ -128,7 +130,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			if (typeof $.cookie('first_visit') !== "undefined") {
 				var lc_first_visit = $.cookie('first_visit');
 			}
-			
+
 		</script>
 
 <script type="text/javascript">

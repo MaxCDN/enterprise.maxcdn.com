@@ -12,7 +12,7 @@
 					<li>World-wide flat price — no extra fee for SSL traffic</li>
 				</ul>
 				<a id="mainbtntryusfree" href="#" class="btn btn-test">Try Us For Free</a>
-				<p class="belowbtn">or see <a href="/pricing/">enterprise pricing</a></p>
+				<p class="belowbtn">or see <a href="http://maxcdn.com/enterprise-pricing/">enterprise pricing</a></p>
 			</div>
 		</div>
 	</div><!-- /block -->
@@ -234,7 +234,7 @@
 		<!-- Free Trial section -->
 		<div id="try-us" class="free-trial footer-freetrial textleft">
 			<div class="column fourty first">
-				<p class="orange-text no-bottom-space"><strong>DO YOU USE OVER 25TB PER<br/>MONTH OF BANDWIDTH?</strong></p>
+				<p class="orange-text no-bottom-space"><strong>DO YOU USE OVER 15TB PER<br/>MONTH OF BANDWIDTH?</strong></p>
 				<h2 class="no-bottom-space"><strong>GET A 7 DAY FREE TRIAL</strong></h2>
 				<p class="copy">Check out our content delivery network and try out the new features that matter to you the most with our 7 day free trial.</p>
 				<ul class="simple-list" >

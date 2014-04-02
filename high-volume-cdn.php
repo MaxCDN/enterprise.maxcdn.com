@@ -621,6 +621,8 @@ window.onload = function(){
 							if(typeof $.cookie('first_message_sent') === "undefined") {
 								$.cookie('first_message_sent', true, {expires: 1, path: '/'});
 								_kmq.push(['record', 'Initial Chat Message Sent']);
+								var kmCookie = $.cookie('km_ai');
+			            				_gaq.push(['_trackEvent', 'LiveChat', 'Message Sent', kmCookie, undefined, true]);
 							}
 						});
 

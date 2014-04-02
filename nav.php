@@ -1,9 +1,9 @@
 <?php
 $homeActive = $pricingActive = "";
 if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
-	$pricingActive = 'current-menu-item';	
+	$pricingActive = 'current-menu-item';
 } else if (($_SERVER['SCRIPT_NAME'] === "/index.php")) {
-	$homeActive = 'current-menu-item';	
+	$homeActive = 'current-menu-item';
 }
 ?>
 <header>
@@ -45,17 +45,7 @@ if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
 							</li>
 						</ul>
 					</li>
-					<li id="menu-item-62" class="<?php echo $pricingActive; ?> menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children hasSubnav menu-item-62">
-						<a href="/pricing/">Pricing</a>
-						<ul class="sub-menu">
-							<li id="menu-item-7124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7124"><a href="http://www.maxcdn.com/pricing/">Standard Pricing</a></li>
-							<li id="menu-item-7125" class="<?php echo $pricingActive; ?> menu-item menu-item-type-custom menu-item-object-custom menu-item-7125"><a href="/pricing/">Enterprise Pricing</a></li>
-							<li class="bottom-subnav textcenter">
-								<p><span class="phone-number">+1 (877) 629-2361</span></p>
-								<a href="#" onclick="return startWidget('chat');" class="button orange"><i class="icon-comments"></i> CHAT</a>
-							</li>
-						</ul>
-					</li>
+					<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7109"><a href="http://maxcdn.com/enterprise-pricing/">Pricing</a></li>
 					<li id="menu-item-63" class="not-clickable menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children hasSubnav menu-item-63">
 						<a href="http://www.maxcdn.com/company/">Company</a>
 						<ul class="sub-menu">

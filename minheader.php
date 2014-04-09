@@ -84,7 +84,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="//cdn.optimizely.com/js/140761619.js"></script>
 	<script async src="//13708.tctm.co/t.js"></script>
-	
+
 </head>
 
 <body class="grey-background">
@@ -139,27 +139,27 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 						<ul>
 							<li>
 								<label for="FirstName">First Name <span class="orange-text">*</span></label>
-								<input class="required" type="text" name="FirstName" />
+								<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="LastName">Last Name <span class="orange-text">*</span></label>
-								<input class="required" type="text" name="LastName" />
+								<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="Email">Email Address <span class="orange-text">*</span></label>
-								<input class="required" type="email" name="Email" />
+								<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="Phone">Phone Number</label>
-								<input type="text" name="Phone" />
+								<input type="phone" name="Phone" />
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="Website">Website <span class="orange-text">*</span></label>
-								<input class="required" type="url" value="http://" name="Website" />
+								<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 								<div class="clearfix"></div>
 							</li>
 						</ul>
@@ -176,6 +176,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					</div>
 				</div>
 			</form>
+
 
 			<div class="clearfix"></div>
 		</div>

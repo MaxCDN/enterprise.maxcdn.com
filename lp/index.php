@@ -5,7 +5,7 @@
 	<div class="small-width">
 		<h2 class="enterprise-lp-headline">What do Amazon and Akamai have in common?</h2>
 	</div>
-	
+
 	<div class="lp-main-row row clearfix">
 		<div class="small-width">
 			<div class="left column">
@@ -21,7 +21,7 @@
 					<li>Simple pricing, <strong>one low flat rate</strong> and no charges for HTTP/HTTPS requests.</li>
 				</ul>
 			</div>
-			
+
 			<div class="right column">
 				<aside class="enterprise-lp-form" id="form-sidebar">
 					<h3 class="lp-section-title">Get a Free Trial</h3>
@@ -44,13 +44,13 @@
 						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/trial-success/" />
 						<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
 
-						
-						<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input type="text" name="FirstName" value="FIRST NAME" class="required text"></div>
-						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input type="text" name="LastName" value="LAST NAME" class="required text"></div>
+
+						<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input class="required" name="FirstName" value="First Name" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required></div>
+						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input class="required" name="LastName" value="Last Name" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required></div>
 						<p class="email-instructions hide-me">Please include a properly formatted email address</p>
-						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input type="text" name="Email" value="EMAIL" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input name="Email" class="required" value="Email Address" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required></div>
 						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
-						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input type="website" name="Website" value="WEBSITE" class="required text"></div>
+						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input name="Website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required></div>
 						<div class="event-form-field select-field">
 							<span class="orange-text float-right">* </span>
 							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
@@ -68,15 +68,15 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="small-width">
-		<div class="left column">			
+		<div class="left column">
 			<div class="data lp-pricing-table">
 				<h3 class="lp-section-title">Simple Flat Rate Pricing</h3>
 				<?php include('../snippets/lppt.php'); ?>
 				<section class="content small">Starting at $800/month. Setup fees apply.</section>
 			</div>
-					
+
 			<div class="lp-customers">
 				<h3 class="lp-section-title">Some of the 15,000+ Companies Using Us</h3>
 				<section class="company-holder lp-logo-holder">

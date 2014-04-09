@@ -115,15 +115,15 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<div class="col">
 					<div class="trial-form custom-form">
 						<label>First Name <span class="orange-text">*</span></label>
-						<input class="text required" type="text" name="FirstName" >
+						<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 						<label>Last Name <span class="orange-text">*</span></label>
-						<input class="text required" type="text" name="LastName" >
+						<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 						<label>Email Address <span class="orange-text">*</span></label>
-						<input class="text required" type="email" name="Email" >
+						<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 						<label>Phone Number <span class="orange-text">*</span></label>
-						<input class="text required" type="text" name="Phone" >
+						<input name="Phone" class="required" type="phone" tabindex="3" title="A valid phone number is required." x-moz-errormessage="Please Enter Your Valid Phone Number" required>
 						<label>URL <span class="orange-text">*</span></label>
-						<input class="text required" type="text" name="Website" value="http://" data-value="http://" >
+						<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 						<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
 						<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
 							<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
@@ -175,11 +175,11 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<div class="col">
 					<div class="trial-form custom-form">
 						<label>Email Address <span class="orange-text">*</span></label>
-						<input class="text required" type="email" name="Email" >
+						<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 						<label>Phone Number (optional)</label>
 						<input class="text " type="text" name="Phone" >
 						<label>URL of a file (2mb or under) <span class="orange-text">*</span></label>
-						<input class="text required" type="text" name="Website" placeholder="http://your-company.com/file.pdf">
+						<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 						<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
 						<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
 							<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
@@ -225,16 +225,16 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 			<div class="cols">
 				<div class="trial-form generalcontact-form custom-form">
-					<label>First Name <span class="orange-text">*</span></label>
-					<input class="text required" type="text" name="FirstName" >
+				<label>First Name <span class="orange-text">*</span></label>
+					<input class="required text" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 					<label>Last Name <span class="orange-text">*</span></label>
-					<input class="text required" type="text" name="LastName" >
+					<input class="required text" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 					<label>Email Address <span class="orange-text">*</span></label>
-					<input class="text required" type="email" name="Email" >
+					<input name="Email" class="required text" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 					<label>Phone Number (optional)</label>
 					<input class="text " type="text" name="Phone" >
 					<label>Your Website <span class="orange-text">*</span></label>
-					<input class="text required" type="text" name="Website" placeholder="http://your-company.com">
+					<input name="Website" class="required text" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 					<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
 					<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
 						<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>

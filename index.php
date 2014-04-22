@@ -272,7 +272,7 @@
 							<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 							<label>Phone Number (optional)</label>
 							<input class="text " type="text" name="Phone" >
-							<label>URL of a file (2mb or under)</label>
+							<label>Website URL</label>
 							<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid File URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 							<label>Your Monthly Bandwidth Usage</label>
 							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">

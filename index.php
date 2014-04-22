@@ -270,10 +270,10 @@
 							<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 							<label>Email Address <span class="orange-text">*</span></label>
 							<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
-							<input class="text " type="text" name="Phone" >
 							<label>Website URL</label>
-							<label>Phone Number (optional)</label>
 							<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid File URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+							<label>Phone Number (optional)</label>
+							<input class="text " type="text" name="Phone" >
 							<label>Your Monthly Bandwidth Usage</label>
 							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
 								<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>

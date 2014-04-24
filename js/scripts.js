@@ -127,12 +127,12 @@ function calculateBandwidthPrice(usage) {
 bandwidthTiers.sort(sortArrayByInt);
 
 Number.prototype.formatMoney = function(c, d, t){
-var n = this, 
-    c = isNaN(c = Math.abs(c)) ? 2 : c, 
-    d = d == undefined ? "." : d, 
-    t = t == undefined ? "," : t, 
-    s = n < 0 ? "-" : "", 
-    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", 
+var n = this,
+    c = isNaN(c = Math.abs(c)) ? 2 : c,
+    d = d == undefined ? "." : d,
+    t = t == undefined ? "," : t,
+    s = n < 0 ? "-" : "",
+    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
     j = (j = i.length) > 3 ? j % 3 : 0;
    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
  };
@@ -298,11 +298,11 @@ function sliderEvents() {
 			}
 		}
 	});
-	
+
 	$(".slider-content > div").append("<a href='#' class='slider-close'>");
 	$(".slider-content").on('click', '.slider-close', function(e) {
 		e.preventDefault();
-		
+
 		//restore all icons
 		$(".orange-slider .icons a").removeClass("inactive");
 
@@ -315,7 +315,7 @@ function sliderEvents() {
 		//hide slider content container
 		$(".slider-content").addClass("hidden").removeClass("active");
 
-	});	
+	});
 }
 
 // store utm values in cookies if the exist
@@ -388,7 +388,7 @@ $(document).ready(function(){
     			});
     		}
     		$(this).dequeue();
-    		});		
+    		});
 		$chatNow.click(function(){
 			$chatNow.hide();
 			_kmq.push(['trackClick', '#new-chat-popup', 'Proactive Chat Initiated']);
@@ -415,30 +415,30 @@ $(document).ready(function(){
 
 	// add in utm details
 	googleUTMSources();
-	
+
 	if (window.PIE) {
 		$('.ie-fix').each(function() {
 			PIE.attach(this);
 		});
 	}
-	
+
 	if ($('#sidebar').exists()) {
 		$('#sidebar').sticky({
 			topSpacing: 80,
 			bottomSpacing: 432
 		});
 	}
-	
+
 	if ($('.testimonial').exists()) {
 		$('.testimonial').parallax("50%", 0.1);
 	}
-	
+
 	if ($('#tabs-1').exists()) {
 		$('#tabs-1').tabs();
 	}
-	
+
 	if ($('.side-menu').exists()) {
-		
+
 		// Cache selectors
 			var lastId,
 			    topMenu = $(".side-menu"),
@@ -450,23 +450,23 @@ $(document).ready(function(){
 			      var item = $($(this).attr("href"));
 			      if (item.length) { return item; }
 			    });
-			
+
 			// Bind click handler to menu items
 			// so we can get a fancy scroll animation
 			menuItems.click(function(e){
 			  var href = $(this).attr("href"),
 			      offsetTop = href === "#" ? 0 : $(href).offset().top-67+1;
-			  $('html, body').stop().animate({ 
+			  $('html, body').stop().animate({
 			      scrollTop: offsetTop
 			  }, 300);
 			  e.preventDefault();
 			});
-			
+
 			// Bind to scroll
 			$(window).scroll(function(){
 			   // Get container scroll position
 			   var fromTop = $(this).scrollTop()+topMenuHeight;
-			   
+
 			   // Get id of current scroll item
 			   var cur = scrollItems.map(function(){
 			     if ($(this).offset().top < fromTop)
@@ -475,18 +475,18 @@ $(document).ready(function(){
 			   // Get the id of the current element
 			   cur = cur[cur.length-1];
 			   var id = cur && cur.length ? cur[0].id : "";
-			   
+
 			   if (lastId !== id) {
 			       lastId = id;
 			       // Set/remove active class
 			       menuItems
 			         .parent().removeClass("active")
 			         .end().filter("[href=#"+id+"]").parent().addClass("active");
-			   }                   
+			   }
 			});
 	}
-	
-	
+
+
 	if ($('.data table').exists()) {
 		$('.data table').each(function() {
 			$(this).find('tr').each(function() {
@@ -497,19 +497,19 @@ $(document).ready(function(){
 			$(this).find('tr:even').addClass('odd');
 		});
 	}
-	
+
 	if ($('.custom-form').exists()) {
 		customForm.lib.domReady(function(){
 			customForm.customForms.replaceAll();
 		});
 	}
-	
+
 	if ($('.hidden-popup').exists()) {
 		setTimeout(function() {
 			$('.hidden-popup').hide();
 		}, 600);
 	}
-	
+
 	if ($('.fancybox').exists()) {
 		$('.fancybox').each(function(){
 			var width = ($(this).hasClass('small-box')) ? 300 : 400;
@@ -520,7 +520,7 @@ $(document).ready(function(){
 			});
 		});
 	}
-	
+
 	if ($('.price-form .btn.open-pricing').exists()) {
 		$(".price-form .text-hold .unit").click(function() {
 			$('.price-form .text-hold .text').focus();
@@ -570,7 +570,7 @@ $(document).ready(function(){
 					}
 				});
 				if (range == null) {
-					//at the end of the array 
+					//at the end of the array
 					range = $('#bandwidth-pricing-hidden option').last();
 				}
 
@@ -628,7 +628,7 @@ $(document).ready(function(){
 					}
 				}
 
-				
+
 				$('.' + classes_obj[direction].out_class).fadeOut(duration, function(){
 					$(this).removeClass(classes_obj[direction].out_class);
 				});
@@ -647,25 +647,25 @@ $(document).ready(function(){
 				}
 				current_slide.find('.img').css({
 					'overflow': 'hidden',
-					borderTopLeftRadius: 83, 
-				    borderTopRightRadius: 83, 
-				    borderBottomLeftRadius: 83, 
+					borderTopLeftRadius: 83,
+				    borderTopRightRadius: 83,
+				    borderBottomLeftRadius: 83,
 				    borderBottomRightRadius: 83,
-				    WebkitBorderTopLeftRadius: 83, 
-				    WebkitBorderTopRightRadius: 83, 
-				    WebkitBorderBottomLeftRadius: 83, 
-				    WebkitBorderBottomRightRadius: 83, 
+				    WebkitBorderTopLeftRadius: 83,
+				    WebkitBorderTopRightRadius: 83,
+				    WebkitBorderBottomLeftRadius: 83,
+				    WebkitBorderBottomRightRadius: 83,
 				    MozBorderRadius: 83
-					
+
 				}).animate({width:'83px', height:'83px', backgroundColor: "#fff",
-													borderTopLeftRadius: 42, 
-												    borderTopRightRadius: 42, 
-												    borderBottomLeftRadius: 42, 
+													borderTopLeftRadius: 42,
+												    borderTopRightRadius: 42,
+												    borderBottomLeftRadius: 42,
 												    borderBottomRightRadius: 42,
-												    WebkitBorderTopLeftRadius: 42, 
-												    WebkitBorderTopRightRadius: 42, 
-												    WebkitBorderBottomLeftRadius: 42, 
-												    WebkitBorderBottomRightRadius: 42, 
+												    WebkitBorderTopLeftRadius: 42,
+												    WebkitBorderTopRightRadius: 42,
+												    WebkitBorderBottomLeftRadius: 42,
+												    WebkitBorderBottomRightRadius: 42,
 												    MozBorderRadius: 42
 												}, duration, function(){
 					$(this).removeAttr('style');
@@ -721,7 +721,7 @@ $(document).ready(function(){
 			}
 		}
 	}
-	
+
 	if ($('.carousel').exists()) {
 		var top_wrap_carousel = $('.carousel').offset().top,
 			carousel_visible_ = false;
@@ -777,7 +777,88 @@ $(document).ready(function(){
 				}, 100);
 			}
 		});
-	}); 
+	});
+
+$('input[name="FirstName"]').focus(function() {
+  $('.fnl').removeClass('hide-me');
+});
+
+$('input[name="FirstName"]').blur(function() {
+  $('.fnl').addClass('hide-me');
+});
+
+$('input[name="LastName"]').focus(function() {
+  $('.lnl').removeClass('hide-me');
+});
+
+$('input[name="LastName"]').blur(function() {
+  $('.lnl').addClass('hide-me');
+});
+
+$('input[name="Email"]').focus(function() {
+  $('.eml').removeClass('hide-me');
+});
+
+$('input[name="Email"]').blur(function() {
+  $('.eml').addClass('hide-me');
+});
+
+$('input[name="Phone"]').focus(function() {
+  $('.pnl').removeClass('hide-me');
+});
+
+$('input[name="Phone"]').blur(function() {
+  $('.pnl').addClass('hide-me');
+});
+
+$('input[name="Website"]').focus(function() {
+  $('.wsl').removeClass('hide-me');
+});
+
+$('input[name="Website"]').blur(function() {
+  $('.wsl').addClass('hide-me');
+});
+
+$(".initial-value-form input[type='text']").each(function() {
+    var default_value = this.value;
+  $(this).focus(function(){
+     if(this.value == default_value) {this.value = '';}
+    });
+    $(this).blur(function(){
+       if(this.value == '') {this.value = default_value;}
+    });
+});
+
+$(".initial-value-form input[type='email']").each(function() {
+    var default_value = this.value;
+  $(this).focus(function(){
+     if(this.value == default_value) {this.value = '';}
+    });
+    $(this).blur(function(){
+       if(this.value == '') {this.value = default_value;}
+    });
+});
+
+$(".initial-value-form input[type='phone']").each(function() {
+    var default_value = this.value;
+  $(this).focus(function(){
+     if(this.value == default_value) {this.value = '';}
+    });
+    $(this).blur(function(){
+       if(this.value == '') {this.value = default_value;}
+    });
+});
+
+$(".initial-value-form input[type='website']").each(function() {
+    var default_value = this.value;
+  $(this).focus(function(){
+     if(this.value == default_value) {this.value = '';}
+    });
+    $(this).blur(function(){
+       if(this.value == '') {this.value = default_value;}
+    });
+});
+
 	checkRequiredFields('form.standard-form');
 	sliderEvents();
 

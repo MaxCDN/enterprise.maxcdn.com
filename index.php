@@ -229,9 +229,88 @@
 		<h2 class="heading">No HTTP Request Charges. Ever.</h2>
 		<p>While it's easy to charge for requests, we're a content delivery network, not a request delivery network. We won't charge for requests, ever. I bet you thought you were going to have to read a bunch of qualifiers here, didn't you?</p>
 		<div class="img-block"><img src="images/img-34.png" alt="image description" width="629" height="234" ></div>
+	</article>
+</div>
+
+<div class="enterprise-trial-holder" style="margin-bottom:0px;">
+<div class="main">
+	<article class="content" >
+      <div class="form-intro">
+        <h2  class="no-bottom-space">Get a Free Trial</h2>
+        <p class="small-subtitle">If you use over 15TB a month you qualify for a MaxCDN free trial. The trial includes everything that comes with a MaxCDN enterprise account. You get:</p>
+      </div>
+
+      <div class="clearfix four-bubble-row">
+
+        <div class="bubble-fourth first-bubble">
+          <p><strong>Unlimited Bandwidth</strong></p>
+          <p>You can use as much bandwidth as you need.</p>
+        </div>
+
+        <div class="bubble-fourth">
+          <p><strong>Flexible Length</strong></p>
+          <p>How long you need the trial for is negotiable!</p>
+        </div>
+
+        <div class="bubble-fourth">
+          <p><strong>All Features</strong></p>
+          <p>The trial comes with all features enabled.</p>
+        </div>
+
+        <div class="bubble-fourth round-box">
+          <p><strong>1-on-1 Setup Call</strong></p>
+          <p>We help you get setup with a 1-on-1 integration call.</p>
+        </div>
+
+      </div>
+
+      <form class="initial-value-form enterprise-trial-form" id="free-trial-form-enterprise_pricing" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+
+        <input name="LeadSource" type="hidden" value="MaxCDN.com">
+        <input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Contact Us Form">
+        <input type="hidden" name="lpId" value="-1" />
+        <input type="hidden" name="subId" value="127" />
+        <input type="hidden" name="kw" value="" />
+        <input type="hidden" name="cr" value="" />
+        <input type="hidden" name="searchstr" value="" />
+        <input name="content__c" type='text' value="" class="hidden" />
+        <input type="hidden" name="_mkt_disp" value="return" />
+        <input type="hidden" name="_mkt_trk" value="" />
+        <input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNFreeTrial_freetrial.html?cr={creative}&kw={keyword}" />
+        <input type="hidden" name="formid" value="111" />
+        <input type="hidden" name="returnURL" value="http://maxcdn.com/success/" />
+        <input type="hidden" name="retURL" value="http://maxcdn.com/success/" />
+        <input name="URL_of_Lead_Source__c" type='hidden' value="http://enterprise.maxcdn.com/" />
+
+        <label class="hide-me fnl" id="fnl">First Name <span class="orange text">*</span></label>
+        <input class="required" name="FirstName" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+        <label class="hide-me lnl" id="lnl">Last Name <span class="orange text">*</span></label>
+        <input class="required" value="Last Name" name="LastName" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+        <label class="hide-me eml" id="eml">Email <span class="orange text">*</span></label>
+        <input name="Email" value="Email Address" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+        <label class="hide-me wsl" id="wsl">Website URL <span class="orange text">*</span></label>
+        <input name="Website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+        <label class="hide-me bwl" id="bandwidth-label">Bandwidth <span class="orange text">*</span></label>
+        <div class="select-field required">
+              <select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+                <option value="Bandwidth" selected="selected">Bandwidth</option>
+                <option value="Under 5TB">Under 5TB</option>
+                <option value="5TB - 10TB">5TB - 10TB</option>
+                <option value="11 - 100TB">11 - 100TB</option>
+                <option value="101TB - 1,000TB">101TB - 1,000TB</option>
+                <option value="1PB+">1PB+</option>
+              </select>
+        </div>
+        <label class="hide-me pnl" id="pnl">Phone Number</label>
+        <input name="Phone" type="phone" value="Phone Number" class="">
+        <button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button>
+      </form>
+      </article>
+    </div>
+    </div>
 
 
-		<!-- Free Trial section -->
+		<!-- Free Trial section
 		<div id="try-us" class="free-trial footer-freetrial textleft">
 			<div class="column fourty first">
 				<p class="orange-text no-bottom-space"><strong>DO YOU USE OVER 15TB PER<br/>MONTH OF BANDWIDTH?</strong></p>
@@ -289,7 +368,9 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="clearfix"></div>
-		</div>
+		</div> -->
+	<div class="main">
+	<article class="content" id="pricing">
 		<div class="container-padding">
      <div class="live-chat info">
         <h2 class="heading">Have questions?</h2>

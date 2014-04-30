@@ -748,7 +748,7 @@ function checkLpTrialForm(form) {
             $(this).addClass('red-border');
             $('p.email-instructions').removeClass('hide-me');
           }
-        } 
+        }
 
         } else if ($(this).is("select")) {
           if ($(this)[0].selectedIndex <= 0) {
@@ -781,7 +781,7 @@ function checkLpTrialForm(form) {
         $("<input type='hidden' value='" + $.cookie("custom_utm_campaign") + "' />").attr("name", "utm_campaign__c").appendTo($(this));
       }
       if (typeof $.cookie("first_visit") !== 'undefined') {
-        $("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "PPC_Entrance_Date__c").appendTo($(this));
+        $("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "ppc_entrance_date__c").appendTo($(this));
       }
     }
   });

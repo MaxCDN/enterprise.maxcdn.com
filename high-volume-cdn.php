@@ -328,81 +328,103 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<h2 class="heading">No HTTP Request Charges. Ever.</h2>
 			<p>While it's easy to charge for requests, we're a content delivery network, not a request delivery network. We won't charge for requests, ever. I bet you thought you were going to have to read a bunch of qualifiers here, didn't you?</p>
 			<div class="img-block"><img src="images/img-34.png" alt="image description" width="629" height="234" ></div>
+		</article>
+	</div>
+
+<div class="enterprise-trial-holder" style="margin-bottom:0px;">
+<div class="main">
+	<article class="content" >
+      <div class="form-intro">
+        <h2  class="no-bottom-space">Get a Free Trial</h2>
+        <p class="small-subtitle">If you use over 15TB a month you qualify for a MaxCDN free trial. The trial includes everything that comes with a MaxCDN enterprise account. You get:</p>
+      </div>
+
+      <div class="clearfix four-bubble-row">
+
+        <div class="bubble-fourth first-bubble">
+          <p><strong>Unlimited Bandwidth</strong></p>
+          <p>You can use as much bandwidth as you need.</p>
+        </div>
+
+        <div class="bubble-fourth">
+          <p><strong>Flexible Length</strong></p>
+          <p>How long you need the trial for is negotiable!</p>
+        </div>
+
+        <div class="bubble-fourth">
+          <p><strong>All Features</strong></p>
+          <p>The trial comes with all features enabled.</p>
+        </div>
+
+        <div class="bubble-fourth round-box">
+          <p><strong>1-on-1 Setup Call</strong></p>
+          <p>We help you get setup with a 1-on-1 integration call.</p>
+        </div>
+
+      </div>
+
+   <form class="initial-value-form enterprise-trial-form" id="free-trial-form-enterprise_pricing" method="post" enctype="multipart/form-data" action="https://forms.hubspot.com/uploads/form/v2/394224/b07d0390-fad1-47e4-a682-ccca7512fbbc">
+
+        <input name="leadsource" type="hidden" value="MaxCDN.com">
+        <input name="lead_source_detail__c" type="hidden" value="MaxCDN Enterprise Homepage Trial Form">
+        <input type="hidden" name="lpId" value="-1" />
+        <input type="hidden" name="subId" value="127" />
+        <input type="hidden" name="kw" value="" />
+        <input type="hidden" name="cr" value="" />
+        <input type="hidden" name="searchstr" value="" />
+        <input name="content__c" type='text' value="" class="hidden" />
+        <input type="hidden" name="_mkt_disp" value="return" />
+        <input type="hidden" name="_mkt_trk" value="" />
+        <input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNFreeTrial_freetrial.html?cr={creative}&kw={keyword}" />
+        <input type="hidden" name="formid" value="111" />
+        <input type="hidden" name="returnURL" value="http://maxcdn.com/success/" />
+        <input type="hidden" name="retURL" value="http://maxcdn.com/success/" />
+        <input name="contact_form__c" type='hidden' value="http://enterprise.maxcdn.com/" />
+
+        <label class="hide-me fnl" id="fnl">First Name <span class="orange text">*</span></label>
+        <input class="required" name="firstname" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+        <label class="hide-me lnl" id="lnl">Last Name <span class="orange text">*</span></label>
+        <input class="required" value="Last Name" name="lastname" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+        <label class="hide-me eml" id="eml">Email <span class="orange text">*</span></label>
+        <input name="email" value="Email Address" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+        <label class="hide-me wsl" id="wsl">Website URL <span class="orange text">*</span></label>
+        <input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+        <label class="hide-me bwl" id="bandwidth-label">Bandwidth <span class="orange text">*</span></label>
+        <div class="select-field required">
+              <select class="required" name="netdna_usage_selection__c" tabindex="6">
+                <option value="Bandwidth" selected="selected">Bandwidth</option>
+                <option value="Under 5TB">Under 5TB</option>
+                <option value="5TB - 10TB">5TB - 10TB</option>
+                <option value="11 - 100TB">11 - 100TB</option>
+                <option value="101TB - 1,000TB">101TB - 1,000TB</option>
+                <option value="1PB+">1PB+</option>
+              </select>
+        </div>
+        <label class="hide-me pnl" id="pnl">Phone Number</label>
+        <input name="phone" type="phone" value="Phone Number" class="">
+        <button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button>
+      </form>
+      </article>
+    </div>
+    </div>
 
 
-			<!-- Free Trial section -->
-			<div class="free-trial footer-freetrial textleft">
-				<div class="column fourty first">
-					<h2 class="no-bottom-space"><strong>GET A 7 DAY FREE TRIAL</strong></h2>
-					<p class="copy">Check out our content delivery network and try out the new features that matter to you the most with our 7 day free trial.</p>
-					<ul class="simple-list" >
-						<li>Low global flat rate pricing</li>
-						<li>Features other CDNs don’t offer</li>
-						<li>Easiest to use control panel</li>
-						<li>24/7 superior support</li>
-						<li>High performance</li>
-					</ul>
-				</div>
-				<div class="column sixty last">
-					<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="alignright standard-form">
-						<input type="hidden" name="lpId" value="-1" />
-						<input type="hidden" name="subId" value="127" />
-						<input type="hidden" name="kw" value="" />
-						<input type="hidden" name="cr" value="" />
-						<input type="hidden" name="searchstr" value="" />
-						<input type="hidden" name="_mkt_disp" value="return" />
-						<input type="hidden" name="_mkt_trk" value="" />
-						<input name="content__c" type='text' value="" class="hidden" />
-						<input name="LeadSource" type="hidden" value="MaxCDN.com">
-						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Contact Us Form">
-						<input type="hidden" name="lpurl" value="http://resources.netdna.com/MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
-						<input type="hidden" name="formid" value="15" />
-						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
-						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
-						<input name="URL_of_Lead_Source__c" type='hidden' value="https://enterprise.maxcdn.com/" />
-
-						<div class="trial-form custom-form">
-							<label>First Name <span class="orange-text">*</span></label>
-							<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
-							<label>Last Name <span class="orange-text">*</span></label>
-							<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
-							<label>Email Address <span class="orange-text">*</span></label>
-							<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
-							<label>Phone Number (optional)</label>
-							<input class="text " type="text" name="Phone" >
-							<label>URL of a file (2mb or under)</label>
-							<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid File URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
-							<label>Your Monthly Bandwidth Usage</label>
-							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
-								<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
-								<option value="Under 5TB">Under 5TB</option>
-								<option value="5TB - 10TB">5TB - 10TB</option>
-								<option value="11 - 100TB">11 - 100TB</option>
-								<option value="101TB - 1,000TB">101TB - 1,000TB</option>
-								<option value="1PB+">1PB+</option>
-							</select>
-						</div>
-						<button type="submit" class="btn btn-submit">Request Free Trial</a>
-					</form>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-					<div class="container-padding">
-    <div class="live-chat info">
+	<div class="main">
+	<article class="content" id="pricing">
+		<div class="container-padding">
+     <div class="live-chat info">
         <h2 class="heading">Have questions?</h2>
         <p>Need to find answers quick? We’re here to help.</p>
         <a href="#" onclick="return startWidget('chat');" class="chbtn">
             <i class="fa fa-comment"></i>
             <div class="chbtn-chat">Start a Live Chat</div>
         </a>
-		<p>or call us +1 (877) 629-2361</p>
+		<p>or call us <span class="phone-number">+1 (877) 629-2361</span></p>
     </div>
 </div><br/>
-		</article>
-		<div class="clearfix"></div>
-
-	</div><!-- /main -->
+	</article>
+	<div class="clearfix"></div>
+</div><!-- /main -->
 
 <?php
 $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
@@ -433,7 +455,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<input type="hidden" name="formid" value="111" />
 			<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
 			<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
-			<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
+			<input name="contact_form__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 			<div class="cols">
 				<div class="col">
@@ -530,7 +552,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		<strong class="orange large-heading">Contact Us</strong>
 		<p>If you have any technical or pricing questions about MaxCDN Enterprise, we can answer them.<br/>If you leave your details below, we'll contact you back with more information.<br/>Otherwise, you can <a href="#" onclick="return startWidget('chat');">live chat</a> us or call us at <span class="phone-number">(877) 629-2361</span>.</p>
 
-		<form id="form-popup-contact-us-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
+		<form id="form-popup-contact-us-<?php echo getPageSlug(); ?>" method="post" enctype="multipart/form-data" action="https://forms.hubspot.com/uploads/form/v2/394224/2e282a6e-b85b-4feb-b58d-01b8925bcc1b" class="standard-form">
 			<input type="hidden" name="lpId" value="-1" />
 			<input type="hidden" name="subId" value="127" />
 			<input type="hidden" name="kw" value="" />
@@ -539,28 +561,28 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<input type="hidden" name="_mkt_disp" value="return" />
 			<input type="hidden" name="_mkt_trk" value="" />
 			<input name="content__c" type='text' value="" class="hidden" />
-			<input name="LeadSource" type="hidden" value="MaxCDN.com">
-			<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Contact Form">
+			<input name="leadsource" type="hidden" value="MaxCDN.com">
+			<input name="lead_source_detail__c" type="hidden" value="Enterprise HV CDN Contact Form (popup)">
 			<input type="hidden" name="lpurl" value="http://resources.netdna.com/EnterpriseMaxCDNContactForm_EnterpriseMaxCDN_MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
 			<input type="hidden" name="formid" value="114" />
 			<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
 			<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
-			<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
+			<input name="contact_form__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 			<div class="cols">
 				<div class="trial-form generalcontact-form custom-form">
 				<label>First Name <span class="orange-text">*</span></label>
-					<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+					<input class="required text" name="firstname" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 					<label>Last Name <span class="orange-text">*</span></label>
-					<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+					<input class="required text" name="lastname" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 					<label>Email Address <span class="orange-text">*</span></label>
-					<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+					<input name="email" class="required text" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 					<label>Phone Number (optional)</label>
 					<input class="text " type="text" name="Phone" >
 					<label>Your Website <span class="orange-text">*</span></label>
-					<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+					<input name="website" class="required text" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 					<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
-					<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+					<select class="required" name="netdna_usage_selection__c" tabindex="6">
 						<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
 						<option value="Under 5TB">Under 5TB</option>
 						<option value="5TB - 10TB">5TB - 10TB</option>

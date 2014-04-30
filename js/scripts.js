@@ -141,6 +141,60 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+// Trial Form Labels
+
+function entTrialFormLabels() {
+        $('.enterprise-trial-form label').hide();
+
+    $('.enterprise-trial-form input[name="firstname"').focus(function() {
+        $('#fnl').show();
+    });
+
+    $('.enterprise-trial-form input[name="firstname"').blur(function() {
+        $('#fnl').hide();
+    });
+
+    $('.enterprise-trial-form input[name="lastname"').focus(function() {
+        $('#lnl').show();
+    });
+
+    $('.enterprise-trial-form input[name="lastname"').blur(function() {
+        $('#lnl').hide();
+    });
+
+    $('.enterprise-trial-form input[name="email"').focus(function() {
+        $('#eml').show();
+    });
+
+    $('.enterprise-trial-form input[name="email"').blur(function() {
+        $('#eml').hide();
+    });
+
+    $('.enterprise-trial-form input[name="phone"').focus(function() {
+        $('#pnl').show();
+    });
+
+    $('.enterprise-trial-form input[name="phone"').blur(function() {
+        $('#pnl').hide();
+    });
+
+    $('.enterprise-trial-form input[name="website"').focus(function() {
+        $('#wsl').show();
+    });
+
+    $('.enterprise-trial-form input[name="website"').blur(function() {
+        $('#wsl').hide();
+    });
+
+    $('.enterprise-trial-form select').focus(function() {
+        $('#bwl').show();
+    });
+
+     $('.enterprise-trial-form select').blur(function() {
+        $('#bwl').hide();
+    });
+}
+
 // nicereply popup after live chat
 function nicereplyPopup(agentName) {
 	if (agentName != null) {
@@ -245,7 +299,7 @@ function checkRequiredFields(form) {
 				$("<input type='hidden' value='" + $.cookie("custom_utm_content") + "' />").attr("name", "utm_content__c").appendTo($(this));
 			}
 			if (typeof $.cookie("first_visit") !== 'undefined') {
-				$("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "PPC_Entrance_Date__c").appendTo($(this));
+				$("<input type='hidden' value='" + $.cookie("first_visit") + "' />").attr("name", "ppc_entrance_date__c").appendTo($(this));
 			}
 		}
 	});
@@ -779,45 +833,7 @@ $(document).ready(function(){
 		});
 	});
 
-$('input[name="FirstName"]').focus(function() {
-  $('.fnl').removeClass('hide-me');
-});
-
-$('input[name="FirstName"]').blur(function() {
-  $('.fnl').addClass('hide-me');
-});
-
-$('input[name="LastName"]').focus(function() {
-  $('.lnl').removeClass('hide-me');
-});
-
-$('input[name="LastName"]').blur(function() {
-  $('.lnl').addClass('hide-me');
-});
-
-$('input[name="Email"]').focus(function() {
-  $('.eml').removeClass('hide-me');
-});
-
-$('input[name="Email"]').blur(function() {
-  $('.eml').addClass('hide-me');
-});
-
-$('input[name="Phone"]').focus(function() {
-  $('.pnl').removeClass('hide-me');
-});
-
-$('input[name="Phone"]').blur(function() {
-  $('.pnl').addClass('hide-me');
-});
-
-$('input[name="Website"]').focus(function() {
-  $('.wsl').removeClass('hide-me');
-});
-
-$('input[name="Website"]').blur(function() {
-  $('.wsl').addClass('hide-me');
-});
+entTrialFormLabels();
 
 $(".initial-value-form input[type='text']").each(function() {
     var default_value = this.value;
@@ -859,7 +875,7 @@ $(".initial-value-form input[type='website']").each(function() {
     });
 });
 
-	checkRequiredFields('form.standard-form');
+	checkRequiredFields('form');
 	sliderEvents();
 
 });

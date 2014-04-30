@@ -33,10 +33,12 @@ if ($_SERVER['SCRIPT_NAME'] === "/pricing/index.php") {
 					<li id="menu-item-6260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children hasSubnav menu-item-6260">
 						<a href="http://www.maxcdn.com/solutions/">Solutions</a>
 						<ul class="sub-menu">
-							<li id="menu-item-6264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6264"><a href="http://www.maxcdn.com/solutions/">Overview</a></li>
-							<li id="menu-item-6262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6262"><a href="http://www.maxcdn.com/solutions/cms/">CMS</a></li>
 							<li id="menu-item-6261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6261"><a href="http://www.maxcdn.com/solutions/advertising/">Advertising</a></li>
 							<li id="menu-item-6263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6263"><a href="http://www.maxcdn.com/solutions/gaming/">Gaming</a></li>
+							<li id="menu-item-7381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7381"><a href="http://www.maxcdn.com/solutions/cms/wordpress-cdn/">WordPress</a></li>
+							<li id="menu-item-7382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7382"><a href="http://www.maxcdn.com/solutions/cms/drupal-cdn/">Drupal</a></li>
+							<li id="menu-item-7383" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7383"><a href="http://www.maxcdn.com/solutions/cms/joomla-cdn/">Joomla</a></li>
+							<li id="menu-item-6262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6262"><a href="http://www.maxcdn.com/solutions/cms/">Other CMS</a></li>
 							<li class="bottom-subnav textcenter">
 								<p><span class="phone-number">+1 (877) 629-2361</span></p>
 								<a href="#" onclick="return startWidget('chat');" class="button orange">

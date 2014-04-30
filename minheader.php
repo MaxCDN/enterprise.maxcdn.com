@@ -116,9 +116,9 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			</p>
 		</div>
 		<div class="slider-email hidden">
-			<form id="form-contact-orange-slider-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="standard-form">
-				<input name="LeadSource" type="hidden" value="MaxCDN.com">
-				<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Side Bar Form">
+			<form id="form-contact-orange-slider-<?php echo getPageSlug(); ?>" method="post" enctype="multipart/form-data" action="https://forms.hubspot.com/uploads/form/v2/394224/2e282a6e-b85b-4feb-b58d-01b8925bcc1b" class="standard-form">
+				<input name="leadsource" type="hidden" value="MaxCDN.com">
+				<input name="lead_source_detail__c" type="hidden" value="Enterprise Sidebar Contact Form">
 				<input type="hidden" name="lpId" value="-1" />
 				<input type="hidden" name="subId" value="127" />
 				<input type="hidden" name="kw" value="" />
@@ -131,7 +131,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<input type="hidden" name="formid" value="113" />
 				<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
 				<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
-				<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
+				<input name="contact_form__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 				<div class="column sixty">
 					<div class="padding">
@@ -139,27 +139,27 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 						<ul>
 							<li>
 								<label for="FirstName">First Name <span class="orange-text">*</span></label>
-								<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+								<input class="required" name="firstname" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="LastName">Last Name <span class="orange-text">*</span></label>
-								<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+								<input class="required" name="lastname" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="Email">Email Address <span class="orange-text">*</span></label>
-								<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+								<input name="email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="Phone">Phone Number</label>
-								<input type="phone" name="Phone" />
+								<input type="phone" name="phone" />
 								<div class="clearfix"></div>
 							</li>
 							<li>
 								<label for="Website">Website <span class="orange-text">*</span></label>
-								<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+								<input name="website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 								<div class="clearfix"></div>
 							</li>
 						</ul>
@@ -169,7 +169,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<div class="column fourty last">
 					<div class="padding">
 						<label for="text" class="textarea">How can we help you? <span class="orange-text">*</span></label>
-						<textarea class="required" name="Contact_Form_Message__c"></textarea>
+						<textarea class="required" name="contact_form_message__c"></textarea>
 						<div class="textright">
 							<input id="talkformsend" type="submit" class="button orange" value="SEND" />
 						</div>

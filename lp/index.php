@@ -27,9 +27,9 @@
 					<h3 class="lp-section-title">Get a Free Trial</h3>
 					<p class="trial-information">You can get an enterprise free trial, just enter your details to get started.</p>
 					<p class="form-directions hide-me">Please fill out all required fields.</p>
-					<form class="initial-value-form ajax-form lp-trial-form" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" id="lp-trial-form">
-						<input name="LeadSource" type="hidden" value="MaxCDN.com">
-						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Enterprise Short LP Trial Form">
+					<form class="initial-value-form ajax-form lp-trial-form" method="post" enctype="multipart/form-data" action="https://forms.hubspot.com/uploads/form/v2/394224/b07d0390-fad1-47e4-a682-ccca7512fbbc" id="lp-trial-form">
+						<input name="leadsource" type="hidden" value="MaxCDN.com">
+						<input name="lead_source_detail__c" type="hidden" value="MaxCDN Enterprise LP Trial Form">
 						<input type="hidden" name="lpId" value="-1" />
 						<input type="hidden" name="subId" value="127" />
 						<input type="hidden" name="kw" value="" />
@@ -42,19 +42,19 @@
 						<input type="hidden" name="formid" value="119" />
 						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/trial-success/" />
 						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/trial-success/" />
-						<input name="URL_of_Lead_Source__c" type='hidden' value="<?php echo getURL(); ?>" />
+						<input name="contact_form__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 
-						<div class="event-form-field"><label class="hidden-label fnl">FIRST NAME</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input class="required" name="FirstName" value="First Name" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required></div>
-						<div class="event-form-field"><label class="hidden-label lnl">LAST NAME</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input class="required" name="LastName" value="Last Name" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required></div>
+						<div class="event-form-field"><label class="hidden-label fnl">First Name</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input class="required" name="firstname" value="First Name" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required></div>
+						<div class="event-form-field"><label class="hidden-label lnl">Last Name</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input class="required" name="lastname" value="Last Name" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required></div>
 						<p class="email-instructions hide-me">Please include a properly formatted email address</p>
-						<div class="event-form-field"><label class="hidden-label eml">EMAIL</label><br class="hidden-label eml" /><span class="orange-text">* </span><input name="Email" class="required" value="Email Address" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required></div>
-						<div class="event-form-field"><label class="hidden-label pnl">PHONE NUMBER</label><br class="hidden-label pnl" /><input type="phone" name="Phone Number" value="PHONE NUMBER" class="text"></div>
-						<div class="event-form-field"><label class="hidden-label wsl">WEBSITE</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input name="Website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required></div>
+						<div class="event-form-field"><label class="hidden-label eml">Email</label><br class="hidden-label eml" /><span class="orange-text">* </span><input name="email" class="required" value="Email Address" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required></div>
+						<div class="event-form-field"><label class="hidden-label pnl">Phone Number</label><br class="hidden-label pnl" /><input type="phone" name="phone" value="Phone Number" class="text"></div>
+						<div class="event-form-field"><label class="hidden-label wsl">Website</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required></div>
 						<div class="event-form-field select-field">
 							<span class="orange-text float-right">* </span>
-							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
-								<option value="Bandwidth" selected="selected">BANDWIDTH</option>
+							<select class="required" name="netdna_usage_selection__c" tabindex="6">
+								<option value="Bandwidth" selected="selected">Bandwidth</option>
 								<option value="Under 5TB">Under 5TB</option>
 								<option value="5TB - 10TB">5TB - 10TB</option>
 								<option value="11 - 100TB">11 - 100TB</option>

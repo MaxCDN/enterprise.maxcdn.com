@@ -264,10 +264,10 @@
 
       </div>
 
-      <form class="initial-value-form enterprise-trial-form" id="free-trial-form-enterprise_pricing" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save">
+   <form class="initial-value-form enterprise-trial-form" id="free-trial-form-enterprise_pricing" method="post" enctype="multipart/form-data" action="https://forms.hubspot.com/uploads/form/v2/394224/b07d0390-fad1-47e4-a682-ccca7512fbbc">
 
-        <input name="LeadSource" type="hidden" value="MaxCDN.com">
-        <input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Contact Us Form">
+        <input name="leadsource" type="hidden" value="MaxCDN.com">
+        <input name="lead_source_detail__c" type="hidden" value="MaxCDN Enterprise Homepage Trial Form">
         <input type="hidden" name="lpId" value="-1" />
         <input type="hidden" name="subId" value="127" />
         <input type="hidden" name="kw" value="" />
@@ -280,19 +280,19 @@
         <input type="hidden" name="formid" value="111" />
         <input type="hidden" name="returnURL" value="http://maxcdn.com/success/" />
         <input type="hidden" name="retURL" value="http://maxcdn.com/success/" />
-        <input name="URL_of_Lead_Source__c" type='hidden' value="http://enterprise.maxcdn.com/" />
+        <input name="contact_form__c" type='hidden' value="http://enterprise.maxcdn.com/" />
 
         <label class="hide-me fnl" id="fnl">First Name <span class="orange text">*</span></label>
-        <input class="required" name="FirstName" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+        <input class="required" name="firstname" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
         <label class="hide-me lnl" id="lnl">Last Name <span class="orange text">*</span></label>
-        <input class="required" value="Last Name" name="LastName" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+        <input class="required" value="Last Name" name="lastname" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
         <label class="hide-me eml" id="eml">Email <span class="orange text">*</span></label>
-        <input name="Email" value="Email Address" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+        <input name="email" value="Email Address" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
         <label class="hide-me wsl" id="wsl">Website URL <span class="orange text">*</span></label>
-        <input name="Website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+        <input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
         <label class="hide-me bwl" id="bandwidth-label">Bandwidth <span class="orange text">*</span></label>
         <div class="select-field required">
-              <select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+              <select class="required" name="netdna_usage_selection__c" tabindex="6">
                 <option value="Bandwidth" selected="selected">Bandwidth</option>
                 <option value="Under 5TB">Under 5TB</option>
                 <option value="5TB - 10TB">5TB - 10TB</option>
@@ -302,7 +302,7 @@
               </select>
         </div>
         <label class="hide-me pnl" id="pnl">Phone Number</label>
-        <input name="Phone" type="phone" value="Phone Number" class="">
+        <input name="phone" type="phone" value="Phone Number" class="">
         <button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button>
       </form>
       </article>
@@ -310,65 +310,6 @@
     </div>
 
 
-		<!-- Free Trial section
-		<div id="try-us" class="free-trial footer-freetrial textleft">
-			<div class="column fourty first">
-				<p class="orange-text no-bottom-space"><strong>DO YOU USE OVER 15TB PER<br/>MONTH OF BANDWIDTH?</strong></p>
-				<h2 class="no-bottom-space"><strong>GET A 7 DAY FREE TRIAL</strong></h2>
-				<p class="copy">Check out our content delivery network and try out the new features that matter to you the most with our 7 day free trial.</p>
-				<ul class="simple-list" >
-					<li>Low global flat rate pricing</li>
-					<li>Features other CDNs don’t offer</li>
-					<li>Easiest to use control panel</li>
-					<li>24/7 superior support</li>
-					<li>High performance</li>
-				</ul>
-			</div>
-			<div class="column sixty last">
-				<form id="form-free-trial-<?php echo getPageSlug(); ?>" method="post" enctype="application/x-www-form-urlencoded" action="http://resources.netdna.com/index.php/leadCapture/save" class="alignright standard-form">
-						<input type="hidden" name="lpId" value="-1" />
-						<input type="hidden" name="subId" value="127" />
-						<input type="hidden" name="kw" value="" />
-						<input type="hidden" name="cr" value="" />
-						<input type="hidden" name="searchstr" value="" />
-						<input type="hidden" name="_mkt_disp" value="return" />
-						<input type="hidden" name="_mkt_trk" value="" />
-						<input name="content__c" type='text' value="" class="hidden" />
-						<input name="LeadSource" type="hidden" value="MaxCDN.com">
-						<input name="Lead_Source_Detail__c" type="hidden" value="MaxCDN Contact Us Form">
-						<input type="hidden" name="lpurl" value="http://resources.netdna.com/MaxCDNContactUs.html?cr={creative}&kw={keyword}" />
-						<input type="hidden" name="formid" value="15" />
-						<input type="hidden" name="returnURL" value="https://enterprise.maxcdn.com/success/" />
-						<input type="hidden" name="retURL" value="https://enterprise.maxcdn.com/success/" />
-						<input name="URL_of_Lead_Source__c" type='hidden' value="https://enterprise.maxcdn.com/" />
-
-						<div class="trial-form custom-form">
-							<label>First Name <span class="orange-text">*</span></label>
-							<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
-							<label>Last Name <span class="orange-text">*</span></label>
-							<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
-							<label>Email Address <span class="orange-text">*</span></label>
-							<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
-							<label>Website URL</label>
-							<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid File URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
-							<label>Phone Number (optional)</label>
-							<input class="text " type="text" name="Phone" >
-							<label>Your Monthly Bandwidth Usage</label>
-							<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
-								<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
-								<option value="Under 5TB">Under 5TB</option>
-								<option value="5TB - 10TB">5TB - 10TB</option>
-								<option value="11 - 100TB">11 - 100TB</option>
-								<option value="101TB - 1,000TB">101TB - 1,000TB</option>
-								<option value="1PB+">1PB+</option>
-							</select>
-						</div>
-						<button type="submit" class="btn btn-submit">Request Free Trial</a>
-					</form>
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"></div>
-		</div> -->
 	<div class="main">
 	<article class="content" id="pricing">
 		<div class="container-padding">

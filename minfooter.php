@@ -140,6 +140,8 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				var lc_first_visit = $.cookie('first_visit');
 			}
 
+			var lc_lead_system = "Salesforce";
+
 		</script>
 
 <script type="text/javascript">

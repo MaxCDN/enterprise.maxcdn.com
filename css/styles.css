@@ -2405,7 +2405,7 @@ Enterprise LP
 	text-align: center;
 }
 
-.enterprise-lp-form .event-form-field, .enterprise-lp-form .event-form-field select {
+.enterprise-lp-form .event-form-field {
 	width: 160px;
 	margin: auto;
 }
@@ -2683,6 +2683,11 @@ label.hidden-label {
 	margin: auto;
 }
 
+.enterprise-trial-form select {
+	width: 97%;
+	margin: auto;
+}
+
 .enterprise-trial-form label {
 	font-weight: 700;
 	float: left;
@@ -2720,4 +2725,9 @@ label.hidden-label {
 .enterprise-trial-form button {
 	border: 0px;
 	padding: 9px 15px;
+}
+
+.enterprise-lp-form .event-form-field select {
+	width: 144px;
+	margin: auto;
 }

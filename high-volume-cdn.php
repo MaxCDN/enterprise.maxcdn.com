@@ -381,7 +381,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
         <input type="hidden" name="retURL" value="http://maxcdn.com/success/" />
         <input name="contact_form__c" type='hidden' value="http://enterprise.maxcdn.com/" />
 
-        <label class="hide-me fnl" id="fnl">First Name <span class="orange text">*</span></label>
+        <!-- <label class="hide-me fnl" id="fnl">First Name <span class="orange text">*</span></label>
         <input class="required" name="firstname" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
         <label class="hide-me lnl" id="lnl">Last Name <span class="orange text">*</span></label>
         <input class="required" value="Last Name" name="lastname" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
@@ -401,7 +401,30 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
               </select>
         </div>
         <label class="hide-me pnl" id="pnl">Phone Number</label>
+        <input name="phone" type="phone" value="Phone Number" class=""> -->
+
+        <label>First Name <span class="orange text">*</span></label>
+        <input class="required" name="firstname" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+        <label>Last Name <span class="orange text">*</span></label>
+        <input class="required" value="Last Name" name="lastname" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+        <label>Email <span class="orange text">*</span></label>
+        <input name="email" value="Email Address" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+        <label>Website URL <span class="orange text">*</span></label>
+        <input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+        <label>Bandwidth <span class="orange text">*</span></label>
+        <div class="select-field required">
+              <select class="required" name="netdna_usage_selection__c" tabindex="6">
+                <option value="Bandwidth" selected="selected">Bandwidth</option>
+                <option value="Under 5TB">Under 5TB</option>
+                <option value="5TB - 10TB">5TB - 10TB</option>
+                <option value="11 - 100TB">11 - 100TB</option>
+                <option value="101TB - 1,000TB">101TB - 1,000TB</option>
+                <option value="1PB+">1PB+</option>
+              </select>
+        </div>
+        <label>Phone Number</label>
         <input name="phone" type="phone" value="Phone Number" class="">
+
         <button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button>
       </form>
       </article>
@@ -599,8 +622,6 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 </div>
 
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.plugins.min.js"></script>
-<script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.js"></script>
-<script type="text/javascript" src="<?php echo $filePrepender; ?>js/custom-form.select.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/scripts.js?q=<?=getMD5Hash('js/scripts.js')?>"></script>

@@ -143,7 +143,7 @@ function numberWithCommas(x) {
 
 // Trial Form Labels
 
-function entTrialFormLabels() {
+/* function entTrialFormLabels() {
         $('.enterprise-trial-form label').hide();
 
     $('.enterprise-trial-form input[name="firstname"').focus(function() {
@@ -193,7 +193,7 @@ function entTrialFormLabels() {
      $('.enterprise-trial-form select').blur(function() {
         $('#bwl').hide();
     });
-}
+} */
 
 // nicereply popup after live chat
 function nicereplyPopup(agentName) {
@@ -552,11 +552,11 @@ $(document).ready(function(){
 		});
 	}
 
-	if ($('.custom-form').exists()) {
+	/* if ($('.custom-form').exists()) {
 		customForm.lib.domReady(function(){
 			customForm.customForms.replaceAll();
 		});
-	}
+	} */
 
 	if ($('.hidden-popup').exists()) {
 		setTimeout(function() {
@@ -833,7 +833,7 @@ $(document).ready(function(){
 		});
 	});
 
-entTrialFormLabels();
+/* entTrialFormLabels(); */
 
 $(".initial-value-form input[type='text']").each(function() {
     var default_value = this.value;

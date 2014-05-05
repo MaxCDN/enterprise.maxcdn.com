@@ -51,7 +51,7 @@
 						<div class="event-form-field"><label class="hidden-label eml">Email</label><br class="hidden-label eml" /><span class="orange-text">* </span><input name="email" class="required" value="Email Address" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required></div>
 						<div class="event-form-field"><label class="hidden-label pnl">Phone Number</label><br class="hidden-label pnl" /><input type="phone" name="phone" value="Phone Number" class="text"></div>
 						<div class="event-form-field"><label class="hidden-label wsl">Website</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required></div>
-						<div class="event-form-field select-field">
+						<div class="event-form-field">
 							<span class="orange-text float-right">* </span>
 							<select class="required" name="netdna_usage_selection__c" tabindex="6">
 								<option value="Bandwidth" selected="selected">Bandwidth</option>

@@ -45,15 +45,15 @@
 						<input name="contact_form__c" type='hidden' value="<?php echo getURL(); ?>" />
 
 
-						<div class="event-form-field"><label class="hidden-label fnl">First Name</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input class="required" name="firstname" value="First Name" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required></div>
-						<div class="event-form-field"><label class="hidden-label lnl">Last Name</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input class="required" name="lastname" value="Last Name" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required></div>
+						<div class="event-form-field"><label class="hidden-label fnl">First Name</label><br class="hidden-label fnl" /><span class="orange-text">* </span><input class="required" name="firstname" value="First Name" pattern="^\w+$" type="text" tabindex="101" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required></div>
+						<div class="event-form-field"><label class="hidden-label lnl">Last Name</label><br class="hidden-label lnl" /><span class="orange-text">* </span><input class="required" name="lastname" value="Last Name" pattern="^\w+$" type="text" tabindex="102"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required></div>
 						<p class="email-instructions hide-me">Please include a properly formatted email address</p>
-						<div class="event-form-field"><label class="hidden-label eml">Email</label><br class="hidden-label eml" /><span class="orange-text">* </span><input name="email" class="required" value="Email Address" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required></div>
+						<div class="event-form-field"><label class="hidden-label eml">Email</label><br class="hidden-label eml" /><span class="orange-text">* </span><input name="email" class="required" value="Email Address" type="email" tabindex="103" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required></div>
 						<div class="event-form-field"><label class="hidden-label pnl">Phone Number</label><br class="hidden-label pnl" /><input type="phone" name="phone" value="Phone Number" class="text"></div>
-						<div class="event-form-field"><label class="hidden-label wsl">Website</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required></div>
+						<div class="event-form-field"><label class="hidden-label wsl">Website</label><br class="hidden-label wsl" /><span class="orange-text">* </span><input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="104" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required></div>
 						<div class="event-form-field">
 							<span class="orange-text float-right">* </span>
-							<select class="required" name="netdna_usage_selection__c" tabindex="6">
+							<select class="required" name="netdna_usage_selection__c" tabindex="105">
 								<option value="Bandwidth" selected="selected">Bandwidth</option>
 								<option value="Under 5TB">Under 5TB</option>
 								<option value="5TB - 10TB">5TB - 10TB</option>
@@ -62,7 +62,7 @@
 								<option value="1PB+">1PB+</option>
 							</select>
 						</div>
-						<div class="event-form-submit"><button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
+						<div class="event-form-submit"><button class="orange button" tabindex="106" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button></div>
 					</form>
 				</aside>
 			</div>

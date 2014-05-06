@@ -817,7 +817,7 @@ $(document).ready(function(){
 
 	$("a#mainbtntryusfree").click(function(e) {
 		e.preventDefault();
-		var freetrial = $('.footer-freetrial');
+		var freetrial = $('#freetrialholder');
 		$("html, body").animate({ scrollTop: freetrial.offset().top-45 }, {
 			duration: 145,
 			complete: function() {

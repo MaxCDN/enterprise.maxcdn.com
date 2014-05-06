@@ -1474,7 +1474,7 @@ footer .socials .ico-3 {background-position:-100px 0;}
     left:5px;
     display:none;
     width:468px;
-    height:331px;
+    height:270px;
 	z-index: 999;
 	color: white;
 	cursor: pointer;
@@ -1520,10 +1520,10 @@ footer .socials .ico-3 {background-position:-100px 0;}
 	display: inherit;
 	position: fixed;
 	z-index: 999;
-	bottom: 290px;
-	height: 20px;
-	width: 20px;
-	left: 425px;
+	bottom: 280px;
+	height: 40px;
+	width: 40px;
+	left: 415px;
 }
 
 .chat-now-popup#new-chat-popup {
@@ -1535,8 +1535,8 @@ footer .socials .ico-3 {background-position:-100px 0;}
 }
 
 #image-maps area#new-area {
-	left: 400px;
-	bottom: 244px;
+	left: 382px;
+	bottom: 238px;
 }
 
 .chat-now-popup#new-chat-popup .chat-popup-text {
@@ -2689,7 +2689,7 @@ label.hidden-label {
 }
 
 .enterprise-trial-form label {
-	font-weight: 700;
+	font-weight: 500;
 	float: left;
 	margin-left: 5px;
 }

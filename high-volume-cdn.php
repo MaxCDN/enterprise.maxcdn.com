@@ -331,7 +331,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		</article>
 	</div>
 
-<div class="enterprise-trial-holder" style="margin-bottom:0px;">
+<div class="enterprise-trial-holder" style="margin-bottom:0px;" id="freetrialholder">
 <div class="main">
 	<article class="content" >
       <div class="form-intro">
@@ -404,16 +404,16 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
         <input name="phone" type="phone" value="Phone Number" class=""> -->
 
         <label>First Name <span class="orange text">*</span></label>
-        <input class="required" name="firstname" value="First Name" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+        <input class="required" name="firstname" value="First Name" type="text" tabindex="101" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
         <label>Last Name <span class="orange text">*</span></label>
-        <input class="required" value="Last Name" name="lastname" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+        <input class="required" value="Last Name" name="lastname" type="text" tabindex="102"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
         <label>Email <span class="orange text">*</span></label>
-        <input name="email" value="Email Address" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+        <input name="email" value="Email Address" class="required" type="email" tabindex="103" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
         <label>Website URL <span class="orange text">*</span></label>
-        <input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+        <input name="website" value="Website URL" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="104" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
         <label>Bandwidth <span class="orange text">*</span></label>
         <div class="select-field required">
-              <select class="required" name="netdna_usage_selection__c" tabindex="6">
+              <select class="required" name="netdna_usage_selection__c" tabindex="105">
                 <option value="Bandwidth" selected="selected">Bandwidth</option>
                 <option value="Under 5TB">Under 5TB</option>
                 <option value="5TB - 10TB">5TB - 10TB</option>
@@ -423,9 +423,9 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
               </select>
         </div>
         <label>Phone Number</label>
-        <input name="phone" type="phone" value="Phone Number" class="">
+        <input name="phone" type="phone" value="Phone Number" tabindex="106" class="">
 
-        <button class="orange button" name="rsvp-button" value="submit" type="submit">GET A FREE TRIAL</button>
+        <button class="orange button" name="rsvp-button" value="submit" tabindex="107" type="submit">GET A FREE TRIAL</button>
       </form>
       </article>
     </div>
@@ -454,10 +454,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 ?>
 
 <footer>
-	<a href="#" onclick="return startWidget('chat');" class="chat-now"><img usemap="#image-maps" src="<?php echo $filePrepender; ?>images/chatimage.gif"/></a>
-    <map id="image-maps" name="image-maps">
-<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="JavaScript:  $('.chat-now').fadeOut(400);" />
-</map>
+	<a href="#" onclick="return startWidget('chat');" class="chat-now chat-now-popup"><img usemap="#image-maps" src="<?php echo $filePrepender; ?>images/proactive-chat.gif"/></a>
+    	<map id="image-maps" name="image-maps">
+		<area  shape="rect" coords="413,15,447,43" alt="" title="" target="_self" href="#" id="new-area"/>
+	</map>
 </footer><!-- /footer -->
 <div class="hidden-popup">
 	<div class="popup" id="popup-contact">
@@ -595,17 +595,17 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<div class="cols">
 				<div class="trial-form generalcontact-form custom-form">
 				<label>First Name <span class="orange-text">*</span></label>
-					<input class="required text" name="firstname" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+					<input class="required text" name="firstname" pattern="^\w+$" type="text" tabindex="301" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 					<label>Last Name <span class="orange-text">*</span></label>
-					<input class="required text" name="lastname" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+					<input class="required text" name="lastname" pattern="^\w+$" type="text" tabindex="302"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 					<label>Email Address <span class="orange-text">*</span></label>
-					<input name="email" class="required text" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+					<input name="email" class="required text" type="email" tabindex="303" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 					<label>Phone Number (optional)</label>
-					<input class="text " type="text" name="Phone" >
+					<input class="text " type="text" name="Phone"  tabindex="304">
 					<label>Your Website <span class="orange-text">*</span></label>
-					<input name="website" class="required text" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+					<input name="website" class="required text" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="305" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 					<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
-					<select class="required" name="netdna_usage_selection__c" tabindex="6">
+					<select class="required" name="netdna_usage_selection__c" tabindex="306">
 						<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
 						<option value="Under 5TB">Under 5TB</option>
 						<option value="5TB - 10TB">5TB - 10TB</option>
@@ -616,7 +616,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-submit">Submit</a>
+			<button type="submit" tabindex="307" class="btn btn-submit">Submit</a>
 		</form>
 	</div><!-- /popup -->
 </div>
@@ -683,7 +683,7 @@ window.onload = function(){
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
 			})();
 
-			unction startWidget(chatType) {
+			function startWidget(chatType) {
 				try{
 				__adroll.record_user({"adroll_segments": "adrollchat"})
 				} catch(err) {}

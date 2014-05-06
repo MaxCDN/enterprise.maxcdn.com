@@ -11,7 +11,7 @@
 					<li>Simple intuitive control panel &amp; 24/7 support, 365 days a year</li><br/>
 					<li>World-wide flat price — no extra fee for SSL traffic</li>
 				</ul>
-				<a id="mainbtntryusfree" href="#" class="btn btn-test">Try Us For Free</a>
+				<a id="mainbtntryusfree" href="#freetrialholder" class="btn btn-test">Try Us For Free</a>
 				<p class="belowbtn">or see <a href="http://maxcdn.com/enterprise-pricing/">enterprise pricing</a></p>
 			</div>
 		</div>
@@ -232,7 +232,7 @@
 	</article>
 </div>
 
-<div class="enterprise-trial-holder" style="margin-bottom:0px;">
+<div class="enterprise-trial-holder" style="margin-bottom:0px;" id="freetrialholder">
 <div class="main">
 	<article class="content" >
       <div class="form-intro">

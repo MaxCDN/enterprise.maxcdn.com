@@ -331,7 +331,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 		</article>
 	</div>
 
-<div class="enterprise-trial-holder" style="margin-bottom:0px;">
+<div class="enterprise-trial-holder" style="margin-bottom:0px;" id="freetrialholder">
 <div class="main">
 	<article class="content" >
       <div class="form-intro">

@@ -34,17 +34,17 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 			<div class="cols">
 				<div class="trial-form generalcontact-form custom-form">
 				<label>First Name <span class="orange-text">*</span></label>
-					<input class="required text" name="firstname" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+					<input class="required text" name="firstname" pattern="^\w+$" type="text" tabindex="301" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 					<label>Last Name <span class="orange-text">*</span></label>
-					<input class="required text" name="lastname" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+					<input class="required text" name="lastname" pattern="^\w+$" type="text" tabindex="302"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 					<label>Email Address <span class="orange-text">*</span></label>
-					<input name="email" class="required text" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+					<input name="email" class="required text" type="email" tabindex="303" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 					<label>Phone Number (optional)</label>
-					<input class="text " type="text" name="phone" >
+					<input class="text " type="text" name="phone" tabindex="304">
 					<label>Your Website <span class="orange-text">*</span></label>
-					<input name="website" class="required text" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+					<input name="website" class="required text" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="305" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 					<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
-					<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+					<select class="required" name="NetDNA_Usage_Selection__c" tabindex="306">
 						<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
 						<option value="Under 5TB">Under 5TB</option>
 						<option value="5TB - 10TB">5TB - 10TB</option>
@@ -55,7 +55,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					<div class="clearfix"></div>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-submit">Submit</a>
+			<button type="submit" class="btn btn-submit" tabindex="307">Submit</a>
 		</form>
 	</div><!-- /popup -->
 

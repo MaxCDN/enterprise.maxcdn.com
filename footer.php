@@ -115,17 +115,17 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				<div class="col">
 					<div class="trial-form custom-form">
 						<label>First Name <span class="orange-text">*</span></label>
-						<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
+						<input class="required" name="FirstName" pattern="^\w+$" type="text" tabindex="201" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" required>
 						<label>Last Name <span class="orange-text">*</span></label>
-						<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
+						<input class="required" name="LastName" pattern="^\w+$" type="text" tabindex="202"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" required>
 						<label>Email Address <span class="orange-text">*</span></label>
-						<input name="Email" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
+						<input name="Email" class="required" type="email" tabindex="203" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" required>
 						<label>Phone Number <span class="orange-text">*</span></label>
-						<input name="Phone" class="required" type="phone" tabindex="3" title="A valid phone number is required." x-moz-errormessage="Please Enter Your Valid Phone Number" required>
+						<input name="Phone" class="required" type="phone" tabindex="204" title="A valid phone number is required." x-moz-errormessage="Please Enter Your Valid Phone Number" required>
 						<label>URL <span class="orange-text">*</span></label>
-						<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+						<input name="Website" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="205" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
 						<label>Your Monthly Bandwidth Usage <span class="orange-text">*</span></label>
-						<select class="required" name="NetDNA_Usage_Selection__c" tabindex="6">
+						<select class="required" name="NetDNA_Usage_Selection__c" tabindex="206">
 							<option value="Select Bandwidth" selected="selected">Select Bandwidth</option>
 							<option value="Under 5TB">Under 5TB</option>
 							<option value="5TB - 10TB">5TB - 10TB</option>
@@ -146,7 +146,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 					</ul>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-submit">Request Free Trial</a>
+			<button type="submit" class="btn btn-submit" tabindex="207">Request Free Trial</a>
 		</form>
 	</div><!-- /popup -->
 

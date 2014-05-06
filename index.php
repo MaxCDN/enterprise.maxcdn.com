@@ -305,16 +305,16 @@
         <input name="phone" type="phone" value="Phone Number" class=""> -->
 
         <label>First Name <span class="orange text">*</span></label>
-        <input class="required" name="firstname" value="" type="text" tabindex="1" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" tabindex="600" required>
+        <input class="required" name="firstname" value="" type="text" tabindex="601" title="Your first name is required." x-moz-errormessage="Please Enter Your First Name" tabindex="600" required>
         <label>Last Name <span class="orange text">*</span></label>
-        <input class="required" value="" name="lastname" type="text" tabindex="2"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" tabindex="601" required>
+        <input class="required" value="" name="lastname" type="text" tabindex="602"  title="Your last name is required." x-moz-errormessage="Please Enter Your Last Name" tabindex="601" required>
         <label>Email <span class="orange text">*</span></label>
-        <input name="email" value="" class="required" type="email" tabindex="3" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" tabindex="602" required>
+        <input name="email" value="" class="required" type="email" tabindex="603" title="A valid email address is required." x-moz-errormessage="Please Enter Your Valid Email Address" tabindex="602" required>
         <label>Website URL <span class="orange text">*</span></label>
-        <input name="website" value="" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="4" tabindex="603" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
+        <input name="website" value="" class="required" type="text" title="Please enter a Valid URL" x-moz-errormessage="Please Enter Your Valid Website URL" tabindex="604" tabindex="603" pattern="^(https?:\/\/)?(www\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$" required>
         <label>Bandwidth <span class="orange text">*</span></label>
         <div class="select-field required">
-              <select class="required" name="netdna_usage_selection__c" tabindex="604">
+              <select class="required" name="netdna_usage_selection__c" tabindex="605">
                 <option value="Bandwidth" selected="selected">Bandwidth</option>
                 <option value="Under 5TB">Under 5TB</option>
                 <option value="5TB - 10TB">5TB - 10TB</option>
@@ -324,10 +324,10 @@
               </select>
         </div>
         <label>Phone Number</label>
-        <input name="phone" type="phone" value="" tabindex="605" class="">
+        <input name="phone" type="phone" value="" tabindex="606" class="">
 
 
-        <button class="orange button" name="rsvp-button" value="submit" tabindex="606" type="submit">GET A FREE TRIAL</button>
+        <button class="orange button" name="rsvp-button" value="submit" tabindex="607" type="submit">GET A FREE TRIAL</button>
       </form>
       </article>
     </div>

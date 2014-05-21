@@ -132,7 +132,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
                     <section class="row"><label for="Contact_Form_Message__c">Message</label>
                                         <textarea name="contact_form_message__c" class="required" type="text" tabindex="706" required title="Make sure you include a message." x-moz-error-message="Please Write Your Message Here"></textarea></section>
 
-                    <input type="submit" class="button orange" value="Ask Your Question" tabindex="707" id="modal-form-submit">
+                    <input type="submit" class="button orange" value="Ask Your Question" tabindex="707" >
 
                 </form>
             </div>

@@ -319,7 +319,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 <!-- <script type="text/javscript" src="//maxcdn.com/assets/olark/olark.js"></script> Olark Script -->
 <script type="text/javascript" src="<?php echo $filePrepender; ?>js/scripts.js?q=<?=getMD5Hash('js/scripts.js')?>"></script>
 
-<!-- begin olark code -->
+<!-- begin olark code
 			<script data-cfasync="false" type='text/javascript'>
 
 				// Custom Variables //
@@ -738,10 +738,10 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				olark('api.box.expand');
 			}
 			</script>
-		<noscript><a href="https://www.olark.com/site/1118-420-10-9501/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+		<noscript><a href="https://www.olark.com/site/1118-420-10-9501/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>-->
 		<!-- end olark code -->
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
 			var seAgent;
 			(function() {
@@ -816,7 +816,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 
 			var lc_lead_system = "Salesforce";
 
-		</script> -->
+		</script>
 
 <script type="text/javascript">
 adroll_adv_id = "DZPY6TZDGBGEJFB7JCH7ML";

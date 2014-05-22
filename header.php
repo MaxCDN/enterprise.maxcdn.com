@@ -50,7 +50,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/styles.css?q=<?=getMD5Hash('css/styles.css')?>" media="all">
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/jquery.fancybox.css" media="all">
 	<link rel="stylesheet" type="text/css" href="<?php echo $filePrepender; ?>css/form.css" media="all">
-	<link rel="stylesheet" href="//maxcdnv4.staging.wpengine.com/assets/olark/olark.css">
+	<!-- <link rel="stylesheet" href="//maxcdn.com/assets/olark/olark.css"> -->
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="prefetch" href="https://enterprise.maxcdn.com/pricing/" />
 	<!--[if lt IE 9]>

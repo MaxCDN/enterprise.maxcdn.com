@@ -706,7 +706,7 @@ window.onload = function(){
 }());
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 			var seAgent;
 			(function() {
@@ -779,16 +779,438 @@ window.onload = function(){
 				var lc_first_visit = $.cookie('first_visit');
 			}
 
-		</script>
+		</script> -->
 
-<script type="text/javascript">
+<!-- begin olark code -->
+			<!--  <script data-cfasync="false" type='text/javascript'>
+
+				// Custom Variables //
+
+				googleUTMSources();
+
+				if (typeof $.cookie('custom_utm_source') !== "undefined") {
+					lc_utm_source = $.cookie('custom_utm_source');
+				}
+
+				if (typeof $.cookie('custom_utm_campaign') !== "undefined") {
+					lc_utm_campaign = $.cookie('custom_utm_campaign');
+				}
+
+				if (typeof $.cookie('custom_utm_term') !== "undefined") {
+					lc_utm_term = $.cookie('custom_utm_term');
+				}
+
+				if (typeof $.cookie('custom_utm_content') !== "undefined") {
+					lc_utm_content = $.cookie('custom_utm_content');
+				}
+
+				if (typeof $.cookie('custom_utm_medium') !== "undefined") {
+					lc_utm_medium = $.cookie('custom_utm_medium');
+				}
+
+				if (typeof $.cookie('first_visit') !== "undefined") {
+					lc_first_visit = $.cookie('first_visit');
+				}
+
+				var kmCookie = $.cookie('km_ai');
+
+
+			    /*<![CDATA[*/
+			    window.olark || (function (c) {
+			        var f = window,
+			            d = document,
+			            l = f.location.protocol == "https:" ? "https:" : "http:",
+			            z = c.name,
+			            r = "load";
+			        var nt = function () {
+			            f[z] = function () {
+			                (a.s = a.s || []).push(arguments)
+			            };
+			            var a = f[z]._ = {}, q = c.methods.length;
+			            while (q--) {
+			                (function (n) {
+			                    f[z][n] = function () {
+			                        f[z]("call", n, arguments)
+			                    }
+			                })(c.methods[q])
+			            }
+			            a.l = c.loader;
+			            a.i = nt;
+			            a.p = {
+			                0: +new Date
+			            };
+			            a.P = function (u) {
+			                a.p[u] = new Date - a.p[0]
+			            };
+
+			            function s() {
+			                a.P(r);
+			                f[z](r)
+			            }
+			            f.addEventListener ? f.addEventListener(r, s, false) : f.attachEvent("on" + r, s);
+			            var ld = function () {
+			                function p(hd) {
+			                    hd = "head";
+			                    return ["<", hd, "></", hd, "><", i, ' onl' + 'oad="var d=', g, ";d.getElementsByTagName('head')[0].", j, "(d.", h, "('script')).", k, "='", l, "//", a.l, "'", '"', "></", i, ">"].join("")
+			                }
+			                var i = "body",
+			                    m = d[i];
+			                if (!m) {
+			                    return setTimeout(ld, 100)
+			                }
+			                a.P(1);
+			                var j = "appendChild",
+			                    h = "createElement",
+			                    k = "src",
+			                    n = d[h]("div"),
+			                    v = n[j](d[h](z)),
+			                    b = d[h]("iframe"),
+			                    g = "document",
+			                    e = "domain",
+			                    o;
+			                n.style.display = "none";
+			                m.insertBefore(n, m.firstChild).id = z;
+			                b.frameBorder = "0";
+			                b.id = z + "-loader";
+			                if (/MSIE[ ]+6/.test(navigator.userAgent)) {
+			                    b.src = "javascript:false"
+			                }
+			                b.allowTransparency = "true";
+			                v[j](b);
+			                try {
+			                    b.contentWindow[g].open()
+			                } catch (w) {
+			                    c[e] = d[e];
+			                    o = "javascript:var d=" + g + ".open();d.domain='" + d.domain + "';";
+			                    b[k] = o + "void(0);"
+			                }
+			                try {
+			                    var t = b.contentWindow[g];
+			                    t.write(p());
+			                    t.close()
+			                } catch (x) {
+			                    b[k] = o + 'd.write("' + p().replace(/"/g, String.fromCharCode(92) + '"') + '");d.close();'
+			                }
+			                a.P(2)
+			            };
+			            ld()
+			        };
+			        nt()
+			    })({
+			        loader: "static.olark.com/jsclient/loader0.js",
+			        name: "olark",
+			        methods: ["configure", "extend", "declare", "identify"]
+			    });
+			    /* custom configuration goes here (www.olark.com/documentation) */
+
+			    olark('api.chat.onBeginConversation', function() {
+                                        setTimeout(function(){
+                                            olark('api.visitor.getDetails', function(details) {
+                                                lc_test = 'test';
+                                                lc_user_city = details.city;
+                                                lc_user_state = details.region;
+                                                lc_user_country = details.country;
+                                                lc_user_startpage = details.conversationBeginPage;
+                                                olark('api.visitor.updateCustomFields', {
+                                                    'City': lc_user_city,
+                                                    'State/Province': lc_user_state,
+                                                    'Country': lc_user_country,
+                                                    'Live-Chat Page URL': lc_user_startpage
+                                                });
+                                            });
+                                        }, 300);
+                                    });
+
+			    olark('api.visitor.updateCustomFields', {
+			    	'Lead Source': 'Live-Chat',
+			    	'Status': 'Cold Leads',
+			    	'Live-Chat Type': 'Olark Live Chat',
+			    	'Lead System': 'Salesforce'
+			    });
+
+			     if(typeof lc_utm_content !== 'undefined') {
+			    	olark('api.visitor.updateCustomFields', {
+			    		'utm_content': lc_utm_content
+			    	});
+			    }
+
+			    if(typeof lc_utm_campaign !== 'undefined') {
+			    	olark('api.visitor.updateCustomFields', {
+			    		'utm_campaign': lc_utm_campaign
+			    	});
+			    }
+
+			    if(typeof lc_utm_term !== 'undefined') {
+			    	olark('api.visitor.updateCustomFields', {
+			    		'utm_term': lc_utm_term
+			    	});
+			    }
+
+			    if(typeof lc_utm_medium !== 'undefined') {
+			    	olark('api.visitor.updateCustomFields', {
+			    		'utm_medium': lc_utm_medium
+			    	});
+			    }
+
+			    if(typeof lc_utm_source !== 'undefined') {
+			    	olark('api.visitor.updateCustomFields', {
+			    		'utm_source': lc_utm_source
+			    	});
+			    }
+
+			    if(typeof lc_first_visit !== 'undefined') {
+			    	olark('api.visitor.updateCustomFields', {
+			    		'PPC Entrance Date': lc_first_visit
+			    	});
+			    }
+
+			    // Kissmetrics and Google Analytics Tracking
+
+			    olark('api.box.onExpand', function() {
+			    	_gaq.push(['_trackEvent', 'LiveChat', 'Chat Expanded', kmCookie, undefined, true]);
+			    	_kmq.push(['record', 'Chat Expanded']);
+			    });
+
+			    olark('api.box.onShrink', function() {
+			    	_gaq.push(['_trackEvent', 'LiveChat', 'Chat Shrunk', kmCookie, undefined, true]);
+			    	_kmq.push(['record', 'Chat Shrunk']);
+
+			    });
+
+			    olark('api.chat.onBeginConversation', function() {
+			    	_gaq.push(['_trackEvent', 'LiveChat', 'Initial Message Sent', kmCookie, undefined, true]);
+			    	_kmq.push(['record', 'Initial Chat Message Sent']);
+
+			    });
+
+                                    // Custom Operator Commands
+
+                                    olark('api.chat.onCommandFromOperator', function(event) {
+                                        if(event.command.name == 'pricing') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://maxcdn.com/pricing/'});
+                                        }
+
+                                        if(event.command.name == 'hvpricing') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://maxcdn.com/high-volume-pricing/'});
+                                        }
+
+                                        if(event.command.name == 'entpricing') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://maxcdn.com/enterprise-pricing/'});
+                                        }
+
+                                        if(event.command.name == 'w3tc') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/wordpress-w3-total-cache/'});
+                                        }
+
+                                        if(event.command.name == 'wpsc') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/wordpress-wp-super-cache/'});
+                                        }
+
+                                        if(event.command.name == 'customint') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/custom-integration/'});
+                                        }
+
+                                        if(event.command.name == 'czpull') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/create-a-pull-zone/'});
+                                        }
+
+                                        if(event.command.name == 'czpush') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/create-a-push-zone/'});
+                                        }
+
+                                        if(event.command.name == 'purge') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/purge-cache-on-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'cname') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/tutorials/create-cname/'});
+                                        }
+
+                                        if(event.command.name == 'webfonts') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/use-cdn-with-webfonts/'});
+                                        }
+
+                                        if(event.command.name == 'magento') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/magento-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'joomla') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/joomla-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'presta') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/prestashop-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'vbulletin') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/vbulletin-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'wordpress') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/pullzone/wordpress-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'privatessl') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/setup-private-ssl/'});
+                                        }
+
+                                        if(event.command.name == 'sharedssl') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/setup-shared-ssl/'});
+                                        }
+
+                                        if(event.command.name == 'support') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/'});
+                                        }
+
+                                        if(event.command.name == 'delzone') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/delete-a-zone/'});
+                                        }
+
+                                        if(event.command.name == 'pullsec') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/pull-zone-security/'});
+                                        }
+
+                                        if(event.command.name == 'pushsec') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/push-zone-security/'});
+                                        }
+
+                                        if(event.command.name == 'connectpush') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/connect-to-push-zone/'});
+                                        }
+
+                                        if(event.command.name == 'connectvod') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/connect-to-vod-zone/'});
+                                        }
+
+                                        if(event.command.name == 'pullfaq') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/faq/pullzone/'});
+                                        }
+
+                                        if(event.command.name == 'pushfaq') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/faq/pushzone/'});
+                                        }
+
+                                        if(event.command.name == 'vodfaq') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/faq/vodzone/'});
+                                        }
+
+                                        if(event.command.name == 'apikey') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/tutorials/create-an-api-idkey-pair/'});
+                                        }
+
+                                        if(event.command.name == 'api') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://docs.maxcdn.com/'});
+                                        }
+
+                                        if(event.command.name == 'htaccess') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/tutorials/htaccess-examples/'});
+                                        }
+
+                                        if(event.command.name == 'seo') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/use-seo-with-cdn/'});
+                                        }
+
+                                        if(event.command.name == 'cloudflare') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/howto/use-cdn-with-cloudflare/'});
+                                        }
+
+                                        if(event.command.name == '502') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/debugging/502-bad-gateway/'});
+                                        }
+
+                                        if(event.command.name == '403') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://support.maxcdn.com/debugging/403-forbidden/'});
+                                        }
+
+                                        if(event.command.name == 'tools') {
+                                            olark('api.chat.sendMessageToVisitor', { body: 'http://tools.maxcdn.com'});
+                                        }
+
+
+                                    });
+
+			olark('api.chat.onCommandFromOperator', function(event){
+				if (event.command.name == 'end' && event.command.nickname == 'Brenda Benosas') {
+					olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Brenda. Just click here to provide feedback - https://www.nicereply.com/netdna/brenda-benosas'});
+				}
+				else if (event.command.name == 'end' && event.command.nickname == 'Geno Romualdo') {
+				 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Geno. Just click here to provide feedback - https://www.nicereply.com/netdna/geno-remualdo'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Howard Guevarra') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Howard. Just click here to provide feedback - https://www.nicereply.com/netdna/howard-guevarra/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Ivan Dabic') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Ivan. Just click here to provide feedback - https://www.nicereply.com/netdna/ivan-dabic/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Ivan Bukvic') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Ivan. Just click here to provide feedback - https://www.nicereply.com/netdna/ivan-bukvic/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Aldrin Nollase') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Aldrin. Just click here to provide feedback - https://www.nicereply.com/netdna/aldrin-nollase/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Paul-Vincent Manansala') {
+					olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Paul-Vincent. Just click here to provide feedback - https://www.nicereply.com/netdna/paul-vincent-mansanala/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Mikko Mendoza') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Mikko. Just click here to provide feedback - https://www.nicereply.com/netdna/mikko-mendoza/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Srdjan Salamunovic') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Srdjan. Just click here to provide feedback - https://www.nicereply.com/netdna/srdjan-salamunovic/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Reinald Ramos') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Reinald. Just click here to provide feedback - https://www.nicereply.com/netdna/reinald-ramos/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Jovan Katic') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Jovan. Just click here to provide feedback - https://www.nicereply.com/netdna/jovan-katic/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Virgil Alcantara') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Virgil. Just click here to provide feedback - https://www.nicereply.com/netdna/virgil-alcantara/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Candy Villar') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Candy. Just click here to provide feedback - https://www.nicereply.com/netdna/candy-villar/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Mitchell Harding') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Mitchell. Just click here to provide feedback - https://www.nicereply.com/netdna/mitchell-harding/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Ivana Tepavcevic') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Ivana. Just click here to provide feedback - https://www.nicereply.com/netdna/ivana-tepavcevic/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Hossein Jafari') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Hossein. Just click here to provide feedback - https://www.nicereply.com/netdna/hossein-jafari'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Milos Smiljanic') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Milos. Just click here to provide feedback - https://www.nicereply.com/netdna/milos-smiljanic'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Nicholas Ferreira') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Nick. Just click here to provide feedback - https://www.nicereply.com/netdna/nick-ferreira/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Fred Madarshahian') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Fred. Just click here to provide feedback - https://www.nicereply.com/netdna/fred-madarshahian/'});
+				}
+				if (event.command.name == 'end' && event.command.nickname == 'Ameer Ghanie') {
+					 olark('api.chat.sendMessageToVisitor', { body: 'Thanks for chatting with Ameer. Just click here to provide feedback - https://www.nicereply.com/netdna/ameer-ghanie/'});
+				}
+			})
+
+
+
+			    olark.identify('1118-420-10-9501'); /*]]>*/
+
+			function startWidget(chatType) {
+				olark('api.box.expand');
+			}
+			</script>
+		<noscript><a href="https://www.olark.com/site/1118-420-10-9501/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+		end olark code -->
+
+<!-- <script type="text/javascript">
 var _mfq = _mfq || [];
 (function() {
 	var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
 	mf.src = "//cdn.mouseflow.com/projects/0871b593-6288-4f18-a9b1-88d1d6802d1e.js";
 	document.getElementsByTagName("head")[0].appendChild(mf);
 })();
-</script>
+</script> -->
 
 <!-- PPC code -->
 <script type="text/javascript">

@@ -738,7 +738,7 @@ $filePrepender = (substr_count($_SERVER['SCRIPT_NAME'], '/') > 1) ? "../" : "";
 				olark('api.box.expand');
 			}
 			</script>
-		<noscript><a href="https://www.olark.com/site/1118-420-10-9501/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>-->
+		<noscript><a href="https://www.olark.com/site/1118-420-10-9501/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript> -->
 		<!-- end olark code -->
 
 <script type="text/javascript">
@@ -836,14 +836,14 @@ window.onload = function(){
 }());
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 var _mfq = _mfq || [];
 (function() {
 	var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
 	mf.src = "//cdn.mouseflow.com/projects/0871b593-6288-4f18-a9b1-88d1d6802d1e.js";
 	document.getElementsByTagName("head")[0].appendChild(mf);
 })();
-</script>
+</script> -->
 
 <!-- PPC code -->
 <script type="text/javascript">

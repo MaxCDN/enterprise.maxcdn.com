@@ -2934,3 +2934,10 @@ a#modal-chatnowbutton {
 	cursor: pointer;
 	cursor: hand;
 }
+
+p.overages {
+	text-align: right;
+	margin-right: 90px;
+	font-size: 12.8px;
+	font-style: italic;
+}

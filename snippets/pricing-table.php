@@ -2,7 +2,7 @@
 	<thead>
 		<tr>
 			<th>Volume</th>
-			<th>Global Flat Rate</th>
+			<th>Global Flat Rate *</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -36,3 +36,4 @@
 		</tr>
 	</tbody>
 </table>
+<p class="overages">* Australia traffic is billed at 5&cent;/GB for all tiers</p>
